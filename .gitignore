@@ -1,0 +1,24 @@
+# Dependencies
+node_modules/
+
+# Vercel
+.vercel/
+
+# Environment
+.env*
+
+# Logs
+*.log
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Scratch / build scripts (not needed for production)
+scratch/
+
+# Next.js build
+.next/
+
+# Agents config (local only)
+.agents/

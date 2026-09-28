@@ -1,0 +1,1176 @@
+<!DOCTYPE html>
+<html lang="fr" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Maison Adénikè — L’Art de Vivre & Haute Hospitalité au Cœur de Ouidah, Bénin</title>
+  
+  <meta name="description" content="Découvrez l’élégance de nos résidences privées et les saveurs authentiques de notre table gastronomique dans un sanctuaire de sérénité au cœur de Ouidah, Bénin.">
+  <meta name="keywords" content="Maison Adénikè, Maison Adenike, Ouidah, Bénin, résidences privées Ouidah, restaurant gastronomique Ouidah, lodge Ouidah, Bomiwo, Soto Royal, Vodoun Days">
+  
+  <!-- Optimisation Performance & LCP (< 2.2s) -->
+  <link rel="preload" as="image" href="assets/images/hero-terrasse.jpg" fetchpriority="high">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Maison Adénikè — L’Art de Vivre & Haute Hospitalité au Cœur de Ouidah">
+  <meta property="og:description" content="Découvrez l’élégance de nos résidences privées et les saveurs authentiques de notre table gastronomique dans un sanctuaire de sérénité.">
+  <meta property="og:image" content="assets/images/hero-terrasse.jpg">
+  
+  <link rel="icon" type="image/png" href="assets/images/logo-adenike.png">
+  <link rel="stylesheet" href="styles.css?v=8.1">
+</head>
+<body>
+
+  <!-- RIDEAU D'OUVERTURE SIGNATURE — 4 PILULES ALTERNÉES (SPLIT-CURTAIN REVEAL) -->
+  <div id="pageCurtainTransition" class="curtain-transition-overlay" role="dialog" aria-modal="true" aria-label="Bienvenue à la Maison Adénikè">
+    <div class="curtain-backdrop-glow"></div>
+    <div class="curtain-pills-container">
+      <!-- 1. Gastronomie (Haut) -->
+      <div class="curtain-pill curtain-pill-up">
+        <div class="curtain-pill-media" style="background-image: url('assets/images/poisson-braise-riz.jpg');"></div>
+      </div>
+      <!-- 2. Lodge & Suites (Bas) -->
+      <div class="curtain-pill curtain-pill-down">
+        <div class="curtain-pill-media" style="background-image: url('assets/images/suite-artisanale.jpg');"></div>
+      </div>
+      <!-- 3. Événements & Soirées (Haut) -->
+      <div class="curtain-pill curtain-pill-up">
+        <div class="curtain-pill-media" style="background-image: url('assets/images/ambiance-fete-adenike.jpg');"></div>
+      </div>
+      <!-- 4. Vodoun Days & Ouidah (Bas) -->
+      <div class="curtain-pill curtain-pill-down">
+        <div class="curtain-pill-media" style="background-image: url('assets/images/porte-entree-adenike.jpg');"></div>
+      </div>
+    </div>
+    <div class="curtain-title-wrapper">
+      <div class="curtain-hero-logo-wrap">
+        <img src="assets/images/logo-adenike.png" alt="Logo Maison Adénikè" class="curtain-hero-logo-img">
+      </div>
+      <span class="curtain-title">BIENVENUE</span>
+      <p class="curtain-subtitle">MAISON ADÉNIKÈ • OUIDAH</p>
+    </div>
+    <button class="curtain-skip-btn" id="curtainSkipBtn" type="button" aria-label="Entrer directement sur le site">
+      <span>Découvrir</span>
+      <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+    </button>
+  </div>
+
+  <!-- BANDEAU D'ANNONCE VODOUN DAYS 2027 -->
+  <div class="vodoun-top-banner" id="vodounTopBanner">
+    <div class="vodoun-top-banner-inner">
+      <div class="vodoun-banner-content">
+        <span class="vodoun-banner-tag">✦ Édition Officielle</span>
+        <span class="vodoun-banner-text">
+          <strong>Vodoun Days 2027 à Ouidah :</strong> Célébrez du 2 au 9 janvier 2027 à la Maison Adénikè !
+        </span>
+      </div>
+      <a href="vodoun-days.html" class="vodoun-banner-cta">
+        <span>Programme &amp; Réservations</span>
+        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      </a>
+    </div>
+  </div>
+
+  <!-- ==========================================================================
+       HEADER FLOTTANT "ISLAND" AVEC LOGO OFFICIEL & NAVIGATION ÉDITORIALE
+       ========================================================================== -->
+  <header class="header-wrapper">
+    <nav class="navbar nav-editorial-transparent" aria-label="Navigation principale">
+      <a href="index.html" class="brand-logo" aria-label="Maison Adénikè - Accueil">
+        <img src="assets/images/logo-adenike.png" alt="Logo Officiel Maison Adénikè" class="brand-logo-img">
+        <div class="brand-text-group">
+          <span class="brand-name">Maison Adénikè</span>
+          <span class="brand-location">Ouidah • Bénin</span>
+        </div>
+      </a>
+
+      <ul class="nav-menu">
+        <li><a href="index.html" class="nav-link active">Accueil</a></li>
+        <li><a href="restaurant.html" class="nav-link">Restaurant</a></li>
+        <li><a href="chambres.html" class="nav-link">Lodges &amp; Espaces</a></li>
+        <li><a href="evenements.html" class="nav-link">Événements</a></li>
+        <li><a href="vodoun-days.html" class="nav-link nav-link-vodoun">Vodoun Days <span class="vodoun-badge-mini">2027</span></a></li>
+        <li><a href="galerie.html" class="nav-link">Galerie</a></li>
+        <li><a href="contact.html" class="nav-link">Contact</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <a href="https://wa.me/2290155456363?text=Bonjour%20Maison%20Adénikè%2C%20je%20souhaite%20réserver%20un%20séjour." 
+           target="_blank" 
+           rel="noopener noreferrer" 
+           class="nav-btn-wa" 
+           title="WhatsApp Conciergerie (01 55 45 63 63)">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M12.031 2C6.505 2 2.012 6.486 2.012 12.004c0 1.907.539 3.69 1.472 5.213L2.001 22l4.945-1.45a9.98 9.98 0 005.085 1.385c5.526 0 10.019-4.486 10.019-10.005C22.05 6.486 17.557 2 12.031 2zm0 18.257c-1.637 0-3.176-.464-4.502-1.267l-.323-.194-2.946.864.88-2.868-.21-.334a8.214 8.214 0 01-1.258-4.454c0-4.57 3.72-8.283 8.359-8.283 4.638 0 8.358 3.713 8.358 8.283 0 4.57-3.72 8.283-8.358 8.283zm4.58-6.195c-.251-.126-1.485-.733-1.715-.816-.23-.084-.397-.126-.565.126-.168.25-.65.816-.797.983-.146.168-.293.189-.544.063-.251-.126-1.06-.39-2.02-1.246-.746-.665-1.25-1.487-1.396-1.739-.147-.251-.016-.387.11-.512.113-.113.251-.294.377-.44.126-.147.168-.252.251-.419.084-.168.042-.315-.021-.441-.063-.126-.565-1.363-.775-1.867-.204-.49-.411-.424-.564-.432l-.481-.008c-.168 0-.44.063-.67.315-.23.252-.88.86-.88 2.097 0 1.238.902 2.435 1.027 2.603.126.168 1.776 2.712 4.303 3.803.601.26 1.07.415 1.436.531.604.192 1.154.165 1.588.1.484-.072 1.485-.607 1.694-1.194.21-.587.21-1.09.147-1.194-.063-.105-.23-.168-.481-.294z"/>
+          </svg>
+          <span style="display: none;" class="xl:inline">01 55 45 63 63</span>
+        </a>
+
+        <button class="btn btn-primary" data-open-booking data-service="Maison Adénikè">
+          <span>Réserver</span>
+          <span class="btn-icon-capsule">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
+          </span>
+        </button>
+
+        <button class="mobile-toggle" aria-label="Ouvrir le menu">
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+        </button>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Mobile Drawer -->
+  <div class="mobile-drawer" aria-hidden="true">
+    <div style="margin-bottom: 2rem; display: flex; align-items: center; gap: 1rem;">
+      <img src="assets/images/logo-adenike.png" alt="Logo Maison Adénikè" style="width: 50px; height: 50px; border-radius: 50%; border: 2px solid var(--c-gold);">
+      <div>
+        <span class="brand-name" style="font-size: 1.75rem;">Maison Adénikè</span>
+        <p style="font-size: 0.75rem; color: var(--c-terracotta); text-transform: uppercase; letter-spacing: 0.2em; font-weight: 700;">Ouidah • Bénin</p>
+      </div>
+    </div>
+    <ul class="mobile-menu-links">
+      <li><a href="index.html" class="mobile-nav-link active">Accueil</a></li>
+      <li><a href="restaurant.html" class="mobile-nav-link">Restaurant</a></li>
+      <li><a href="chambres.html" class="mobile-nav-link">Lodges &amp; Espaces</a></li>
+      <li><a href="evenements.html" class="mobile-nav-link">Événements</a></li>
+      <li><a href="vodoun-days.html" class="mobile-nav-link" style="color: var(--c-gold-bright); font-weight: 700;">★ Vodoun Days 2027</a></li>
+      <li><a href="galerie.html" class="mobile-nav-link">Galerie Photos</a></li>
+      <li><a href="contact.html" class="mobile-nav-link">Contact &amp; Accès</a></li>
+    </ul>
+    <div style="margin-top: 2rem; display: flex; flex-direction: column; gap: 0.75rem;">
+      <a href="https://wa.me/2290155456363" target="_blank" rel="noopener noreferrer" class="btn btn-whatsapp" style="width: 100%;">
+        WhatsApp : 01 55 45 63 63
+      </a>
+      <a href="https://wa.me/2290153838363" target="_blank" rel="noopener noreferrer" class="btn btn-whatsapp" style="width: 100%; background: #128C7E;">
+        WhatsApp : 01 53 83 83 63
+      </a>
+      <a href="tel:+2290155456363" class="btn btn-secondary" style="width: 100%;">
+        Appel Direct (01 55 45 63 63)
+      </a>
+    </div>
+  </div>
+
+  <main>
+    <!-- ==========================================================================
+         HERO : "L'ARRIVÉE À OUIDAH" (VIDÉO BÔMIWO & IMMERSION SENSORIELLE)
+         ========================================================================== -->
+    <section class="hero-editorial-full" id="arrivee">
+      <div class="hero-cinematic-video-wrap">
+        <video class="hero-video-bg" autoplay muted loop playsinline poster="assets/images/plat-signature.jpg?v=2" preload="auto">
+          <source src="assets/videos/try4.mp4" type="video/mp4">
+        </video>
+      </div>
+      <div class="hero-cinematic-scrim"></div>
+
+      <div class="hero-content-editorial reveal-on-scroll">
+        <!-- Logo Monumental Maison Adénikè (Emblème Or & Lotus) -->
+        <div class="hero-brand-emblem-wrap" aria-hidden="true">
+          <img src="assets/images/logo-adenike.png" alt="Logo Officiel Maison Adénikè" class="hero-brand-emblem-img">
+        </div>
+
+        <!-- Micro-badge d'accroche -->
+        <div class="hero-micro-badge">
+          <span>✦</span>
+          <span>Quartier Lêbou, Ouidah • Résidence Privée &amp; Haute Table</span>
+        </div>
+
+        <!-- Titre H1 -->
+        <h1 class="hero-title-editorial">
+          L’âme d’une maison,<br>
+          <span>le goût de nos racines.</span>
+        </h1>
+
+        <!-- Sous-titre narratif -->
+        <p class="hero-sub-editorial">
+          Une parenthèse intimiste où le repos de nos suites rencontre le rituel sacré de notre Bômiwo d'héritage et l'effervescence artistique de Ouidah.
+        </p>
+
+        <!-- Double CTA épuré -->
+        <div class="hero-actions-editorial">
+          <a href="chambres.html" class="btn-nested-gold">
+            <span>Découvrir nos Séjours &amp; Espaces</span>
+            <span class="btn-icon-circle">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </span>
+          </a>
+
+          <a href="restaurant.html" class="btn-nested-glass">
+            <span>Le Rituel Culinaire</span>
+            <span class="btn-icon-circle">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M19 14l-7 7m0 0l-7-7m7 7V3"/></svg>
+            </span>
+          </a>
+        </div>
+      </div>
+
+      <!-- Micro-détail immersif : Toggle sonore acoustique doux -->
+      <button type="button" class="hero-audio-pill" id="heroAudioToggle" aria-label="Activer l'ambiance sonore naturelle">
+        <span class="audio-pulse-dot"></span>
+        <span>Ambiance sonore</span>
+      </button>
+    </section>
+
+    <!-- ==========================================================================
+         ACTE 1 : LE BÔMIWO – SACRALISATION DU PLAT SIGNATURE
+         ========================================================================== -->
+    <section class="section-bomiwo-magazine" id="bomiwo">
+      <div class="container">
+        <div class="bomiwo-magazine-grid">
+          <!-- Côté Photographie Plein Cadre -->
+          <div class="double-bezel-outer reveal-on-scroll">
+            <div class="bomiwo-frame">
+              <img src="assets/images/plat-signature.jpg?v=3" 
+                   alt="Le festin signature Bômiwo Royal en canaris traditionnels de la Maison Adénikè" 
+                   loading="lazy">
+              <div class="bomiwo-tag-floating">
+                <span>✦ Spécialité Authentique du Terroir</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Côté Récit d'Héritage -->
+          <div class="bomiwo-story reveal-on-scroll">
+            <span class="bomiwo-eyebrow">Notre Plat Signature</span>
+            <h2 class="bomiwo-title">
+              Le Bômiwo : Plus qu'une recette, <span class="italic-accent">une célébration.</span>
+            </h2>
+            <p class="bomiwo-lead">
+              Patiemment tourné au bouillon d'aromates et d'épices du terroir, notre Bômiwo rend hommage aux gestes ancestraux des femmes de Ouidah. Accompagné de nos volailles de ferme rôties et de notre piment pilé maison, il se savoure comme un retour aux sources.
+            </p>
+
+            <!-- Note d'Exclusivité & de Réservation -->
+            <div class="bomiwo-reservation-note">
+              <div style="display: flex; align-items: flex-start; gap: 0.75rem;">
+                <span style="color: var(--brand-terracotta); font-size: 1.15rem; line-height: 1;">✦</span>
+                <div>
+                  <strong>Préparé à la commande avec des ingrédients frais du jour.</strong><br>
+                  Réservation de votre table conseillée 24h à l'avance pour garantir le mijotage artisanal dans nos canaris traditionnels.
+                </div>
+              </div>
+            </div>
+
+            <div style="display: flex; gap: 1rem; flex-wrap: wrap; align-items: center;">
+              <button class="btn-nested-gold" data-open-booking data-service="Restaurant Adénikè">
+                <span>Réserver Votre Table Bômiwo</span>
+                <span class="btn-icon-circle">
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                </span>
+              </button>
+              <a href="restaurant.html?menu=open#carte-complete" class="btn btn-secondary" data-open-menu-card style="border-radius: var(--radius-full); padding: 0.65rem 1.4rem; font-size: 0.875rem;">
+                <span>Découvrir la Carte Complète &rarr;</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         ACTE 2 : LES RÉSIDENCES PRIVÉES – LE SANCTUAIRE DU REPOS
+         ========================================================================== -->
+    <section class="section-sanctuary" id="residences">
+      <div class="container">
+        <div class="sanctuary-header reveal-on-scroll">
+          <span class="bomiwo-eyebrow" style="color: var(--brand-gold);">L'Hospitalité Intimiste</span>
+          <h2 class="sanctuary-title">Le Sanctuaire : Calme, Matières Brutes &amp; Lumière.</h2>
+          <p class="sanctuary-subtitle">
+            Deux résidences panoramiques pensées pour suspendre le temps. Mobilier en bois de teck patiné, draps en pur coton peigné et douce brise côtière au cœur du quartier Lêbou.
+          </p>
+        </div>
+
+        <div class="sanctuary-panoramic-grid">
+          <!-- Carte 1 : Suite Royale Lêbou -->
+          <article class="sanctuary-card reveal-on-scroll">
+            <div class="sanctuary-card-img-wrap">
+              <img src="assets/images/suite-artisanale.jpg" alt="Suite artisanale de la Maison Adénikè avec lit king en bois massif et textiles purs" loading="lazy">
+              <span class="sanctuary-card-badge">Suite Privée</span>
+            </div>
+            <div class="sanctuary-card-body">
+              <div>
+                <h3 class="sanctuary-card-title">La Suite Royale Lêbou</h3>
+                <p class="sanctuary-card-desc">
+                  Une alcôve de silence drapée de pur coton et de teck huilé. Lit King-size sculpté par des ébénistes béninois, douche à l'italienne en pierre brute et lumière naturelle tamisée.
+                </p>
+                <div class="sanctuary-amenities-row">
+                  <span class="sanctuary-amenity-chip">Draps Pur Coton</span>
+                  <span class="sanctuary-amenity-chip">Bois Massif Artisanal</span>
+                  <span class="sanctuary-amenity-chip">Climatisation Douce</span>
+                  <span class="sanctuary-amenity-chip">Check-in Intimiste</span>
+                </div>
+              </div>
+              <div style="display: flex; align-items: center; justify-content: space-between; border-top: 1px solid rgba(216, 186, 142, 0.4); padding-top: 1.25rem;">
+                <div>
+                  <span style="font-size: 0.75rem; color: var(--text-espresso-subtle); text-transform: uppercase;">À partir de</span>
+                  <div style="font-family: var(--font-serif); font-size: 1.4rem; color: var(--text-espresso); font-weight: 600;">45 000 FCFA <span style="font-size: 0.85rem; font-weight: 400; color: var(--text-espresso-subtle);">/ nuit</span></div>
+                </div>
+                <button class="btn btn-primary" data-open-booking data-service="Chambre / Lodge" style="border-radius: var(--radius-full); padding: 0.55rem 1.25rem;">
+                  <span>Réserver</span>
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Carte 2 : Lodge & Lounge des Ombres -->
+          <article class="sanctuary-card reveal-on-scroll">
+            <div class="sanctuary-card-img-wrap">
+              <img src="assets/images/espace-lounge-teck.jpg" alt="Lounge et lodge en teck sous pergola de bambou" loading="lazy">
+              <span class="sanctuary-card-badge">Lodge d'Auteur</span>
+            </div>
+            <div class="sanctuary-card-body">
+              <div>
+                <h3 class="sanctuary-card-title">Lodge &amp; Lounge des Ombres</h3>
+                <p class="sanctuary-card-desc">
+                  Ouvert sur le jardin secret de la Maison. Toiture en bambou ajourée créant des ombres mouvantes, salon de repos privatif sur sable doux et petit-déjeuner servi sous la varangue.
+                </p>
+                <div class="sanctuary-amenities-row">
+                  <span class="sanctuary-amenity-chip">Pergola &amp; Sable Fin</span>
+                  <span class="sanctuary-amenity-chip">Petit-Déjeuner Sous Varangue</span>
+                  <span class="sanctuary-amenity-chip">Salon Extérieur</span>
+                  <span class="sanctuary-amenity-chip">Intimité Totale</span>
+                </div>
+              </div>
+              <div style="display: flex; align-items: center; justify-content: space-between; border-top: 1px solid rgba(216, 186, 142, 0.4); padding-top: 1.25rem;">
+                <div>
+                  <span style="font-size: 0.75rem; color: var(--text-espresso-subtle); text-transform: uppercase;">À partir de</span>
+                  <div style="font-family: var(--font-serif); font-size: 1.4rem; color: var(--text-espresso); font-weight: 600;">60 000 FCFA <span style="font-size: 0.85rem; font-weight: 400; color: var(--text-espresso-subtle);">/ nuit</span></div>
+                </div>
+                <button class="btn btn-primary" data-open-booking data-service="Chambre / Lodge" style="border-radius: var(--radius-full); padding: 0.55rem 1.25rem;">
+                  <span>Réserver</span>
+                </button>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         ACTE 3 : LA RÉSIDENCE D'ARTISTE – TEASING "ARTISTE MYSTÈRE"
+         ========================================================================== -->
+    <section class="section-artist-residence" id="art-evenements">
+      <div class="artist-residence-glow"></div>
+      <div class="container">
+        <div class="artist-residence-grid">
+          <!-- Visuels Magnétiques -->
+          <div class="artist-frame-composition reveal-on-scroll">
+            <div class="artist-img-main">
+              <img src="assets/images/mur-rouge-canari.jpg" alt="Mur rouge ocre et poterie canari de la Maison Adénikè" loading="lazy">
+            </div>
+            <div class="artist-img-secondary">
+              <img src="assets/images/porte-artisanale.jpg" alt="Porte artisanale ouvragée à Ouidah" loading="lazy">
+            </div>
+          </div>
+
+          <!-- Teasing & Accès VIP -->
+          <div class="artist-story reveal-on-scroll">
+            <span class="bomiwo-eyebrow">Création Contemporaine &amp; Afro-Chic</span>
+            <h2 class="artist-h2-gold">
+              Maison Adénikè &amp; Les Arts : <br>
+              <span>Résidence d’Artiste.</span>
+            </h2>
+            <p class="artist-teaser-text">
+              Ouidah a toujours été le berceau des esprits créatifs. Dans les prochaines semaines, Maison Adénikè ouvre ses portes à un <strong>Artiste Mystère</strong> pour une création in situ et des soirées-dégustations intimistes.
+            </p>
+
+            <div class="artist-vip-box">
+              <div class="artist-vip-title">✦ Cercle Confidentiel &amp; Soirée de Révélation</div>
+              <p class="artist-vip-desc">
+                Une invitation exclusive pour assister au vernissage privé, échanger avec l'artiste et déguster un menu d'accords mets-vins exclusif sous nos bambous.
+              </p>
+              <a href="https://wa.me/2290155456363?text=Bonjour%20Maison%20Ad%C3%A9nik%C3%A8%2C%20je%20souhaite%20%C3%AAtre%20invit%C3%A9%20%C3%A0%20la%20soir%C3%A9e%20de%20r%C3%A9v%C3%A9lation%20de%20l%27Artiste%20Myst%C3%A8re." 
+                 target="_blank" 
+                 rel="noopener noreferrer" 
+                 class="btn-nested-gold" 
+                 style="width: 100%; justify-content: space-between;">
+                <span>Être invité à la soirée de révélation</span>
+                <span class="btn-icon-circle">
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                </span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         ACTE 4 : L'ÉQUIPE & LES COULISSES – CHALEUREUX, FIERS, AUTHENTIQUES
+         ========================================================================== -->
+    <section class="section-team-ouidah" id="experience">
+      <div class="container">
+        <div class="team-magazine-layout">
+          <!-- Portrait & Vérité -->
+          <div class="team-portrait-wrap reveal-on-scroll">
+            <img src="assets/images/equipe-mur-rouge.jpg" 
+                 alt="L'équipe accueillante et fière de la Maison Adénikè devant le mur rouge de Ouidah" 
+                 loading="lazy">
+          </div>
+
+          <!-- Citation Monumentale & Ancrage Culturel -->
+          <div class="team-content reveal-on-scroll">
+            <span class="bomiwo-eyebrow">L'Esprit d'Accueil</span>
+            <div class="quote-monumental-block">
+              <p class="quote-monumental-text">
+                « Nous ne recevons pas des clients, nous accueillons des invités d'honneur dans notre maison. »
+              </p>
+              <div class="quote-monumental-author">— L'Équipe de la Maison Adénikè • Ouidah</div>
+            </div>
+
+            <p style="font-size: 1.05rem; line-height: 1.7; color: var(--text-espresso-muted); margin-bottom: 2rem; font-weight: 300;">
+              Ici, chaque sourire est sincère, chaque plat est dressé avec générosité et chaque attention reflète la noblesse de l'hospitalité béninoise. Ancrée dans le quartier historique de Lêbou, la Maison est votre point de départ privilégié pour explorer les trésors sacrés de Ouidah.
+            </p>
+
+            <div class="ouidah-landmarks-list" id="acces">
+              <div class="landmark-item">
+                <span class="landmark-name">Temple des Pythons</span>
+                <span class="landmark-dist">✦ 4 minutes en voiture</span>
+              </div>
+              <div class="landmark-item">
+                <span class="landmark-name">Forêt Sacrée de Kpassè</span>
+                <span class="landmark-dist">✦ 6 minutes en voiture</span>
+              </div>
+              <div class="landmark-item">
+                <span class="landmark-name">Porte du Non-Retour &amp; Plage</span>
+                <span class="landmark-dist">✦ 8 minutes en voiture</span>
+              </div>
+              <div class="landmark-item">
+                <span class="landmark-name">Fondation Zinsou &amp; Musée</span>
+                <span class="landmark-dist">✦ 5 minutes en voiture</span>
+              </div>
+            </div>
+
+            <div style="margin-top: 2rem; display: flex; gap: 1rem; flex-wrap: wrap;">
+              <a href="contact.html" class="btn btn-secondary" style="border-radius: var(--radius-full); padding: 0.65rem 1.5rem;">
+                <span>Consulter l'Itinéraire &amp; Coordonnées GPS</span>
+              </a>
+              <button class="btn btn-primary" data-open-booking data-service="Chambre / Lodge" style="border-radius: var(--radius-full); padding: 0.65rem 1.5rem;">
+                <span>Planifier Votre Séjour</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         CARTE INTERACTIVE & LOCALISATION À OUIDAH
+         ========================================================================== -->
+    <section class="section-map-immersive" id="acces">
+      <div class="container">
+        <div style="text-align: center; max-width: 720px; margin: 0 auto;">
+          <div class="hero-micro-badge" style="margin-bottom: 1rem;">
+            <span>✦</span>
+            <span>Localisation &amp; Accès Privilégié</span>
+          </div>
+          <h2 style="font-family: var(--font-serif); font-size: 2.75rem; color: var(--text-espresso); margin-bottom: 0.75rem;">
+            Venir à la Maison Adénikè
+          </h2>
+          <p style="font-size: 1.05rem; color: var(--text-espresso-muted); line-height: 1.7;">
+            À 45 minutes de Cotonou par la paisible Route des Pêches. Située dans le quartier historique de Lêbou à Ouidah, entre lagune côtière, océan et temples ancestraux.
+          </p>
+        </div>
+
+        <div class="map-layout-grid">
+          <!-- Colonne Informations d'Accès -->
+          <div class="map-info-card">
+            <!-- Vignette Repère Visuel -->
+            <div style="border-radius: 1rem; overflow: hidden; border: 1px solid rgba(216, 186, 142, 0.45); margin-bottom: 1.5rem; position: relative;">
+              <img src="assets/images/facade-bleue-enseigne.jpg" alt="Enseigne officielle Maison Adénikè à Ouidah" style="width: 100%; height: 170px; object-fit: cover;">
+              <div style="padding: 0.65rem 1rem; background: rgba(20, 16, 14, 0.88); color: #FFF; font-size: 0.78rem; backdrop-filter: blur(8px);">
+                📍 <strong>Repère à l'arrivée :</strong> Grande enseigne officielle bleue « Maison Adénikè • Lodge • Resto • Bar ».
+              </div>
+            </div>
+
+            <div style="display: flex; flex-direction: column; gap: 1rem; margin-bottom: 1.75rem;">
+              <div style="display: flex; gap: 0.75rem; align-items: flex-start;">
+                <span style="font-size: 1.25rem;">📍</span>
+                <div>
+                  <strong style="color: var(--text-espresso); font-size: 0.95rem; display: block;">Adresse Exacte :</strong>
+                  <span style="color: var(--text-espresso-muted); font-size: 0.875rem;">Quartier Lêbou, Ouidah, Bénin</span>
+                </div>
+              </div>
+
+              <div style="display: flex; gap: 0.75rem; align-items: flex-start;">
+                <span style="font-size: 1.25rem;">🚗</span>
+                <div>
+                  <strong style="color: var(--text-espresso); font-size: 0.95rem; display: block;">Depuis Cotonou :</strong>
+                  <span style="color: var(--text-espresso-muted); font-size: 0.875rem;">40 km • Environ 45 min par la Route des Pêches (ou voie express RNIE1).</span>
+                </div>
+              </div>
+
+              <div style="display: flex; gap: 0.75rem; align-items: flex-start;">
+                <span style="font-size: 1.25rem;">📞</span>
+                <div>
+                  <strong style="color: var(--text-espresso); font-size: 0.95rem; display: block;">Lignes d'Orientation 7j/7 :</strong>
+                  <span style="color: var(--text-espresso-muted); font-size: 0.875rem;">
+                    <a href="tel:+2290155456363" style="color: var(--color-ochre); font-weight: 700;">01 55 45 63 63</a> / <a href="tel:+2290153838363" style="color: var(--color-ochre); font-weight: 700;">01 53 83 83 63</a>
+                  </span>
+                </div>
+              </div>
+            </div>
+
+            <div style="margin-top: auto; display: flex; flex-direction: column; gap: 0.75rem;">
+              <a href="https://maps.google.com/?q=Ouidah,+Benin" target="_blank" rel="noopener noreferrer" class="btn btn-primary" style="justify-content: center; width: 100%;">
+                <span>Ouvrir dans Google Maps / GPS</span>
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6M15 3h6v6M10 14L21 3"/></svg>
+              </a>
+              <a href="https://wa.me/2290155456363?text=Bonjour%20Maison%20Ad%C3%A9nik%C3%A8%2C%20je%20souhaite%20r%C3%A9server%20un%20chauffeur%20%2F%20navette%20pour%20venir%20%C3%A0%20Ouidah." target="_blank" rel="noopener noreferrer" class="btn btn-whatsapp" style="justify-content: center; width: 100%;">
+                <span>Réserver une Navette Privée</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- Colonne Carte Interactive -->
+          <div class="map-card-wrapper">
+            <iframe 
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d31728.84711382436!2d2.062483839212001!3d6.363840742188419!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x10237731cae09641%3A0xe1ca0272ee33878b!2sOuidah%2C%20B%C3%A9nin!5e0!3m2!1sfr!2s!4v1700000000000!5m2!1sfr!2s" 
+              allowfullscreen="" 
+              loading="lazy" 
+              title="Carte interactive Google Maps Maison Adénikè à Ouidah">
+            </iframe>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ==========================================================================
+       FOOTER ÉDITORIAL & PRESTIGE
+       ========================================================================== -->
+    <!-- ==========================================================================
+       FOOTER STATUTAIRE & HAUTE HOSPITALITÉ (4 COLONNES ÉDITORIALES & MO MO)
+       ========================================================================== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <!-- Colonne 1 : Identité & Maison -->
+        <div class="footer-brand-col">
+          <div class="footer-brand-box">
+            <img src="assets/images/logo-adenike.png" alt="Logo Maison Adénikè" class="footer-logo-img">
+            <div>
+              <div class="footer-brand">Maison Adénikè</div>
+              <div class="footer-brand-tag">Haute Hospitalité • Ouidah</div>
+            </div>
+          </div>
+          <p class="footer-brand-desc">
+            L’âme d’une maison, le goût de nos racines. Résidences privées d'exception, haute gastronomie d'héritage et sanctuaire de sérénité au cœur de la cité historique de Ouidah.
+          </p>
+          <div class="footer-phone-badges">
+            <a href="https://wa.me/2290155456363" target="_blank" rel="noopener noreferrer" class="footer-phone-btn" title="Ligne 1 WhatsApp Conciergerie">
+              <span class="dot-live"></span>
+              <span>01 55 45 63 63</span>
+            </a>
+            <a href="https://wa.me/2290153838363" target="_blank" rel="noopener noreferrer" class="footer-phone-btn" title="Ligne 2 WhatsApp Conciergerie">
+              <span class="dot-live"></span>
+              <span>01 53 83 83 63</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Colonne 2 : Navigation (Les 7 Espaces) -->
+        <div class="footer-nav-col">
+          <h4 class="footer-col-title">Les 7 Espaces</h4>
+          <ul class="footer-links">
+            <li><a href="index.html">Accueil</a></li>
+            <li><a href="restaurant.html">Restaurant &amp; Bômiwo</a></li>
+            <li><a href="chambres.html">Lodges &amp; Espaces Privatisables</a></li>
+            <li><a href="evenements.html">Événements &amp; Résidences d'Art</a></li>
+            <li><a href="vodoun-days.html" class="footer-link-vodoun">Vodoun Days 2027 ★</a></li>
+            <li><a href="galerie.html">Galerie Photos &amp; Œuvres</a></li>
+            <li><a href="contact.html">Contact &amp; Accès Ouidah</a></li>
+          </ul>
+        </div>
+
+        <!-- Colonne 3 : Expériences Signatures -->
+        <div class="footer-exp-col">
+          <h4 class="footer-col-title">Expériences</h4>
+          <ul class="footer-links">
+            <li><a href="restaurant.html">Le Plat Signature Bômiwo</a></li>
+            <li><a href="chambres.html#privatisation">Privatisation &amp; Banquets</a></li>
+            <li><a href="chambres.html">Suites &amp; Lodges Climatisés</a></li>
+            <li><a href="vodoun-days.html">Vodoun Days (2–9 Janvier 2027)</a></li>
+            <li><a href="contact.html">Navette Privée &amp; Chauffeur</a></li>
+          </ul>
+        </div>
+
+        <!-- Colonne 4 : Réservations & Modalités MoMo -->
+        <div class="footer-booking-col">
+          <h4 class="footer-col-title">Réservations &amp; Modalités</h4>
+          <div class="footer-booking-card">
+            <div class="footer-booking-row">
+              <span class="footer-booking-label">Lignes Directes (Appel / WhatsApp) :</span>
+              <div class="footer-booking-contacts">
+                <a href="tel:+2290155456363">01 55 45 63 63</a>
+                <span>•</span>
+                <a href="tel:+2290153838363">01 53 83 83 63</a>
+              </div>
+            </div>
+            <div class="footer-momo-box">
+              <span class="momo-badge">MTN MoMo</span>
+              <div class="footer-momo-text">
+                <strong>Acompte obligatoire :</strong> Exigé à la réservation par Mobile Money ou Carte Bancaire. Le solde est réglé sur place à l'arrivée.
+              </div>
+            </div>
+            <button class="btn btn-primary footer-cta-btn" data-open-booking data-service="Séjour &amp; Haute Table">
+              <span>Réserver en Ligne</span>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div class="footer-bottom-copy">
+          &copy; <span id="currentYear">2026</span> <strong>Maison Adénikè (M • A)</strong>. Tous droits réservés. Quartier Lébou, Ouidah, République du Bénin.
+        </div>
+        <div class="footer-bottom-tagline">
+          <span>Haute Hospitalité</span>
+          <span class="sep">•</span>
+          <span>Table d'Héritage</span>
+          <span class="sep">•</span>
+          <span>Art &amp; Culture Afro-Chic</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ==========================================================================
+       MODAL DE RÉSERVATION UNIVERSEL — DUAL PAYMENT STACK CRO & HAUTE HOSPITALITÉ
+       ========================================================================== -->
+  <div id="reservationModal" class="reservation-modal-backdrop" role="dialog" aria-modal="true">
+    <div class="reservation-modal-card" style="max-width: 580px;">
+      <div class="modal-header" style="background: var(--bg-cream); border-bottom: 1.5px solid var(--color-raffia);">
+        <div style="display: flex; align-items: center; gap: 0.75rem;">
+          <img src="assets/images/logo-adenike.png" alt="Logo Maison Adénikè" style="width: 40px; height: 40px; border-radius: 50%; border: 1.5px solid var(--color-champagne); box-shadow: var(--shadow-luxury-glow);">
+          <div>
+            <span style="font-size: 0.6875rem; text-transform: uppercase; letter-spacing: 0.15em; color: var(--color-ochre); font-weight: 700;">Haute Hospitalité • Ouidah</span>
+            <h3 class="modal-title" style="margin: 0; font-size: 1.25rem; color: var(--text-espresso); font-family: var(--font-serif); font-weight: 700;">Réservation &amp; Escale Privée</h3>
+          </div>
+        </div>
+        <button id="modalCloseBtn" class="modal-close-btn" aria-label="Fermer la fenêtre">&times;</button>
+      </div>
+
+      <div class="modal-body" style="padding: 1.5rem;">
+        <form id="modalBookingForm">
+          <!-- Étape 1 : Expérience -->
+          <div class="form-group" style="margin-bottom: 1rem;">
+            <label class="form-label" style="font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.05em; color: var(--text-espresso-muted);">
+              1. Choisissez votre expérience
+            </label>
+            <div class="service-selector-pills">
+              <label>
+                <input type="radio" name="modalService" value="Chambre / Lodge" class="service-pill-radio" checked>
+                <span class="service-pill-label">🛏️ Suite & Lodge</span>
+              </label>
+              <label>
+                <input type="radio" name="modalService" value="Restaurant Adénikè" class="service-pill-radio">
+                <span class="service-pill-label">🍽️ Table & Terroir</span>
+              </label>
+              <label>
+                <input type="radio" name="modalService" value="Séjour / Événement" class="service-pill-radio">
+                <span class="service-pill-label">🎉 Événement</span>
+              </label>
+              <label>
+                <input type="radio" name="modalService" value="Vodoun Days 2027" class="service-pill-radio">
+                <span class="service-pill-label">✨ Vodoun Days</span>
+              </label>
+            </div>
+          </div>
+
+          <!-- Étape 2 : Date, Heure & Convives -->
+          <div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 0.75rem;" class="form-group">
+            <div>
+              <label for="modalDate" class="form-label" style="font-size: 0.75rem;">Date d'arrivée</label>
+              <input type="date" id="modalDate" class="form-input" style="padding: 0.55rem 0.65rem; font-size: 0.8125rem;" required>
+            </div>
+            <div>
+              <label for="modalTime" class="form-label" style="font-size: 0.75rem;">Heure souhaitée</label>
+              <input type="time" id="modalTime" class="form-input" style="padding: 0.55rem 0.65rem; font-size: 0.8125rem;" value="12:30">
+            </div>
+            <div>
+              <label for="modalGuests" class="form-label" style="font-size: 0.75rem;">Nombre d'hôtes</label>
+              <select id="modalGuests" class="form-select" style="padding: 0.55rem 0.65rem; font-size: 0.8125rem;">
+                <option value="1 personne">1 personne</option>
+                <option value="2 personnes" selected>2 personnes</option>
+                <option value="3 à 4 personnes">3 à 4 personnes</option>
+                <option value="5 personnes et plus">5 personnes et plus</option>
+              </select>
+            </div>
+          </div>
+
+          <!-- Étape 3 : Nom & Contact -->
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 0.75rem;" class="form-group">
+            <div>
+              <label for="modalName" class="form-label" style="font-size: 0.75rem;">Nom & Prénom</label>
+              <input type="text" id="modalName" class="form-input" style="padding: 0.55rem 0.75rem; font-size: 0.8125rem;" placeholder="Ex. Sophie Mensah" required>
+            </div>
+            <div>
+              <label for="modalPhone" class="form-label" style="font-size: 0.75rem;">Numéro Mobile (MoMo / WhatsApp)</label>
+              <input type="tel" id="modalPhone" class="form-input" style="padding: 0.55rem 0.75rem; font-size: 0.8125rem;" placeholder="Ex. 01 55 45 63 63" required>
+            </div>
+          </div>
+
+          <!-- Transparent Payment Breakdown Card -->
+          <div class="price-breakdown-card">
+            <div class="price-breakdown-row">
+              <span>Montant estimatif total :</span>
+              <strong id="breakdownTotal" style="color: #FFFFFF;">45 000 FCFA</strong>
+            </div>
+            <div class="price-breakdown-row accent-row">
+              <div style="display: flex; align-items: center; gap: 0.5rem;">
+                <span>Acompte requis :</span>
+                <span class="deposit-toggle-group">
+                  <button type="button" class="deposit-toggle-btn active" data-deposit-pct="30">30%</button>
+                  <button type="button" class="deposit-toggle-btn" data-deposit-pct="50">50%</button>
+                </span>
+              </div>
+              <strong id="breakdownDeposit" style="color: var(--c-gold-bright);">13 500 FCFA</strong>
+            </div>
+            <div class="price-breakdown-row" style="border-top: 1px solid rgba(255, 255, 255, 0.08); padding-top: 0.35rem;">
+              <span>Solde restant dû à l'arrivée :</span>
+              <strong id="breakdownBalance" style="color: var(--text-espresso-muted);">31 500 FCFA</strong>
+            </div>
+          </div>
+
+          <!-- Étape 4 : Dual Payment Stack Tabs -->
+          <div class="form-group" style="margin-bottom: 0.75rem;">
+            <label class="form-label" style="font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.05em; color: var(--text-espresso-muted);">
+              2. Canal de paiement sécurisé
+            </label>
+            <div class="dual-payment-tabs">
+              <button type="button" class="payment-tab-btn active" data-payment-channel="momo">
+                <span>🟡 MTN MoMo</span>
+                <span class="payment-tab-badge">Push Bénin</span>
+              </button>
+              <button type="button" class="payment-tab-btn" data-payment-channel="flooz">
+                <span>🔵 Moov Flooz</span>
+                <span class="payment-tab-badge">Push Bénin</span>
+              </button>
+              <button type="button" class="payment-tab-btn" data-payment-channel="card">
+                <span>💳 Carte CB</span>
+                <span class="payment-tab-badge">Visa / MC</span>
+              </button>
+              <button type="button" class="payment-tab-btn" data-payment-channel="concierge">
+                <span>🛎️ Concierge</span>
+                <span class="payment-tab-badge">Garantie</span>
+              </button>
+            </div>
+
+            <!-- Notice d'instruction interactive -->
+            <div id="paymentInstructionBox" class="payment-instruction-box">
+              📲 <strong>Paiement instantané MTN Mobile Money :</strong> Un prompt de notification push sera déclenché vers votre numéro pour composer votre code secret et verrouiller immédiatement votre réservation.
+            </div>
+          </div>
+
+          <!-- Reassurance Security Badge -->
+          <div class="reassurance-badge-box">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--c-gold)" stroke-width="2" style="flex-shrink: 0;">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+            </svg>
+            <span>Paiement sécurisé instantané par Mobile Money & Carte Bancaire • Confirmation immédiate par SMS & WhatsApp</span>
+          </div>
+
+          <!-- Submit Button -->
+          <button type="submit" class="btn btn-primary" id="modalSubmitBtn" style="width: 100%; padding: 0.95rem; font-size: 0.95rem; background: var(--color-ochre); color: #FFFFFF; font-weight: 700; box-shadow: 0 4px 20px rgba(168, 59, 36, 0.35);">
+            <span>Valider ma Réservation & l'Acompte (13 500 FCFA)</span>
+            <span class="btn-icon-capsule" style="background: rgba(255, 255, 255, 0.2); color: #FFFFFF;">
+              &rarr;
+            </span>
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- Fenêtre Modale Dédiée Vodoun Days 2027 -->
+  <div id="vodounModal" class="reservation-modal-backdrop" role="dialog" aria-modal="true">
+    <div class="reservation-modal-card vodoun-modal-card">
+      <div class="modal-header vodoun-modal-header">
+        <div style="display: flex; align-items: center; gap: 0.75rem;">
+          <img src="assets/images/logo-adenike.png" alt="Logo" style="width: 38px; height: 38px; border-radius: 50%; border: 1.5px solid var(--c-gold);">
+          <div>
+            <div style="display: flex; align-items: center; gap: 0.5rem;">
+              <span style="font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.15em; color: var(--c-gold-bright); font-weight: 700;">Édition Spéciale</span>
+              <span class="vodoun-gold-tag">02 - 09 Janv 2027</span>
+            </div>
+            <h3 class="modal-title" style="margin: 0;">Réservation Vodoun Days 2027</h3>
+          </div>
+        </div>
+        <button id="vodounModalClose" class="modal-close-btn" style="color: #FFFFFF;">&times;</button>
+      </div>
+      <div class="modal-body">
+        <p style="font-size: 0.9rem; color: var(--c-teak-light); margin-bottom: 1.25rem;">
+          Vivez la ferveur des Vodoun Days à Ouidah avec le confort et la gastronomie de la Maison Adénikè.
+        </p>
+        <form id="vodounBookingForm">
+          <div class="form-group">
+            <label class="form-label">1. Choisissez Votre Formule Vodoun Days</label>
+            <div style="display: grid; gap: 0.6rem;">
+              <label style="display: flex; align-items: center; gap: 0.6rem; background: var(--c-sand-surface); padding: 0.65rem 0.85rem; border-radius: var(--radius-md); cursor: pointer; border: 1px solid rgba(61,39,29,0.1);">
+                <input type="radio" name="vodounPack" value="Pack Séjour & Nuitées (Chambre Lodge)" checked>
+                <span style="font-size: 0.875rem;"><strong>Pack Séjour & Lodge :</strong> Hébergement climatisé, petit-déjeuner & accès privilégié</span>
+              </label>
+              <label style="display: flex; align-items: center; gap: 0.6rem; background: var(--c-sand-surface); padding: 0.65rem 0.85rem; border-radius: var(--radius-md); cursor: pointer; border: 1px solid rgba(61,39,29,0.1);">
+                <input type="radio" name="vodounPack" value="Table Dîner & Festin sous Pergola">
+                <span style="font-size: 0.875rem;"><strong>Table & Festin Terroir :</strong> Déjeuner ou dîner braisé, Soto Royal, ambiance conviviale</span>
+              </label>
+              <label style="display: flex; align-items: center; gap: 0.6rem; background: var(--c-sand-surface); padding: 0.65rem 0.85rem; border-radius: var(--radius-md); cursor: pointer; border: 1px solid rgba(61,39,29,0.1);">
+                <input type="radio" name="vodounPack" value="Pass Journée & Lounge Détente">
+                <span style="font-size: 0.875rem;"><strong>Pass Journée Lounge :</strong> Repos sur sable fin, cocktails & escale entre deux concerts</span>
+              </label>
+            </div>
+          </div>
+
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;" class="form-group">
+            <div>
+              <label for="vodounDate" class="form-label">Date (Entre le 2 et 9 Janv 2027)</label>
+              <input type="date" id="vodounDate" class="form-input" min="2027-01-02" max="2027-01-09" value="2027-01-08" required>
+            </div>
+            <div>
+              <label for="vodounGuests" class="form-label">Nombre de personnes</label>
+              <select id="vodounGuests" class="form-select">
+                <option value="1 personne">1 personne</option>
+                <option value="2 personnes" selected>2 personnes</option>
+                <option value="3 à 5 personnes">3 à 5 personnes</option>
+                <option value="Groupe (6+)">Groupe (6+)</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="vodounName" class="form-label">Votre Nom Complet</label>
+            <input type="text" id="vodounName" class="form-input" placeholder="Ex. Diane Dossou" required>
+          </div>
+
+          <div class="form-group">
+            <label for="vodounNotes" class="form-label">Demandes spéciales / Transport / Besoins</label>
+            <textarea id="vodounNotes" class="form-textarea" rows="2" placeholder="Précisez : arrivée aéroport Cotonou, nuits consécutives, régimes..."></textarea>
+          </div>
+
+          <div class="momo-notice-box" style="margin-top: 0.5rem; margin-bottom: 1.25rem;">
+            <span class="momo-badge">MTN MoMo</span>
+            <div class="momo-text">
+              <strong>Acompte obligatoire :</strong> Un acompte par MoMo sera exigé à la réservation pour garantir votre place pendant les Vodoun Days. Le solde sera réglé sur place.
+            </div>
+          </div>
+
+          <button type="submit" class="btn btn-primary" style="width: 100%; padding: 0.95rem; font-size: 0.95rem;">
+            <span>Confirmer Ma Réservation Vodoun Days sur WhatsApp</span>
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==========================================================================
+       FLOATING WHATSAPP CONCIERGE WIDGET (HAUTE HOSPITALITÉ 24H)
+       ========================================================================== -->
+  <aside class="wa-concierge-container" id="waConciergeWidget" aria-label="Conciergerie WhatsApp Maison Adénikè">
+    <div class="wa-concierge-tooltip" id="waConciergeTooltip">
+      <span class="wa-concierge-pulse-dot"></span>
+      <span>Conciergerie Maison Adénikè — <strong>Réponse immédiate</strong></span>
+    </div>
+
+    <!-- Sélecteur rapide des 2 lignes officielles -->
+    <div class="wa-concierge-lines" id="waConciergeLines">
+      <div style="font-size: 0.6875rem; text-transform: uppercase; letter-spacing: 0.1em; color: var(--c-gold); font-weight: 700; margin-bottom: 0.25rem;">
+        Conciergerie en Ligne (24h/7j)
+      </div>
+      <a href="https://wa.me/2290155456363?text=Bonjour%20Maison%20Ad%C3%A9nik%C3%A8%2C%20je%20souhaite%20des%20informations%20pour%20une%20r%C3%A9servation..." 
+         target="_blank" 
+         rel="noopener noreferrer" 
+         class="wa-line-btn">
+        <div>
+          <div style="font-weight: 600; color: #FFFFFF;">Ligne 1 (Principale)</div>
+          <div style="font-size: 0.7rem; color: var(--color-raffia);">01 55 45 63 63</div>
+        </div>
+        <span class="wa-line-badge">Direct</span>
+      </a>
+      <a href="https://wa.me/2290153838363?text=Bonjour%20Maison%20Ad%C3%A9nik%C3%A8%2C%20je%20souhaite%20des%20informations%20pour%20une%20r%C3%A9servation..." 
+         target="_blank" 
+         rel="noopener noreferrer" 
+         class="wa-line-btn">
+        <div>
+          <div style="font-weight: 600; color: #FFFFFF;">Ligne 2 (Secondaire)</div>
+          <div style="font-size: 0.7rem; color: var(--color-raffia);">01 53 83 83 63</div>
+        </div>
+        <span class="wa-line-badge" style="background: rgba(255,255,255,0.2); color: #FFF;">Disponible</span>
+      </a>
+    </div>
+
+    <button type="button" class="wa-concierge-btn" id="waConciergeToggle" aria-label="Contacter la conciergerie Maison Adénikè sur WhatsApp">
+      <span class="wa-concierge-pulse-ring"></span>
+      <svg width="30" height="30" viewBox="0 0 24 24" fill="currentColor">
+        <path d="M12.031 2C6.505 2 2.012 6.486 2.012 12.004c0 1.907.539 3.69 1.472 5.213L2.001 22l4.945-1.45a9.98 9.98 0 005.085 1.385c5.526 0 10.019-4.486 10.019-10.005C22.05 6.486 17.557 2 12.031 2zm0 18.257c-1.637 0-3.176-.464-4.502-1.267l-.323-.194-2.946.864.88-2.868-.21-.334a8.214 8.214 0 01-1.258-4.454c0-4.57 3.72-8.283 8.359-8.283 4.638 0 8.358 3.713 8.358 8.283 0 4.57-3.72 8.283-8.358 8.283zm4.58-6.195c-.251-.126-1.485-.733-1.715-.816-.23-.084-.397-.126-.565.126-.168.25-.65.816-.797.983-.146.168-.293.189-.544.063-.251-.126-1.06-.39-2.02-1.246-.746-.665-1.25-1.487-1.396-1.739-.147-.251-.016-.387.11-.512.113-.113.251-.294.377-.44.126-.147.168-.252.251-.419.084-.168.042-.315-.021-.441-.063-.126-.565-1.363-.775-1.867-.204-.49-.411-.424-.564-.432l-.481-.008c-.168 0-.44.063-.67.315-.23.252-.88.86-.88 2.097 0 1.238.902 2.435 1.027 2.603.126.168 1.776 2.712 4.303 3.803.601.26 1.07.415 1.436.531.604.192 1.154.165 1.588.1.484-.072 1.485-.607 1.694-1.194.21-.587.21-1.09.147-1.194-.063-.105-.23-.168-.481-.294z"/>
+      </svg>
+    </button>
+  </aside>
+
+  <!-- ==========================================================================
+       CARTE DE RESTAURANT OFFICIELLE MAISON ADÉNIKÈ (MODAL HAUTE GASTRONOMIE)
+       ========================================================================== -->
+  <div id="restaurantMenuModal" class="menu-card-backdrop" aria-hidden="true" role="dialog" aria-modal="true" aria-label="Carte officielle du Menu Maison Adénikè">
+    <div class="menu-card-container">
+      <button type="button" class="menu-card-close-btn" id="menuCardCloseBtn" aria-label="Fermer la carte du menu">&times;</button>
+
+      <div class="menu-card-paper">
+        <!-- 4 Fleurons d'Angles Or (Reproduction fidèle de la carte) -->
+        <svg class="menu-card-corner menu-card-corner-tl" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <path d="M4 56V12C4 7.58 7.58 4 12 4H56" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+          <path d="M10 50V16C10 12.68 12.68 10 16 10H50" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-dasharray="2 3"/>
+          <circle cx="12" cy="12" r="3" fill="currentColor"/>
+          <path d="M4 28C8 28 14 26 18 20C22 14 20 8 20 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+          <path d="M28 4C28 8 26 14 20 18C14 22 8 20 4 20" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+        </svg>
+        <svg class="menu-card-corner menu-card-corner-tr" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <path d="M4 56V12C4 7.58 7.58 4 12 4H56" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+          <path d="M10 50V16C10 12.68 12.68 10 16 10H50" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-dasharray="2 3"/>
+          <circle cx="12" cy="12" r="3" fill="currentColor"/>
+          <path d="M4 28C8 28 14 26 18 20C22 14 20 8 20 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+          <path d="M28 4C28 8 26 14 20 18C14 22 8 20 4 20" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+        </svg>
+        <svg class="menu-card-corner menu-card-corner-bl" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <path d="M4 56V12C4 7.58 7.58 4 12 4H56" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+          <path d="M10 50V16C10 12.68 12.68 10 16 10H50" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-dasharray="2 3"/>
+          <circle cx="12" cy="12" r="3" fill="currentColor"/>
+          <path d="M4 28C8 28 14 26 18 20C22 14 20 8 20 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+          <path d="M28 4C28 8 26 14 20 18C14 22 8 20 4 20" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+        </svg>
+        <svg class="menu-card-corner menu-card-corner-br" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <path d="M4 56V12C4 7.58 7.58 4 12 4H56" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+          <path d="M10 50V16C10 12.68 12.68 10 16 10H50" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-dasharray="2 3"/>
+          <circle cx="12" cy="12" r="3" fill="currentColor"/>
+          <path d="M4 28C8 28 14 26 18 20C22 14 20 8 20 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+          <path d="M28 4C28 8 26 14 20 18C14 22 8 20 4 20" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+        </svg>
+
+        <!-- Filigrane discret de lotus à gauche -->
+        <svg class="menu-card-watermark" viewBox="0 0 120 120" fill="none" stroke="#C5A059" stroke-width="1" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <path d="M60 15C60 15 42 45 42 75C42 90 50 96 60 98C70 96 78 90 78 75C78 45 60 15 60 15Z"/>
+          <path d="M60 45C60 45 32 60 22 78C16 88 24 94 36 94C46 94 54 84 60 76"/>
+          <path d="M60 45C60 45 88 60 98 78C104 88 96 94 84 94C74 94 66 84 60 76"/>
+        </svg>
+
+        <!-- En-tête Statutaire -->
+        <div class="menu-card-header">
+          <div class="menu-card-crest">
+            <img src="assets/images/logo-adenike.png" alt="Logo Maison Adénikè">
+          </div>
+          <div class="menu-card-brand">Maison Adénikè</div>
+          <div class="menu-card-ornament-small" aria-hidden="true"><span>✦</span></div>
+
+          <div class="menu-card-title-wrap">
+            <h2 class="menu-card-title">Menu</h2>
+            <!-- Toque de Chef Dorée inclinée -->
+            <svg class="menu-card-chef-hat" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M6 13.8a4.4 4.4 0 0 1-2.8-4.2 4.5 4.5 0 0 1 7.4-3.5 4.5 4.5 0 0 1 6.8 0 4.5 4.5 0 0 1 7.4 3.5 4.4 4.4 0 0 1-2.8 4.2"/>
+              <path d="M6 17h12"/>
+              <path d="M6 21h12"/>
+              <path d="M6 14v7"/>
+              <path d="M18 14v7"/>
+            </svg>
+          </div>
+
+          <!-- Ruban doré courbe -->
+          <svg class="menu-card-ribbon" viewBox="0 0 160 14" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <path d="M5 7C45 1 115 13 155 7" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+            <circle cx="80" cy="7" r="2.5" fill="currentColor"/>
+          </svg>
+
+          <p class="menu-card-subtitle">Des saveurs authentiques, un plaisir à chaque bouchée !</p>
+          <div class="menu-card-ornament-small" aria-hidden="true"><span>✦</span></div>
+        </div>
+
+        <!-- 10 Plats Officiels de la Carte -->
+        <div class="menu-card-items-list">
+          <!-- 1. Bomiwo de luxe Complet (5 000 FCFA - Plusieurs plats & canaris) -->
+          <div class="menu-card-row" data-dish="Bomiwo de luxe (Complet)" data-price="5 000 FCFA" data-dish-img="assets/images/bomiwo-royal-5000.jpg">
+            <div class="menu-card-dish-left">
+              <span class="menu-card-lotus-bullet"><svg viewBox="0 0 24 24"><path d="M12 3C12 3 9.5 7.5 9.5 11.5C9.5 14 10.6 15.8 12 16.5C13.4 15.8 14.5 14 14.5 11.5C14.5 7.5 12 3 12 3ZM12 8C12 8 7 9.8 6 13.5C5.2 16 6.8 17.8 8 18.2C9.5 18 11.2 16.5 12 15C12.8 16.5 14.5 18 16 18.2C17.2 17.8 18.8 16 18 13.5C17 9.8 12 8 12 8ZM12 17.5C9.5 17.5 4 18.5 2 20.5H22C20 18.5 14.5 17.5 12 17.5Z"/></svg></span>
+              <div class="menu-card-dish-thumb"><img src="assets/images/bomiwo-royal-5000.jpg" alt="Bomiwo de luxe complet 5000 FCFA" loading="lazy"></div>
+              <div class="menu-card-dish-info">
+                <span class="menu-card-dish-name">Bomiwo de luxe <span class="menu-card-badge-new">Spécialité</span></span>
+                <span class="menu-card-dish-note">(Festin complet &amp; canaris traditionnels)</span>
+              </div>
+            </div>
+            <span class="menu-card-dots" aria-hidden="true"></span>
+            <div class="menu-card-dish-price">5 000 <small>FCFA</small></div>
+          </div>
+
+          <!-- 1b. Bomiwo de luxe Demi-portion (3 000 FCFA - 1 Assiette) -->
+          <div class="menu-card-row" data-dish="Bomiwo de luxe (Demi-portion)" data-price="3 000 FCFA" data-dish-img="assets/images/bomiwo-demi-3000.jpg">
+            <div class="menu-card-dish-left">
+              <span class="menu-card-lotus-bullet"><svg viewBox="0 0 24 24"><path d="M12 3C12 3 9.5 7.5 9.5 11.5C9.5 14 10.6 15.8 12 16.5C13.4 15.8 14.5 14 14.5 11.5C14.5 7.5 12 3 12 3ZM12 8C12 8 7 9.8 6 13.5C5.2 16 6.8 17.8 8 18.2C9.5 18 11.2 16.5 12 15C12.8 16.5 14.5 18 16 18.2C17.2 17.8 18.8 16 18 13.5C17 9.8 12 8 12 8ZM12 17.5C9.5 17.5 4 18.5 2 20.5H22C20 18.5 14.5 17.5 12 17.5Z"/></svg></span>
+              <div class="menu-card-dish-thumb"><img src="assets/images/bomiwo-demi-3000.jpg" alt="Bomiwo de luxe 1 assiette 3000 FCFA" loading="lazy"></div>
+              <div class="menu-card-dish-info">
+                <span class="menu-card-dish-name">Bomiwo de luxe <span class="menu-card-badge-demi">1 Assiette</span></span>
+                <span class="menu-card-dish-note">(Assiette individuelle sur feuille de bananier)</span>
+              </div>
+            </div>
+            <span class="menu-card-dots" aria-hidden="true"></span>
+            <div class="menu-card-dish-price">3 000 <small>FCFA</small></div>
+          </div>
+
+          <!-- 2. Riz au gras poisson de jour -->
+          <div class="menu-card-row" data-dish="Riz au gras poisson de jour" data-price="2 500 / 3 000 FCFA" data-dish-img="assets/images/poisson-frit-riz-rouge.jpg">
+            <div class="menu-card-dish-left">
+              <span class="menu-card-lotus-bullet"><svg viewBox="0 0 24 24"><path d="M12 3C12 3 9.5 7.5 9.5 11.5C9.5 14 10.6 15.8 12 16.5C13.4 15.8 14.5 14 14.5 11.5C14.5 7.5 12 3 12 3ZM12 8C12 8 7 9.8 6 13.5C5.2 16 6.8 17.8 8 18.2C9.5 18 11.2 16.5 12 15C12.8 16.5 14.5 18 16 18.2C17.2 17.8 18.8 16 18 13.5C17 9.8 12 8 12 8ZM12 17.5C9.5 17.5 4 18.5 2 20.5H22C20 18.5 14.5 17.5 12 17.5Z"/></svg></span>
+              <div class="menu-card-dish-thumb"><img src="assets/images/poisson-frit-riz-rouge.jpg" alt="Riz au gras poisson de jour" loading="lazy"></div>
+              <div class="menu-card-dish-info">
+                <span class="menu-card-dish-name">Riz au gras poisson de jour</span>
+                <span class="menu-card-dish-note">(fraîchement pêché)</span>
+              </div>
+            </div>
+            <span class="menu-card-dots" aria-hidden="true"></span>
+            <div class="menu-card-dish-price">2 500 <small>/</small> 3 000</div>
+          </div>
+
+          <!-- 3. Ba rouge avec aileron -->
+          <div class="menu-card-row" data-dish="Ba rouge avec aileron" data-price="2 500 FCFA" data-dish-img="assets/images/plateau-poulet-pate.jpg">
+            <div class="menu-card-dish-left">
+              <span class="menu-card-lotus-bullet"><svg viewBox="0 0 24 24"><path d="M12 3C12 3 9.5 7.5 9.5 11.5C9.5 14 10.6 15.8 12 16.5C13.4 15.8 14.5 14 14.5 11.5C14.5 7.5 12 3 12 3ZM12 8C12 8 7 9.8 6 13.5C5.2 16 6.8 17.8 8 18.2C9.5 18 11.2 16.5 12 15C12.8 16.5 14.5 18 16 18.2C17.2 17.8 18.8 16 18 13.5C17 9.8 12 8 12 8ZM12 17.5C9.5 17.5 4 18.5 2 20.5H22C20 18.5 14.5 17.5 12 17.5Z"/></svg></span>
+              <div class="menu-card-dish-thumb"><img src="assets/images/plateau-poulet-pate.jpg" alt="Ba rouge avec aileron" loading="lazy"></div>
+              <div class="menu-card-dish-info">
+                <span class="menu-card-dish-name">Ba rouge avec aileron</span>
+              </div>
+            </div>
+            <span class="menu-card-dots" aria-hidden="true"></span>
+            <div class="menu-card-dish-price">2 500</div>
+          </div>
+
+          <!-- 4. Moyo avec poisson du jour -->
+          <div class="menu-card-row" data-dish="Moyo avec poisson du jour" data-price="2 500 / 3 000 FCFA" data-dish-img="assets/images/poisson-braise-riz.jpg">
+            <div class="menu-card-dish-left">
+              <span class="menu-card-lotus-bullet"><svg viewBox="0 0 24 24"><path d="M12 3C12 3 9.5 7.5 9.5 11.5C9.5 14 10.6 15.8 12 16.5C13.4 15.8 14.5 14 14.5 11.5C14.5 7.5 12 3 12 3ZM12 8C12 8 7 9.8 6 13.5C5.2 16 6.8 17.8 8 18.2C9.5 18 11.2 16.5 12 15C12.8 16.5 14.5 18 16 18.2C17.2 17.8 18.8 16 18 13.5C17 9.8 12 8 12 8ZM12 17.5C9.5 17.5 4 18.5 2 20.5H22C20 18.5 14.5 17.5 12 17.5Z"/></svg></span>
+              <div class="menu-card-dish-thumb"><img src="assets/images/poisson-braise-riz.jpg" alt="Moyo avec poisson du jour" loading="lazy"></div>
+              <div class="menu-card-dish-info">
+                <span class="menu-card-dish-name">Moyo avec poisson du jour</span>
+              </div>
+            </div>
+            <span class="menu-card-dots" aria-hidden="true"></span>
+            <div class="menu-card-dish-price">2 500 <small>/</small> 3 000</div>
+          </div>
+
+          <!-- 5. Atassi royal -->
+          <div class="menu-card-row" data-dish="Atassi royal" data-price="3 000 / 3 500 FCFA" data-dish-img="assets/images/festin-canaris-terre-cuite.jpg">
+            <div class="menu-card-dish-left">
+              <span class="menu-card-lotus-bullet"><svg viewBox="0 0 24 24"><path d="M12 3C12 3 9.5 7.5 9.5 11.5C9.5 14 10.6 15.8 12 16.5C13.4 15.8 14.5 14 14.5 11.5C14.5 7.5 12 3 12 3ZM12 8C12 8 7 9.8 6 13.5C5.2 16 6.8 17.8 8 18.2C9.5 18 11.2 16.5 12 15C12.8 16.5 14.5 18 16 18.2C17.2 17.8 18.8 16 18 13.5C17 9.8 12 8 12 8ZM12 17.5C9.5 17.5 4 18.5 2 20.5H22C20 18.5 14.5 17.5 12 17.5Z"/></svg></span>
+              <div class="menu-card-dish-thumb"><img src="assets/images/festin-canaris-terre-cuite.jpg" alt="Atassi royal" loading="lazy"></div>
+              <div class="menu-card-dish-info">
+                <span class="menu-card-dish-name">Atassi royal</span>
+              </div>
+            </div>
+            <span class="menu-card-dots" aria-hidden="true"></span>
+            <div class="menu-card-dish-price">3 000 <small>/</small> 3 500</div>
+          </div>
+
+          <!-- 6. Frites au poulet -->
+          <div class="menu-card-row" data-dish="Frites au poulet" data-price="2 500 FCFA" data-dish-img="assets/images/poulet-braise-assiette.jpg">
+            <div class="menu-card-dish-left">
+              <span class="menu-card-lotus-bullet"><svg viewBox="0 0 24 24"><path d="M12 3C12 3 9.5 7.5 9.5 11.5C9.5 14 10.6 15.8 12 16.5C13.4 15.8 14.5 14 14.5 11.5C14.5 7.5 12 3 12 3ZM12 8C12 8 7 9.8 6 13.5C5.2 16 6.8 17.8 8 18.2C9.5 18 11.2 16.5 12 15C12.8 16.5 14.5 18 16 18.2C17.2 17.8 18.8 16 18 13.5C17 9.8 12 8 12 8ZM12 17.5C9.5 17.5 4 18.5 2 20.5H22C20 18.5 14.5 17.5 12 17.5Z"/></svg></span>
+              <div class="menu-card-dish-thumb"><img src="assets/images/poulet-braise-assiette.jpg" alt="Frites au poulet" loading="lazy"></div>
+              <div class="menu-card-dish-info">
+                <span class="menu-card-dish-name">Frites au poulet</span>
+              </div>
+            </div>
+            <span class="menu-card-dots" aria-hidden="true"></span>
+            <div class="menu-card-dish-price">2 500</div>
+          </div>
+
+          <!-- 7. Salade composée -->
+          <div class="menu-card-row" data-dish="Salade composée" data-price="2 500 / 3 000 FCFA" data-dish-img="assets/images/salade-composee.jpg">
+            <div class="menu-card-dish-left">
+              <span class="menu-card-lotus-bullet"><svg viewBox="0 0 24 24"><path d="M12 3C12 3 9.5 7.5 9.5 11.5C9.5 14 10.6 15.8 12 16.5C13.4 15.8 14.5 14 14.5 11.5C14.5 7.5 12 3 12 3ZM12 8C12 8 7 9.8 6 13.5C5.2 16 6.8 17.8 8 18.2C9.5 18 11.2 16.5 12 15C12.8 16.5 14.5 18 16 18.2C17.2 17.8 18.8 16 18 13.5C17 9.8 12 8 12 8ZM12 17.5C9.5 17.5 4 18.5 2 20.5H22C20 18.5 14.5 17.5 12 17.5Z"/></svg></span>
+              <div class="menu-card-dish-thumb"><img src="assets/images/salade-composee.jpg" alt="Salade composée" loading="lazy"></div>
+              <div class="menu-card-dish-info">
+                <span class="menu-card-dish-name">Salade composée</span>
+                <span class="menu-card-dish-note">(à composer par le client)</span>
+              </div>
+            </div>
+            <span class="menu-card-dots" aria-hidden="true"></span>
+            <div class="menu-card-dish-price">2 500 <small>/</small> 3 000</div>
+          </div>
+
+          <!-- 8. Macaroni sauté -->
+          <div class="menu-card-row" data-dish="Macaroni sauté" data-price="2 500 FCFA" data-dish-img="assets/images/macaroni-saute.jpg">
+            <div class="menu-card-dish-left">
+              <span class="menu-card-lotus-bullet"><svg viewBox="0 0 24 24"><path d="M12 3C12 3 9.5 7.5 9.5 11.5C9.5 14 10.6 15.8 12 16.5C13.4 15.8 14.5 14 14.5 11.5C14.5 7.5 12 3 12 3ZM12 8C12 8 7 9.8 6 13.5C5.2 16 6.8 17.8 8 18.2C9.5 18 11.2 16.5 12 15C12.8 16.5 14.5 18 16 18.2C17.2 17.8 18.8 16 18 13.5C17 9.8 12 8 12 8ZM12 17.5C9.5 17.5 4 18.5 2 20.5H22C20 18.5 14.5 17.5 12 17.5Z"/></svg></span>
+              <div class="menu-card-dish-thumb"><img src="assets/images/macaroni-saute.jpg" alt="Macaroni sauté" loading="lazy"></div>
+              <div class="menu-card-dish-info">
+                <span class="menu-card-dish-name">Macaroni sauté</span>
+              </div>
+            </div>
+            <span class="menu-card-dots" aria-hidden="true"></span>
+            <div class="menu-card-dish-price">2 500</div>
+          </div>
+
+          <!-- 9. Sandwich panuzzo -->
+          <div class="menu-card-row" data-dish="Sandwich panuzzo" data-price="3 500 FCFA" data-dish-img="assets/images/sandwich-panuzzo.jpg">
+            <div class="menu-card-dish-left">
+              <span class="menu-card-lotus-bullet"><svg viewBox="0 0 24 24"><path d="M12 3C12 3 9.5 7.5 9.5 11.5C9.5 14 10.6 15.8 12 16.5C13.4 15.8 14.5 14 14.5 11.5C14.5 7.5 12 3 12 3ZM12 8C12 8 7 9.8 6 13.5C5.2 16 6.8 17.8 8 18.2C9.5 18 11.2 16.5 12 15C12.8 16.5 14.5 18 16 18.2C17.2 17.8 18.8 16 18 13.5C17 9.8 12 8 12 8ZM12 17.5C9.5 17.5 4 18.5 2 20.5H22C20 18.5 14.5 17.5 12 17.5Z"/></svg></span>
+              <div class="menu-card-dish-thumb"><img src="assets/images/sandwich-panuzzo.jpg" alt="Sandwich panuzzo" loading="lazy"></div>
+              <div class="menu-card-dish-info">
+                <span class="menu-card-dish-name">Sandwich panuzzo</span>
+                <span class="menu-card-dish-note">(Disponible à partir d'octobre)</span>
+              </div>
+            </div>
+            <span class="menu-card-dots" aria-hidden="true"></span>
+            <div class="menu-card-dish-price">3 500</div>
+          </div>
+
+          <!-- 10. Pizzas -->
+          <div class="menu-card-row" data-dish="Pizzas artisanales" data-price="Dès octobre" data-dish-img="assets/images/pizza-artisanale.jpg">
+            <div class="menu-card-dish-left">
+              <span class="menu-card-lotus-bullet"><svg viewBox="0 0 24 24"><path d="M12 3C12 3 9.5 7.5 9.5 11.5C9.5 14 10.6 15.8 12 16.5C13.4 15.8 14.5 14 14.5 11.5C14.5 7.5 12 3 12 3ZM12 8C12 8 7 9.8 6 13.5C5.2 16 6.8 17.8 8 18.2C9.5 18 11.2 16.5 12 15C12.8 16.5 14.5 18 16 18.2C17.2 17.8 18.8 16 18 13.5C17 9.8 12 8 12 8ZM12 17.5C9.5 17.5 4 18.5 2 20.5H22C20 18.5 14.5 17.5 12 17.5Z"/></svg></span>
+              <div class="menu-card-dish-thumb"><img src="assets/images/pizza-artisanale.jpg" alt="Pizzas artisanales" loading="lazy"></div>
+              <div class="menu-card-dish-info">
+                <span class="menu-card-dish-name">Pizzas</span>
+                <span class="menu-card-dish-note">(Plusieurs sortes de pizzas, disponibles à partir d'octobre)</span>
+              </div>
+            </div>
+            <span class="menu-card-dots" aria-hidden="true"></span>
+            <div class="menu-card-dish-price" style="font-size: 0.85rem; color: #6E4935; font-style: italic;">Dès octobre</div>
+          </div>
+        </div>
+
+        <!-- Pied de Carte / Cartouche Statutaire Noir & Or -->
+        <div class="menu-card-footer">
+          <div class="menu-card-cartouche">
+            <p class="menu-card-cartouche-notice">Merci de passer commande à l'avance pour qu'on puisse vous satisfaire</p>
+            <div class="menu-card-cartouche-main">
+              <a href="tel:+2290155456363" class="menu-card-phone-btn" title="Appeler la Maison Adénikè">
+                <span class="menu-card-phone-circle">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M6.62 10.79a15.053 15.053 0 006.59 6.59l2.2-2.2a1.003 1.003 0 011.02-.24c1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/>
+                  </svg>
+                </span>
+                <span>01.55.45.63.63</span>
+              </a>
+            </div>
+          </div>
+
+          <div class="menu-card-actions">
+            <a href="https://wa.me/2290155456363?text=Bonjour%20Maison%20Ad%C3%A9nik%C3%A8%2C%20je%20souhaite%20commander%20depuis%20le%20Menu%20du%20Restaurant..." 
+               target="_blank" 
+               rel="noopener noreferrer" 
+               class="menu-card-btn-wa">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12.031 2C6.505 2 2.012 6.486 2.012 12.004c0 1.907.539 3.69 1.472 5.213L2.001 22l4.945-1.45a9.98 9.98 0 005.085 1.385c5.526 0 10.019-4.486 10.019-10.005C22.05 6.486 17.557 2 12.031 2zm0 18.257c-1.637 0-3.176-.464-4.502-1.267l-.323-.194-2.946.864.88-2.868-.21-.334a8.214 8.214 0 01-1.258-4.454c0-4.57 3.72-8.283 8.359-8.283 4.638 0 8.358 3.713 8.358 8.283 0 4.57-3.72 8.283-8.358 8.283zm4.58-6.195c-.251-.126-1.485-.733-1.715-.816-.23-.084-.397-.126-.565.126-.168.25-.65.816-.797.983-.146.168-.293.189-.544.063-.251-.126-1.06-.39-2.02-1.246-.746-.665-1.25-1.487-1.396-1.739-.147-.251-.016-.387.11-.512.113-.113.251-.294.377-.44.126-.147.168-.252.251-.419.084-.168.042-.315-.021-.441-.063-.126-.565-1.363-.775-1.867-.204-.49-.411-.424-.564-.432l-.481-.008c-.168 0-.44.063-.67.315-.23.252-.88.86-.88 2.097 0 1.238.902 2.435 1.027 2.603.126.168 1.776 2.712 4.303 3.803.601.26 1.07.415 1.436.531.604.192 1.154.165 1.588.1.484-.072 1.485-.607 1.694-1.194.21-.587.21-1.09.147-1.194-.063-.105-.23-.168-.481-.294z"/></svg>
+              <span>Commander sur WhatsApp</span>
+            </a>
+          </div>
+
+          <div class="menu-card-bon-appetit">Bon appétit !</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="app.js?v=8.1"></script>
+</body>
+</html>

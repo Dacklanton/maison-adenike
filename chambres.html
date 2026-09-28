@@ -1,0 +1,1365 @@
+<!DOCTYPE html>
+<html lang="fr" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lodges &amp; Suites — Hébergements de Charme à Ouidah | Maison Adénikè</title>
+  
+  <meta name="description" content="Séjournez à la Maison Adénikè à Ouidah : lodges et suites de charme parés de bois de teck et d'artisanat béninois, climatisation, calme absolu. Réservation au 01 55 45 63 63 / 01 53 83 83 63.">
+  <meta property="og:title" content="Lodges &amp; Suites — Maison Adénikè Ouidah">
+  <link rel="stylesheet" href="styles.css?v=10.0">
+</head>
+<body>
+
+  <!-- RIDEAU D'OUVERTURE SIGNATURE — 4 PILULES ALTERNÉES (SPLIT-CURTAIN REVEAL) -->
+  <div id="pageCurtainTransition" class="curtain-transition-overlay" role="dialog" aria-modal="true" aria-label="Lodge & Suites Maison Adénikè">
+    <div class="curtain-backdrop-glow"></div>
+    <div class="curtain-pills-container">
+      <!-- 1. Façade & Enseigne (Haut) -->
+      <div class="curtain-pill curtain-pill-up">
+        <div class="curtain-pill-media" style="background-image: url('assets/images/facade-bleue-enseigne.jpg');"></div>
+      </div>
+      <!-- 2. Suite Royale (Bas) -->
+      <div class="curtain-pill curtain-pill-down">
+        <div class="curtain-pill-media" style="background-image: url('assets/images/suite-artisanale.jpg');"></div>
+      </div>
+      <!-- 3. Lounge Teck (Haut) -->
+      <div class="curtain-pill curtain-pill-up">
+        <div class="curtain-pill-media" style="background-image: url('assets/images/espace-lounge-teck.jpg');"></div>
+      </div>
+      <!-- 4. Patio & Poterie (Bas) -->
+      <div class="curtain-pill curtain-pill-down">
+        <div class="curtain-pill-media" style="background-image: url('assets/images/poterie-artisanat.jpg');"></div>
+      </div>
+    </div>
+    <div class="curtain-title-wrapper">
+      <span class="curtain-title">LODGE</span>
+      <p class="curtain-subtitle">SUITES DE CHARME & SÉRÉNITÉ • MAISON ADÉNIKÈ</p>
+    </div>
+    <button class="curtain-skip-btn" id="curtainSkipBtn" type="button" aria-label="Découvrir les lodges">
+      <span>Découvrir</span>
+      <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+    </button>
+  </div>
+
+  <!-- Bannière Vodoun Days 2027 -->
+  <div class="vodoun-top-banner" id="vodounTopBanner">
+    <div class="vodoun-top-banner-inner">
+      <div class="vodoun-banner-content">
+        <span class="vodoun-banner-tag">✦ Édition Officielle</span>
+        <span class="vodoun-banner-text">
+          <strong>Vodoun Days 2027 à Ouidah :</strong> Célébrez du 2 au 9 janvier 2027 à la Maison Adénikè !
+        </span>
+      </div>
+      <a href="vodoun-days.html" class="vodoun-banner-cta">
+        <span>Programme &amp; Réservations</span>
+        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      </a>
+    </div>
+  </div>
+
+  <!-- HEADER -->
+  <header class="header-wrapper">
+    <nav class="navbar" aria-label="Navigation principale">
+      <a href="index.html" class="brand-logo" aria-label="Maison Adénikè - Accueil">
+        <img src="assets/images/logo-adenike.png" alt="Logo Officiel Maison Adénikè" class="brand-logo-img">
+        <div class="brand-text-group">
+          <span class="brand-name">Maison Adénikè</span>
+          <span class="brand-location">Ouidah • Bénin</span>
+        </div>
+      </a>
+
+      <ul class="nav-menu">
+        <li><a href="index.html" class="nav-link">Accueil</a></li>
+        <li><a href="restaurant.html" class="nav-link">Restaurant</a></li>
+        <li><a href="chambres.html" class="nav-link active">Lodges &amp; Espaces</a></li>
+        <li><a href="evenements.html" class="nav-link">Événements</a></li>
+        <li><a href="vodoun-days.html" class="nav-link nav-link-vodoun">Vodoun Days <span class="vodoun-badge-mini">2027</span></a></li>
+        <li><a href="galerie.html" class="nav-link">Galerie</a></li>
+        <li><a href="contact.html" class="nav-link">Contact</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <a href="https://wa.me/2290155456363?text=Bonjour%20Maison%20Adénikè%2C%20je%20souhaite%20connaître%20les%20disponibilités%20des%20lodges%20et%20suites." 
+           target="_blank" 
+           rel="noopener noreferrer" 
+           class="nav-btn-wa" 
+           title="WhatsApp Conciergerie (01 55 45 63 63)">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M12.031 2C6.505 2 2.012 6.486 2.012 12.004c0 1.907.539 3.69 1.472 5.213L2.001 22l4.945-1.45a9.98 9.98 0 005.085 1.385c5.526 0 10.019-4.486 10.019-10.005C22.05 6.486 17.557 2 12.031 2zm0 18.257c-1.637 0-3.176-.464-4.502-1.267l-.323-.194-2.946.864.88-2.868-.21-.334a8.214 8.214 0 01-1.258-4.454c0-4.57 3.72-8.283 8.359-8.283 4.638 0 8.358 3.713 8.358 8.283 0 4.57-3.72 8.283-8.358 8.283zm4.58-6.195c-.251-.126-1.485-.733-1.715-.816-.23-.084-.397-.126-.565.126-.168.25-.65.816-.797.983-.146.168-.293.189-.544.063-.251-.126-1.06-.39-2.02-1.246-.746-.665-1.25-1.487-1.396-1.739-.147-.251-.016-.387.11-.512.113-.113.251-.294.377-.44.126-.147.168-.252.251-.419.084-.168.042-.315-.021-.441-.063-.126-.565-1.363-.775-1.867-.204-.49-.411-.424-.564-.432l-.481-.008c-.168 0-.44.063-.67.315-.23.252-.88.86-.88 2.097 0 1.238.902 2.435 1.027 2.603.126.168 1.776 2.712 4.303 3.803.601.26 1.07.415 1.436.531.604.192 1.154.165 1.588.1.484-.072 1.485-.607 1.694-1.194.21-.587.21-1.09.147-1.194-.063-.105-.23-.168-.481-.294z"/>
+          </svg>
+          <span style="display: none;" class="xl:inline">01 55 45 63 63</span>
+        </a>
+
+        <button class="btn btn-primary" data-open-booking data-service="Chambre / Lodge">
+          <span>Réserver un Lodge</span>
+          <span class="btn-icon-capsule">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
+          </span>
+        </button>
+
+        <button class="mobile-toggle" aria-label="Ouvrir le menu">
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+        </button>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Mobile Drawer -->
+  <div class="mobile-drawer" aria-hidden="true">
+    <div style="margin-bottom: 2rem; display: flex; align-items: center; gap: 1rem;">
+      <img src="assets/images/logo-adenike.png" alt="Logo Maison Adénikè" style="width: 50px; height: 50px; border-radius: 50%; border: 2px solid var(--c-gold);">
+      <div>
+        <span class="brand-name" style="font-size: 1.75rem;">Maison Adénikè</span>
+        <p style="font-size: 0.75rem; color: var(--c-terracotta); text-transform: uppercase; letter-spacing: 0.2em; font-weight: 700;">Lodges &amp; Espaces Privatisables</p>
+      </div>
+    </div>
+    <ul class="mobile-menu-links">
+      <li><a href="index.html" class="mobile-nav-link">Accueil</a></li>
+      <li><a href="restaurant.html" class="mobile-nav-link">Restaurant</a></li>
+      <li><a href="chambres.html" class="mobile-nav-link active">Lodges &amp; Espaces</a></li>
+      <li><a href="evenements.html" class="mobile-nav-link">Événements</a></li>
+      <li><a href="vodoun-days.html" class="mobile-nav-link" style="color: var(--c-gold-bright); font-weight: 700;">★ Vodoun Days 2027</a></li>
+      <li><a href="galerie.html" class="mobile-nav-link">Galerie Photos</a></li>
+      <li><a href="contact.html" class="mobile-nav-link">Contact &amp; Accès</a></li>
+    </ul>
+    <div style="margin-top: 2rem; display: flex; flex-direction: column; gap: 0.75rem;">
+      <a href="https://wa.me/2290155456363" target="_blank" rel="noopener noreferrer" class="btn btn-whatsapp" style="width: 100%; justify-content: center;">
+        WhatsApp 1 : 01 55 45 63 63
+      </a>
+      <a href="https://wa.me/2290153838363" target="_blank" rel="noopener noreferrer" class="btn btn-whatsapp" style="width: 100%; justify-content: center; background: #128C7E;">
+        WhatsApp 2 : 01 53 83 83 63
+      </a>
+    </div>
+  </div>
+
+  <main>
+    <!-- ==========================================================================
+         1. HERO SECTION PLEIN ÉCRAN AVEC BOUCLE VIDÉO DRONE & TRAVELING SALONS
+         ========================================================================== -->
+    <section class="lodging-hero-section" id="hero-chambres">
+      <div class="lodging-hero-video-bg">
+        <video class="lodging-hero-video" autoplay loop muted playsinline poster="assets/images/rooms/grand-salon-led-terracotta.jpg">
+          <source src="assets/videos/try4.mp4" type="video/mp4">
+          <source src="TRY4.mp4" type="video/mp4">
+        </video>
+        <div class="lodging-hero-overlay"></div>
+        <div class="lodging-hero-radial"></div>
+      </div>
+
+      <div class="lodging-hero-content">
+        <div class="lodging-hero-kicker">
+          <span>✦</span>
+          <span>Maison Adénikè • Ouidah</span>
+          <span>✦</span>
+        </div>
+
+        <h1 class="lodging-hero-title">
+          Résidences &amp; Espaces<br>
+          <em>d’Exception</em>
+        </h1>
+
+        <p class="lodging-hero-subtitle">
+          Du repos intimiste aux réceptions d'apparat au cœur de Ouidah. Des suites parées de teck noble, de textiles d'art et de calme absolu.
+        </p>
+
+        <div class="lodging-hero-actions">
+          <button type="button" class="btn btn-secondary aww-carte-btn" data-open-lodging-menu style="background: #C5A059; color: #14100E; border: 1.5px solid #C5A059; font-weight: 700; padding: 0.95rem 1.8rem; box-shadow: 0 8px 24px rgba(197, 160, 89, 0.35); cursor: pointer; border-radius: 9999px;">
+            <span>Consulter la Carte des Chambres</span>
+            <span class="btn-icon-circle" style="background: #14100E; color: #C5A059;">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </span>
+          </button>
+          <a href="#carte-complete" class="lodging-btn-glass" style="border-radius: 9999px;">
+            <span>Voir la Carte sur la Page</span>
+          </a>
+        </div>
+      </div>
+
+      <a href="#carte-complete" class="lodging-hero-scroll-indicator" aria-label="Faire défiler vers le catalogue">
+        <span>Explorer</span>
+        <div class="lodging-mouse-wheel">
+          <div class="lodging-wheel-dot"></div>
+        </div>
+      </a>
+    </section>
+
+    <!-- ==========================================================================
+         2. TRIPTYQUE ARCHITECTURAL & SÉRÉNITÉ (PHOTOS RÉELLES DES SALONS)
+         ========================================================================== -->
+    <section class="lodging-triptych-section" id="histoire">
+      <div class="lodging-triptych-grid">
+        <div class="lodging-triptych-story">
+          <span style="font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.2em; color: #C5A059; font-weight: 700;">L'Art de l'Hospitalité</span>
+          <h2>L'Écrin Historique &amp; Contemporain</h2>
+          <p style="font-size: 0.85rem; line-height: 1.7; color: rgba(250, 247, 242, 0.75); margin: 0; font-family: 'Plus Jakarta Sans', sans-serif;">
+            Née d’une passion pour l’art de vivre ouidannais, la Maison Adénikè réunit le charme intemporel de l’ébénisterie béninoise et la modernité lumineuse de ses espaces de vie partagés.
+          </p>
+          <p style="font-size: 0.85rem; line-height: 1.7; color: rgba(250, 247, 242, 0.75); margin: 0; font-family: 'Plus Jakarta Sans', sans-serif;">
+            Fidèle à notre devise yoruba <em style="color: #C5A059; font-family: 'Cormorant Garamond', serif; font-size: 1.05rem;">« Ibi yìí L'ọkàn ń Sinmi »</em>, nous offrons à nos hôtes l'alliance rare du confort moderne et de l'authenticité culturelle de Ouidah.
+          </p>
+        </div>
+
+        <div class="lodging-triptych-card">
+          <img src="assets/images/rooms/grand-salon-led-terracotta.jpg" alt="Grand Salon lumineux de l'Appartement 1 avec rétro-éclairage LED et table en teck">
+          <div class="lodging-triptych-caption">
+            Grand Salon Appartement 1 • Gorges Lumineuses &amp; Meuble TV
+          </div>
+        </div>
+
+        <div class="lodging-triptych-card">
+          <img src="assets/images/rooms/salon-indigo-traditionnel.jpg" alt="Salon en teck avec parures indigo teintes à la main">
+          <div class="lodging-triptych-caption">
+            Textiles d'art indigo teints à la main &amp; mobilier teck
+          </div>
+        </div>
+      </div>
+    </section>
+
+        <!-- ==========================================================================
+         3. GALERIE DES DEMEURES & SUITES D'EXCEPTION (DÉFILEMENT SANS PRIX)
+         ========================================================================== -->
+    <section class="aww-showcase-section" id="carte-chambres">
+      <span id="carte-complete" style="display: block; position: relative; top: -80px; visibility: hidden;"></span>
+      <span id="catalogue" style="display: block; position: relative; top: -80px; visibility: hidden;"></span>
+      <div class="container">
+        <div class="aww-showcase-header">
+          <div class="aww-header-text">
+            <span class="aww-eyebrow">Les Demeures &amp; Suites d'Exception</span>
+            <h2 class="aww-showcase-title">L'Art du Repos &amp; de l'Ébénisterie à Ouidah</h2>
+          </div>
+          <button type="button" class="btn btn-secondary aww-carte-btn" data-open-lodging-menu>
+            <span>Consulter la Carte des Chambres</span>
+            <span class="btn-icon-circle">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </span>
+          </button>
+        </div>
+      </div>
+
+      <div class="aww-gallery-marquee-wrap" aria-label="Galerie de photos des chambres et espaces de séjour">
+        <div class="aww-gallery-track">
+          <!-- Ensemble 1 -->
+          <!-- 1. Grand Salon Appartement 1 -->
+          <article class="aww-gallery-card" data-item-id="apt-1-entier">
+            <div class="aww-card-img-wrap">
+              <span class="aww-gallery-badge">Appartement Entier</span>
+              <img src="assets/images/rooms/grand-salon-led-terracotta.jpg" alt="Grand Salon lumineux de l'Appartement 1 avec rétro-éclairage LED et table en teck" class="aww-card-img" loading="lazy">
+            </div>
+            <div class="aww-card-body">
+              <h3 class="aww-card-title">Grand Salon — Domaine Historique</h3>
+              <p class="aww-card-specs">Gorges lumineuses contemporaines, meuble multimédia intégré, table en teck et parures d'artisanat.</p>
+              <div class="aww-gallery-footer">
+                <span class="aww-gallery-tagline">✦ 3 Suites • 6 pers.</span>
+                <span class="aww-gallery-action-btn">Découvrir &rarr;</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- 2. Chambre Indigo -->
+          <article class="aww-gallery-card" data-item-id="chambre-indigo">
+            <div class="aww-card-img-wrap">
+              <span class="aww-gallery-badge">Art Textile</span>
+              <img src="assets/images/rooms/chambre-indigo.jpg" alt="Chambre Indigo avec lit en teck et parure bleu et blanc" class="aww-card-img" loading="lazy">
+            </div>
+            <div class="aww-card-body">
+              <h3 class="aww-card-title">Chambre Indigo</h3>
+              <p class="aww-card-specs">Lit de maître en teck noble, parure aux motifs traditionnels indigo teints à la main et salle d'eau privative.</p>
+              <div class="aww-gallery-footer">
+                <span class="aww-gallery-tagline">✦ Douche/WC privatif</span>
+                <span class="aww-gallery-action-btn">Découvrir &rarr;</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- 3. Chambre Ocre & Terre -->
+          <article class="aww-gallery-card" data-item-id="chambre-ocre-terre">
+            <div class="aww-card-img-wrap">
+              <span class="aww-gallery-badge">Persiennes Bois</span>
+              <img src="assets/images/rooms/chambre-ocre-terre.jpg" alt="Chambre Ocre & Terre avec persiennes traditionnelles en bois" class="aww-card-img" loading="lazy">
+            </div>
+            <div class="aww-card-body">
+              <h3 class="aww-card-title">Chambre Ocre &amp; Terre</h3>
+              <p class="aww-card-specs">Volets persiennes traditionnels en bois noble, parure dahoméenne bordeaux et ocre chaud, salle d'eau privative.</p>
+              <div class="aww-gallery-footer">
+                <span class="aww-gallery-tagline">✦ Douche/WC privatif</span>
+                <span class="aww-gallery-action-btn">Découvrir &rarr;</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- 4. Chambre Azur -->
+          <article class="aww-gallery-card" data-item-id="chambre-azur">
+            <div class="aww-card-img-wrap">
+              <span class="aww-gallery-badge">Clarté Océane</span>
+              <img src="assets/images/rooms/chambre-azur.jpg" alt="Chambre Azur baignée de lumière avec penderie sculptée en teck" class="aww-card-img" loading="lazy">
+            </div>
+            <div class="aww-card-body">
+              <h3 class="aww-card-title">Chambre Azur</h3>
+              <p class="aww-card-specs">Voilages azur lumineux, penderie sculptée en teck massif, miroir d'apparat de plain-pied et salle d'eau attenante.</p>
+              <div class="aww-gallery-footer">
+                <span class="aww-gallery-tagline">✦ Douche/WC privatif</span>
+                <span class="aww-gallery-action-btn">Découvrir &rarr;</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- 5. Salon Lounge Teck & Indigo -->
+          <article class="aww-gallery-card" data-item-id="apt-1-entier">
+            <div class="aww-card-img-wrap">
+              <span class="aww-gallery-badge">Ébénisterie Royale</span>
+              <img src="assets/images/rooms/salon-indigo-traditionnel.jpg" alt="Salon lounge en teck avec parures artisanales indigo" class="aww-card-img" loading="lazy">
+            </div>
+            <div class="aww-card-body">
+              <h3 class="aww-card-title">Salon Lounge Teck &amp; Indigo</h3>
+              <p class="aww-card-specs">Espace détente habillé de bois précieux, coussins d'apparat en textiles artisanaux béninois et calme absolu.</p>
+              <div class="aww-gallery-footer">
+                <span class="aww-gallery-tagline">✦ Espace Lounge</span>
+                <span class="aww-gallery-action-btn">Découvrir &rarr;</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- 6. Aile Contemporaine — Appartement 2 -->
+          <article class="aww-gallery-card" data-item-id="apt-2-entier">
+            <div class="aww-card-img-wrap">
+              <span class="aww-gallery-badge">Octobre 2026</span>
+              <img src="assets/images/suite-artisanale.jpg" alt="Suite de l'Aile Contemporaine" class="aww-card-img" loading="lazy">
+            </div>
+            <div class="aww-card-body">
+              <h3 class="aww-card-title">Appartement 2 — Aile Contemporaine</h3>
+              <p class="aww-card-specs">Nouvelle aile architecturale : 3 suites épurées, salon panoramique privatif et terrasse privée arborée.</p>
+              <div class="aww-gallery-footer">
+                <span class="aww-gallery-tagline">✦ 3 Suites • Terrasse</span>
+                <span class="aww-gallery-action-btn">Découvrir &rarr;</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- 7. Chambre Dune & Lin -->
+          <article class="aww-gallery-card" data-item-id="chambre-dune-lin">
+            <div class="aww-card-img-wrap">
+              <span class="aww-gallery-badge">Béton Ciré &amp; Lin</span>
+              <img src="assets/images/chambre-confort-adenike.jpg" alt="Chambre contemporaine sable et lin naturel" class="aww-card-img" loading="lazy">
+            </div>
+            <div class="aww-card-body">
+              <h3 class="aww-card-title">Chambre Dune &amp; Lin</h3>
+              <p class="aww-card-specs">Teintes douces sable et lin naturel, claustras en bois clair, salle d'eau privative moderne en béton ciré.</p>
+              <div class="aww-gallery-footer">
+                <span class="aww-gallery-tagline">✦ Douche/WC privatif</span>
+                <span class="aww-gallery-action-btn">Découvrir &rarr;</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- 8. Cour d'Honneur & Pergolas -->
+          <article class="aww-gallery-card" data-item-id="cour-honneur-pergolas">
+            <div class="aww-card-img-wrap">
+              <span class="aww-gallery-badge">Plein Air de Prestige</span>
+              <img src="assets/images/diner-terrasse.jpg" alt="Cour d'Honneur de nuit sous pergola" class="aww-card-img" loading="lazy">
+            </div>
+            <div class="aww-card-body">
+              <h3 class="aww-card-title">Cour d'Honneur &amp; Pergolas</h3>
+              <p class="aww-card-specs">Pergolas ombragées, tables d'apparat en teck massif, sol en sable blanc de Ouidah et lanternes dorées.</p>
+              <div class="aww-gallery-footer">
+                <span class="aww-gallery-tagline">✦ Jusqu'à 50 convives</span>
+                <span class="aww-gallery-action-btn">Découvrir &rarr;</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- 9. Façade Coloniale & Portail -->
+          <article class="aww-gallery-card" data-item-id="privatisation-complete-domaine">
+            <div class="aww-card-img-wrap">
+              <span class="aww-gallery-badge">Privatisation Totale</span>
+              <img src="assets/images/facade-bleue-enseigne.jpg" alt="Façade et enseigne Maison Adénikè Ouidah" class="aww-card-img" loading="lazy">
+            </div>
+            <div class="aww-card-body">
+              <h3 class="aww-card-title">Privatisation Complète du Domaine</h3>
+              <p class="aww-card-specs">Les 2 appartements réunis, 6 suites privatives, la cour d'honneur entière et une conciergerie dédiée 24h/7j.</p>
+              <div class="aww-gallery-footer">
+                <span class="aww-gallery-tagline">✦ Exclusivité totale</span>
+                <span class="aww-gallery-action-btn">Découvrir &rarr;</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Ensemble 2 (Duplicata pour le défilement infini fluide) -->
+          <!-- 1. Grand Salon Appartement 1 -->
+          <article class="aww-gallery-card" data-item-id="apt-1-entier" aria-hidden="true">
+            <div class="aww-card-img-wrap">
+              <span class="aww-gallery-badge">Appartement Entier</span>
+              <img src="assets/images/rooms/grand-salon-led-terracotta.jpg" alt="" class="aww-card-img" loading="lazy">
+            </div>
+            <div class="aww-card-body">
+              <h3 class="aww-card-title">Grand Salon — Domaine Historique</h3>
+              <p class="aww-card-specs">Gorges lumineuses contemporaines, meuble multimédia intégré, table en teck et parures d'artisanat.</p>
+              <div class="aww-gallery-footer">
+                <span class="aww-gallery-tagline">✦ 3 Suites • 6 pers.</span>
+                <span class="aww-gallery-action-btn">Découvrir &rarr;</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- 2. Chambre Indigo -->
+          <article class="aww-gallery-card" data-item-id="chambre-indigo" aria-hidden="true">
+            <div class="aww-card-img-wrap">
+              <span class="aww-gallery-badge">Art Textile</span>
+              <img src="assets/images/rooms/chambre-indigo.jpg" alt="" class="aww-card-img" loading="lazy">
+            </div>
+            <div class="aww-card-body">
+              <h3 class="aww-card-title">Chambre Indigo</h3>
+              <p class="aww-card-specs">Lit de maître en teck noble, parure aux motifs traditionnels indigo teints à la main et salle d'eau privative.</p>
+              <div class="aww-gallery-footer">
+                <span class="aww-gallery-tagline">✦ Douche/WC privatif</span>
+                <span class="aww-gallery-action-btn">Découvrir &rarr;</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- 3. Chambre Ocre & Terre -->
+          <article class="aww-gallery-card" data-item-id="chambre-ocre-terre" aria-hidden="true">
+            <div class="aww-card-img-wrap">
+              <span class="aww-gallery-badge">Persiennes Bois</span>
+              <img src="assets/images/rooms/chambre-ocre-terre.jpg" alt="" class="aww-card-img" loading="lazy">
+            </div>
+            <div class="aww-card-body">
+              <h3 class="aww-card-title">Chambre Ocre &amp; Terre</h3>
+              <p class="aww-card-specs">Volets persiennes traditionnels en bois noble, parure dahoméenne bordeaux et ocre chaud, salle d'eau privative.</p>
+              <div class="aww-gallery-footer">
+                <span class="aww-gallery-tagline">✦ Douche/WC privatif</span>
+                <span class="aww-gallery-action-btn">Découvrir &rarr;</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- 4. Chambre Azur -->
+          <article class="aww-gallery-card" data-item-id="chambre-azur" aria-hidden="true">
+            <div class="aww-card-img-wrap">
+              <span class="aww-gallery-badge">Clarté Océane</span>
+              <img src="assets/images/rooms/chambre-azur.jpg" alt="" class="aww-card-img" loading="lazy">
+            </div>
+            <div class="aww-card-body">
+              <h3 class="aww-card-title">Chambre Azur</h3>
+              <p class="aww-card-specs">Voilages azur lumineux, penderie sculptée en teck massif, miroir d'apparat de plain-pied et salle d'eau attenante.</p>
+              <div class="aww-gallery-footer">
+                <span class="aww-gallery-tagline">✦ Douche/WC privatif</span>
+                <span class="aww-gallery-action-btn">Découvrir &rarr;</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- 5. Salon Lounge Teck & Indigo -->
+          <article class="aww-gallery-card" data-item-id="apt-1-entier" aria-hidden="true">
+            <div class="aww-card-img-wrap">
+              <span class="aww-gallery-badge">Ébénisterie Royale</span>
+              <img src="assets/images/rooms/salon-indigo-traditionnel.jpg" alt="" class="aww-card-img" loading="lazy">
+            </div>
+            <div class="aww-card-body">
+              <h3 class="aww-card-title">Salon Lounge Teck &amp; Indigo</h3>
+              <p class="aww-card-specs">Espace détente habillé de bois précieux, coussins d'apparat en textiles artisanaux béninois et calme absolu.</p>
+              <div class="aww-gallery-footer">
+                <span class="aww-gallery-tagline">✦ Espace Lounge</span>
+                <span class="aww-gallery-action-btn">Découvrir &rarr;</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- 6. Aile Contemporaine — Appartement 2 -->
+          <article class="aww-gallery-card" data-item-id="apt-2-entier" aria-hidden="true">
+            <div class="aww-card-img-wrap">
+              <span class="aww-gallery-badge">Octobre 2026</span>
+              <img src="assets/images/suite-artisanale.jpg" alt="" class="aww-card-img" loading="lazy">
+            </div>
+            <div class="aww-card-body">
+              <h3 class="aww-card-title">Appartement 2 — Aile Contemporaine</h3>
+              <p class="aww-card-specs">Nouvelle aile architecturale : 3 suites épurées, salon panoramique privatif et terrasse privée arborée.</p>
+              <div class="aww-gallery-footer">
+                <span class="aww-gallery-tagline">✦ 3 Suites • Terrasse</span>
+                <span class="aww-gallery-action-btn">Découvrir &rarr;</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- 7. Chambre Dune & Lin -->
+          <article class="aww-gallery-card" data-item-id="chambre-dune-lin" aria-hidden="true">
+            <div class="aww-card-img-wrap">
+              <span class="aww-gallery-badge">Béton Ciré &amp; Lin</span>
+              <img src="assets/images/chambre-confort-adenike.jpg" alt="" class="aww-card-img" loading="lazy">
+            </div>
+            <div class="aww-card-body">
+              <h3 class="aww-card-title">Chambre Dune &amp; Lin</h3>
+              <p class="aww-card-specs">Teintes douces sable et lin naturel, claustras en bois clair, salle d'eau privative moderne en béton ciré.</p>
+              <div class="aww-gallery-footer">
+                <span class="aww-gallery-tagline">✦ Douche/WC privatif</span>
+                <span class="aww-gallery-action-btn">Découvrir &rarr;</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- 8. Cour d'Honneur & Pergolas -->
+          <article class="aww-gallery-card" data-item-id="cour-honneur-pergolas" aria-hidden="true">
+            <div class="aww-card-img-wrap">
+              <span class="aww-gallery-badge">Plein Air de Prestige</span>
+              <img src="assets/images/diner-terrasse.jpg" alt="" class="aww-card-img" loading="lazy">
+            </div>
+            <div class="aww-card-body">
+              <h3 class="aww-card-title">Cour d'Honneur &amp; Pergolas</h3>
+              <p class="aww-card-specs">Pergolas ombragées, tables d'apparat en teck massif, sol en sable blanc de Ouidah et lanternes dorées.</p>
+              <div class="aww-gallery-footer">
+                <span class="aww-gallery-tagline">✦ Jusqu'à 50 convives</span>
+                <span class="aww-gallery-action-btn">Découvrir &rarr;</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- 9. Façade Coloniale & Portail -->
+          <article class="aww-gallery-card" data-item-id="privatisation-complete-domaine" aria-hidden="true">
+            <div class="aww-card-img-wrap">
+              <span class="aww-gallery-badge">Privatisation Totale</span>
+              <img src="assets/images/facade-bleue-enseigne.jpg" alt="" class="aww-card-img" loading="lazy">
+            </div>
+            <div class="aww-card-body">
+              <h3 class="aww-card-title">Privatisation Complète du Domaine</h3>
+              <p class="aww-card-specs">Les 2 appartements réunis, 6 suites privatives, la cour d'honneur entière et une conciergerie dédiée 24h/7j.</p>
+              <div class="aww-gallery-footer">
+                <span class="aww-gallery-tagline">✦ Exclusivité totale</span>
+                <span class="aww-gallery-action-btn">Découvrir &rarr;</span>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+  
+  
+  </main>
+
+  <!-- ==========================================================================
+       4. TIROIR LATÉRAL (DRAWER) DE CONFIGURATION & CALCULATEUR DE PRIX DYNAMIQUE
+       ========================================================================== -->
+  <!-- ==========================================================================
+       MODAL CARTE DÉPLIANTE PLEIN ÉCRAN DES CHAMBRES (STYLE CARTE RESTAURANT)
+       ========================================================================== -->
+  <div id="lodgingMenuModal" class="menu-card-backdrop" aria-hidden="true" role="dialog" aria-modal="true" aria-label="Carte officielle des Chambres et Suites Maison Adénikè">
+    <div class="menu-card-container">
+      <button type="button" class="menu-card-close-btn" id="lodgingMenuCardCloseBtn" aria-label="Fermer la carte des chambres">&times;</button>
+
+          <div class="menu-card-paper">
+            
+            <svg class="menu-card-corner menu-card-corner-tl" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <path d="M4 56V12C4 7.58 7.58 4 12 4H56" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+              <path d="M10 50V16C10 12.68 12.68 10 16 10H50" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-dasharray="2 3"/>
+              <circle cx="12" cy="12" r="3" fill="currentColor"/>
+              <path d="M4 28C8 28 14 26 18 20C22 14 20 8 20 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+              <path d="M28 4C28 8 26 14 20 18C14 22 8 20 4 20" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+            </svg>
+            
+            <svg class="menu-card-corner menu-card-corner-tr" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <path d="M4 56V12C4 7.58 7.58 4 12 4H56" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+              <path d="M10 50V16C10 12.68 12.68 10 16 10H50" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-dasharray="2 3"/>
+              <circle cx="12" cy="12" r="3" fill="currentColor"/>
+              <path d="M4 28C8 28 14 26 18 20C22 14 20 8 20 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+              <path d="M28 4C28 8 26 14 20 18C14 22 8 20 4 20" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+            </svg>
+            
+            <svg class="menu-card-corner menu-card-corner-bl" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <path d="M4 56V12C4 7.58 7.58 4 12 4H56" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+              <path d="M10 50V16C10 12.68 12.68 10 16 10H50" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-dasharray="2 3"/>
+              <circle cx="12" cy="12" r="3" fill="currentColor"/>
+              <path d="M4 28C8 28 14 26 18 20C22 14 20 8 20 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+              <path d="M28 4C28 8 26 14 20 18C14 22 8 20 4 20" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+            </svg>
+            
+            <svg class="menu-card-corner menu-card-corner-br" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <path d="M4 56V12C4 7.58 7.58 4 12 4H56" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+              <path d="M10 50V16C10 12.68 12.68 10 16 10H50" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-dasharray="2 3"/>
+              <circle cx="12" cy="12" r="3" fill="currentColor"/>
+              <path d="M4 28C8 28 14 26 18 20C22 14 20 8 20 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+              <path d="M28 4C28 8 26 14 20 18C14 22 8 20 4 20" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+            </svg>
+            
+            <svg class="menu-card-watermark" viewBox="0 0 120 120" fill="none" stroke="#C5A059" stroke-width="1" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <path d="M60 15C60 15 42 45 42 75C42 90 50 96 60 98C70 96 78 90 78 75C78 45 60 15 60 15Z"/>
+              <path d="M60 45C60 45 32 60 22 78C16 88 24 94 36 94C46 94 54 84 60 76"/>
+              <path d="M60 45C60 45 88 60 98 78C104 88 96 94 84 94C74 94 66 84 60 76"/>
+            </svg>
+
+            <!-- En-tête Statutaire -->
+            <div class="menu-card-header">
+              <div class="menu-card-crest">
+                <img src="assets/images/logo-adenike.png" alt="Logo Maison Adénikè">
+              </div>
+              <div class="menu-card-brand">Maison Adénikè</div>
+              <div class="menu-card-ornament-small" aria-hidden="true"><span>✦</span></div>
+
+              <div class="menu-card-title-wrap">
+                <h2 class="menu-card-title">Carte des Chambres</h2>
+                <svg class="menu-card-chef-hat" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="width: 26px; height: 26px;">
+                  <path d="M21 2l-2 2m-1.5 1.5L14 9a5 5 0 1 0 3 3l3.5-3.5a1 1 0 0 0 0-1.4l-2.6-2.6a1 1 0 0 0-1.4 0zM11 16a2 2 0 1 1-2-2 2 2 0 0 1 2 2z"/>
+                </svg>
+              </div>
+
+              <svg class="menu-card-ribbon" viewBox="0 0 160 14" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <path d="M5 7C45 1 115 13 155 7" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+                <circle cx="80" cy="7" r="2.5" fill="currentColor"/>
+              </svg>
+
+              <p class="menu-card-subtitle">Demeures de repos, artisanat d’art &amp; hospitalité au cœur de Ouidah</p>
+              <div class="menu-card-ornament-small" aria-hidden="true"><span>✦</span></div>
+            </div>
+
+            <!-- Liste des Hébergements & Espaces -->
+            <div class="menu-card-items-list">
+              
+              <!-- CATÉGORIE 1 : APPARTEMENT 1 -->
+              <div class="menu-card-category-divider">
+                <span>Appartement 1 — Le Domaine Historique (Disponible Immédiatement)</span>
+              </div>
+
+              <!-- 1. Appartement 1 Entier -->
+              <div class="menu-card-row" data-item-id="apt-1-entier" data-dish="Appartement 1 — Le Domaine Historique" data-price="110 000 FCFA" data-dish-img="assets/images/rooms/grand-salon-led-terracotta.jpg">
+                <div class="menu-card-dish-left">
+                  <span class="menu-card-lotus-bullet"><svg viewBox="0 0 24 24"><path d="M12 3C12 3 9.5 7.5 9.5 11.5C9.5 14 10.6 15.8 12 16.5C13.4 15.8 14.5 14 14.5 11.5C14.5 7.5 12 3 12 3ZM12 8C12 8 7 9.8 6 13.5C5.2 16 6.8 17.8 8 18.2C9.5 18 11.2 16.5 12 15C12.8 16.5 14.5 18 16 18.2C17.2 17.8 18.8 16 18 13.5C17 9.8 12 8 12 8ZM12 17.5C9.5 17.5 4 18.5 2 20.5H22C20 18.5 14.5 17.5 12 17.5Z"/></svg></span>
+                  <div class="menu-card-dish-thumb"><img src="assets/images/rooms/grand-salon-led-terracotta.jpg" alt="Appartement 1 Entier" loading="lazy"></div>
+                  <div class="menu-card-dish-info">
+                    <span class="menu-card-dish-name">Appartement 1 — Entier Privatif <span class="menu-card-badge-new">3 Suites Privatives</span></span>
+                    <span class="menu-card-dish-note">(6 pers. • 3 douches/WC privatifs • Jouissance exclusive du grand salon lumineux &amp; table à manger)</span>
+                  </div>
+                </div>
+                <span class="menu-card-dots" aria-hidden="true"></span>
+                <div class="menu-card-dish-price">110 000 <small>FCFA / nuit</small></div>
+              </div>
+
+              <!-- 2. Chambre Indigo -->
+              <div class="menu-card-row" data-item-id="chambre-indigo" data-dish="Chambre Indigo" data-price="38 000 FCFA" data-dish-img="assets/images/rooms/chambre-indigo.jpg">
+                <div class="menu-card-dish-left">
+                  <span class="menu-card-lotus-bullet"><svg viewBox="0 0 24 24"><path d="M12 3C12 3 9.5 7.5 9.5 11.5C9.5 14 10.6 15.8 12 16.5C13.4 15.8 14.5 14 14.5 11.5C14.5 7.5 12 3 12 3ZM12 8C12 8 7 9.8 6 13.5C5.2 16 6.8 17.8 8 18.2C9.5 18 11.2 16.5 12 15C12.8 16.5 14.5 18 16 18.2C17.2 17.8 18.8 16 18 13.5C17 9.8 12 8 12 8ZM12 17.5C9.5 17.5 4 18.5 2 20.5H22C20 18.5 14.5 17.5 12 17.5Z"/></svg></span>
+                  <div class="menu-card-dish-thumb"><img src="assets/images/rooms/chambre-indigo.jpg" alt="Chambre Indigo" loading="lazy"></div>
+                  <div class="menu-card-dish-info">
+                    <span class="menu-card-dish-name">Chambre Indigo <span class="menu-card-badge-demi">Art Textile</span></span>
+                    <span class="menu-card-dish-note">(Lit en teck massif noble, parure indigo béninois, douche/WC privatif attenant)</span>
+                  </div>
+                </div>
+                <span class="menu-card-dots" aria-hidden="true"></span>
+                <div class="menu-card-dish-price">38 000 <small>FCFA / nuit</small></div>
+              </div>
+
+              <!-- 3. Chambre Ocre & Terre -->
+              <div class="menu-card-row" data-item-id="chambre-ocre-terre" data-dish="Chambre Ocre &amp; Terre" data-price="42 000 FCFA" data-dish-img="assets/images/rooms/chambre-ocre-terre.jpg">
+                <div class="menu-card-dish-left">
+                  <span class="menu-card-lotus-bullet"><svg viewBox="0 0 24 24"><path d="M12 3C12 3 9.5 7.5 9.5 11.5C9.5 14 10.6 15.8 12 16.5C13.4 15.8 14.5 14 14.5 11.5C14.5 7.5 12 3 12 3ZM12 8C12 8 7 9.8 6 13.5C5.2 16 6.8 17.8 8 18.2C9.5 18 11.2 16.5 12 15C12.8 16.5 14.5 18 16 18.2C17.2 17.8 18.8 16 18 13.5C17 9.8 12 8 12 8ZM12 17.5C9.5 17.5 4 18.5 2 20.5H22C20 18.5 14.5 17.5 12 17.5Z"/></svg></span>
+                  <div class="menu-card-dish-thumb"><img src="assets/images/rooms/chambre-ocre-terre.jpg" alt="Chambre Ocre &amp; Terre" loading="lazy"></div>
+                  <div class="menu-card-dish-info">
+                    <span class="menu-card-dish-name">Chambre Ocre &amp; Terre <span class="menu-card-badge-demi">Persiennes Bois</span></span>
+                    <span class="menu-card-dish-note">(Volets persiennes traditionnels en teck, parure dahoméenne bordeaux &amp; ocre, douche/WC privatif)</span>
+                  </div>
+                </div>
+                <span class="menu-card-dots" aria-hidden="true"></span>
+                <div class="menu-card-dish-price">42 000 <small>FCFA / nuit</small></div>
+              </div>
+
+              <!-- 4. Chambre Azur -->
+              <div class="menu-card-row" data-item-id="chambre-azur" data-dish="Chambre Azur" data-price="38 000 FCFA" data-dish-img="assets/images/rooms/chambre-azur.jpg">
+                <div class="menu-card-dish-left">
+                  <span class="menu-card-lotus-bullet"><svg viewBox="0 0 24 24"><path d="M12 3C12 3 9.5 7.5 9.5 11.5C9.5 14 10.6 15.8 12 16.5C13.4 15.8 14.5 14 14.5 11.5C14.5 7.5 12 3 12 3ZM12 8C12 8 7 9.8 6 13.5C5.2 16 6.8 17.8 8 18.2C9.5 18 11.2 16.5 12 15C12.8 16.5 14.5 18 16 18.2C17.2 17.8 18.8 16 18 13.5C17 9.8 12 8 12 8ZM12 17.5C9.5 17.5 4 18.5 2 20.5H22C20 18.5 14.5 17.5 12 17.5Z"/></svg></span>
+                  <div class="menu-card-dish-thumb"><img src="assets/images/rooms/chambre-azur.jpg" alt="Chambre Azur" loading="lazy"></div>
+                  <div class="menu-card-dish-info">
+                    <span class="menu-card-dish-name">Chambre Azur <span class="menu-card-badge-demi">Clarté Océane</span></span>
+                    <span class="menu-card-dish-note">(Voilages azur lumineux, penderie sculptée en teck, miroir d’apparat, douche/WC privatif)</span>
+                  </div>
+                </div>
+                <span class="menu-card-dots" aria-hidden="true"></span>
+                <div class="menu-card-dish-price">38 000 <small>FCFA / nuit</small></div>
+              </div>
+
+              <!-- CATÉGORIE 2 : APPARTEMENT 2 -->
+              <div class="menu-card-category-divider">
+                <span>Appartement 2 — L’Aile Contemporaine (Fin Octobre 2026)</span>
+              </div>
+
+              <!-- 5. Appartement 2 Entier -->
+              <div class="menu-card-row" data-item-id="apt-2-entier" data-dish="Appartement 2 — L’Aile Contemporaine" data-price="120 000 FCFA" data-dish-img="assets/images/suite-artisanale.jpg">
+                <div class="menu-card-dish-left">
+                  <span class="menu-card-lotus-bullet"><svg viewBox="0 0 24 24"><path d="M12 3C12 3 9.5 7.5 9.5 11.5C9.5 14 10.6 15.8 12 16.5C13.4 15.8 14.5 14 14.5 11.5C14.5 7.5 12 3 12 3ZM12 8C12 8 7 9.8 6 13.5C5.2 16 6.8 17.8 8 18.2C9.5 18 11.2 16.5 12 15C12.8 16.5 14.5 18 16 18.2C17.2 17.8 18.8 16 18 13.5C17 9.8 12 8 12 8ZM12 17.5C9.5 17.5 4 18.5 2 20.5H22C20 18.5 14.5 17.5 12 17.5Z"/></svg></span>
+                  <div class="menu-card-dish-thumb"><img src="assets/images/suite-artisanale.jpg" alt="Appartement 2 Entier" loading="lazy"></div>
+                  <div class="menu-card-dish-info">
+                    <span class="menu-card-dish-name">Appartement 2 — Entier Privatif <span class="menu-card-badge-demi">Avant-Première</span></span>
+                    <span class="menu-card-dish-note">(3 suites contemporaines • 6 pers • Salon panoramique privatif &amp; terrasse aménagée)</span>
+                  </div>
+                </div>
+                <span class="menu-card-dots" aria-hidden="true"></span>
+                <div class="menu-card-dish-price">120 000 <small>FCFA / nuit</small></div>
+              </div>
+
+              <!-- 6. Chambre Dune & Lin -->
+              <div class="menu-card-row" data-item-id="chambre-dune-lin" data-dish="Chambre Dune &amp; Lin" data-price="45 000 FCFA" data-dish-img="assets/images/chambre-confort-adenike.jpg">
+                <div class="menu-card-dish-left">
+                  <span class="menu-card-lotus-bullet"><svg viewBox="0 0 24 24"><path d="M12 3C12 3 9.5 7.5 9.5 11.5C9.5 14 10.6 15.8 12 16.5C13.4 15.8 14.5 14 14.5 11.5C14.5 7.5 12 3 12 3ZM12 8C12 8 7 9.8 6 13.5C5.2 16 6.8 17.8 8 18.2C9.5 18 11.2 16.5 12 15C12.8 16.5 14.5 18 16 18.2C17.2 17.8 18.8 16 18 13.5C17 9.8 12 8 12 8ZM12 17.5C9.5 17.5 4 18.5 2 20.5H22C20 18.5 14.5 17.5 12 17.5Z"/></svg></span>
+                  <div class="menu-card-dish-thumb"><img src="assets/images/chambre-confort-adenike.jpg" alt="Chambre Dune &amp; Lin" loading="lazy"></div>
+                  <div class="menu-card-dish-info">
+                    <span class="menu-card-dish-name">Chambre Dune &amp; Lin <span class="menu-card-badge-demi">Octobre 2026</span></span>
+                    <span class="menu-card-dish-note">(Teintes douces sable et lin naturel, claustras bois clair, douche/WC privatif béton ciré)</span>
+                  </div>
+                </div>
+                <span class="menu-card-dots" aria-hidden="true"></span>
+                <div class="menu-card-dish-price">45 000 <small>FCFA / nuit</small></div>
+              </div>
+
+              <!-- CATÉGORIE 3 : COUR D'HONNEUR & PRIVATISATION -->
+              <div class="menu-card-category-divider">
+                <span>Cour d’Honneur &amp; Privatisation Complète</span>
+              </div>
+
+              <!-- 7. Cour d'Honneur & Pergolas -->
+              <div class="menu-card-row" data-item-id="cour-honneur-pergolas" data-dish="La Cour d’Honneur &amp; Pergolas" data-price="150 000 FCFA" data-dish-img="assets/images/diner-terrasse.jpg">
+                <div class="menu-card-dish-left">
+                  <span class="menu-card-lotus-bullet"><svg viewBox="0 0 24 24"><path d="M12 3C12 3 9.5 7.5 9.5 11.5C9.5 14 10.6 15.8 12 16.5C13.4 15.8 14.5 14 14.5 11.5C14.5 7.5 12 3 12 3ZM12 8C12 8 7 9.8 6 13.5C5.2 16 6.8 17.8 8 18.2C9.5 18 11.2 16.5 12 15C12.8 16.5 14.5 18 16 18.2C17.2 17.8 18.8 16 18 13.5C17 9.8 12 8 12 8ZM12 17.5C9.5 17.5 4 18.5 2 20.5H22C20 18.5 14.5 17.5 12 17.5Z"/></svg></span>
+                  <div class="menu-card-dish-thumb"><img src="assets/images/diner-terrasse.jpg" alt="Cour d’Honneur" loading="lazy"></div>
+                  <div class="menu-card-dish-info">
+                    <span class="menu-card-dish-name">Cour d’Honneur &amp; Pergolas <span class="menu-card-badge-new">Jusqu'à 50 Convives</span></span>
+                    <span class="menu-card-dish-note">(Cadre plein air sous pergola, tables d'apparat en teck noble, sol en sable fin de Ouidah)</span>
+                  </div>
+                </div>
+                <span class="menu-card-dots" aria-hidden="true"></span>
+                <div class="menu-card-dish-price">150 000 <small>FCFA / évént</small></div>
+              </div>
+
+              <!-- 8. Privatisation Complète du Domaine -->
+              <div class="menu-card-row" data-item-id="privatisation-complete-domaine" data-dish="Privatisation Complète du Domaine" data-price="Dès 350 000 FCFA" data-dish-img="assets/images/facade-bleue-enseigne.jpg">
+                <div class="menu-card-dish-left">
+                  <span class="menu-card-lotus-bullet"><svg viewBox="0 0 24 24"><path d="M12 3C12 3 9.5 7.5 9.5 11.5C9.5 14 10.6 15.8 12 16.5C13.4 15.8 14.5 14 14.5 11.5C14.5 7.5 12 3 12 3ZM12 8C12 8 7 9.8 6 13.5C5.2 16 6.8 17.8 8 18.2C9.5 18 11.2 16.5 12 15C12.8 16.5 14.5 18 16 18.2C17.2 17.8 18.8 16 18 13.5C17 9.8 12 8 12 8ZM12 17.5C9.5 17.5 4 18.5 2 20.5H22C20 18.5 14.5 17.5 12 17.5Z"/></svg></span>
+                  <div class="menu-card-dish-thumb"><img src="assets/images/facade-bleue-enseigne.jpg" alt="Privatisation Complète" loading="lazy"></div>
+                  <div class="menu-card-dish-info">
+                    <span class="menu-card-dish-name">Privatisation Complète du Domaine <span class="menu-card-badge-new">Exclusivité Totale</span></span>
+                    <span class="menu-card-dish-note">(Les 2 Appartements réunis • 6 Suites privatives • Cour d'honneur, chef privé &amp; conciergerie 24/7)</span>
+                  </div>
+                </div>
+                <span class="menu-card-dots" aria-hidden="true"></span>
+                <div class="menu-card-dish-price">Dès 350 000 <small>FCFA / jour</small></div>
+              </div>
+            </div>
+
+            <!-- Pied de Carte / Cartouche Statutaire Noir & Or -->
+            <div class="menu-card-footer">
+              <div class="menu-card-cartouche">
+                <p class="menu-card-cartouche-notice">✦ Réservations directes avec conciergerie &amp; services d’intendance sur mesure 7j/7</p>
+                <div class="menu-card-cartouche-main">
+                  <a href="tel:+2290155456363" class="menu-card-phone-btn" title="Appeler la Réception de la Maison Adénikè">
+                    <span class="menu-card-phone-circle">
+                      <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M6.62 10.79a15.053 15.053 0 006.59 6.59l2.2-2.2a1.003 1.003 0 011.02-.24c1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/>
+                      </svg>
+                    </span>
+                    <span>01.55.45.63.63</span>
+                  </a>
+                </div>
+              </div>
+
+              <div class="menu-card-actions">
+                <a href="https://wa.me/2290155456363?text=Bonjour%20Maison%20Ad%C3%A9nik%C3%A8%2C%20je%20souhaite%20r%C3%A9server%20un%20s%C3%A9jour%20depuis%20la%20Carte%20des%20Chambres..." 
+                   target="_blank" 
+                   rel="noopener noreferrer" 
+                   class="menu-card-btn-wa">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12.031 2C6.505 2 2.012 6.486 2.012 12.004c0 1.907.539 3.69 1.472 5.213L2.001 22l4.945-1.45a9.98 9.98 0 005.085 1.385c5.526 0 10.019-4.486 10.019-10.005C22.05 6.486 17.557 2 12.031 2zm0 18.257c-1.637 0-3.176-.464-4.502-1.267l-.323-.194-2.946.864.88-2.868-.21-.334a8.214 8.214 0 01-1.258-4.454c0-4.57 3.72-8.283 8.359-8.283 4.638 0 8.358 3.713 8.358 8.283 0 4.57-3.72 8.283-8.358 8.283zm4.58-6.195c-.251-.126-1.485-.733-1.715-.816-.23-.084-.397-.126-.565.126-.168.25-.65.816-.797.983-.146.168-.293.189-.544.063-.251-.126-1.06-.39-2.02-1.246-.746-.665-1.25-1.487-1.396-1.739-.147-.251-.016-.387.11-.512.113-.113.251-.294.377-.44.126-.147.168-.252.251-.419.084-.168.042-.315-.021-.441-.063-.126-.565-1.363-.775-1.867-.204-.49-.411-.424-.564-.432l-.481-.008c-.168 0-.44.063-.67.315-.23.252-.88.86-.88 2.097 0 1.238.902 2.435 1.027 2.603.126.168 1.776 2.712 4.303 3.803.601.26 1.07.415 1.436.531.604.192 1.154.165 1.588.1.484-.072 1.485-.607 1.694-1.194.21-.587.21-1.09.147-1.194-.063-.105-.23-.168-.481-.294z"/></svg>
+                  <span>Réserver sur WhatsApp avec la Conciergerie</span>
+                </a>
+              </div>
+
+              <div class="menu-card-bon-appetit" style="font-size: 1.15rem; letter-spacing: 0.05em;">« Ibi yìí L'ọkàn ń Sinmi »</div>
+            </div>
+          </div>
+    </div>
+  </div>
+
+  <div class="lodging-drawer-overlay" id="lodgingDrawerOverlay" role="dialog" aria-modal="true" aria-labelledby="drawerItemTitle">
+    <div class="lodging-drawer-card">
+      <!-- En-tête fixe -->
+      <div class="lodging-drawer-header">
+        <div style="display: flex; align-items: center; gap: 0.6rem;">
+          <span style="width: 8px; height: 8px; border-radius: 50%; background: #C5A059; box-shadow: 0 0 8px #C5A059;"></span>
+          <span id="drawerItemLabel" style="font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.15em; color: #C5A059; font-weight: 600; font-family: 'Plus Jakarta Sans', sans-serif;">
+            Appartement 1 — Le Domaine Historique
+          </span>
+        </div>
+        <button type="button" id="lodgingDrawerCloseBtn" class="lodging-discovery-close" aria-label="Fermer le tiroir" style="font-size: 1.5rem; color: rgba(255, 255, 255, 0.6);">&times;</button>
+      </div>
+
+      <!-- Corps déroulant -->
+      <div class="lodging-drawer-body">
+        <!-- Galerie photo -->
+        <div>
+          <div class="lodging-drawer-gallery">
+            <img id="drawerMainImg" src="assets/images/rooms/grand-salon-led-terracotta.jpg" alt="Aperçu du logement">
+            <span id="drawerItemBadge" class="lodging-badge-tag" style="position: absolute; top: 0.75rem; left: 0.75rem; background: rgba(26, 26, 23, 0.85); backdrop-filter: blur(8px);">
+              Disponible
+            </span>
+          </div>
+          <div class="lodging-drawer-thumbs" id="drawerThumbsContainer" style="margin-top: 0.5rem;">
+            <!-- Miniatures générées dynamiquement -->
+          </div>
+        </div>
+
+        <!-- Titre et description -->
+        <div>
+          <h2 id="drawerItemTitle" style="font-family: 'Cormorant Garamond', 'Playfair Display', serif; font-size: 1.85rem; color: #FAF7F2; margin: 0 0 0.4rem; font-weight: 500;">
+            Chambre Indigo
+          </h2>
+          <div style="display: flex; align-items: center; gap: 0.85rem; font-size: 0.78rem; color: rgba(250, 247, 242, 0.65); font-family: 'Plus Jakarta Sans', sans-serif; margin-bottom: 0.85rem;">
+            <span id="drawerItemCapacity">👥 2 personnes</span>
+            <span>•</span>
+            <span id="drawerItemPriceDisplay" style="color: #C5A059; font-weight: 600;">38 000 FCFA / nuit</span>
+          </div>
+          <p id="drawerItemDesc" style="font-size: 0.82rem; line-height: 1.65; color: rgba(250, 247, 242, 0.8); font-weight: 300; font-family: 'Plus Jakarta Sans', sans-serif; margin: 0;">
+            Description complète...
+          </p>
+        </div>
+
+        <!-- Inclusion explicite & salle d'eau -->
+        <div style="padding: 1rem 1.15rem; border-radius: 0.75rem; background: rgba(197, 160, 89, 0.1); border: 1px solid rgba(197, 160, 89, 0.35);">
+          <div style="font-size: 0.68rem; text-transform: uppercase; letter-spacing: 0.15em; color: #C5A059; font-weight: 700; margin-bottom: 0.35rem; display: flex; align-items: center; gap: 0.4rem;">
+            <span>✦</span>
+            <span>Inclusions Claires &amp; Espaces Partagés</span>
+          </div>
+          <p id="drawerItemInclusion" style="font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: 1.05rem; color: #FAF7F2; margin: 0 0 0.5rem; line-height: 1.4;">
+            « Douche/WC privatif inclus • Accès libre au grand salon de vie et à la terrasse »
+          </p>
+          <div style="font-size: 0.72rem; color: rgba(250, 247, 242, 0.75); display: grid; gap: 0.35rem; font-family: 'Plus Jakarta Sans', sans-serif;">
+            <div>✔ <span id="drawerItemBathroom">Salle d'eau privative attenante</span></div>
+            <div>✔ <span id="drawerItemLiving">Accès libre au grand salon</span></div>
+          </div>
+        </div>
+
+        <!-- Commodités -->
+        <div>
+          <h4 style="font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.15em; color: #C5A059; font-weight: 700; margin: 0 0 0.6rem; font-family: 'Plus Jakarta Sans', sans-serif;">
+            Commodités &amp; Confort
+          </h4>
+          <div id="drawerAmenitiesList" style="display: grid; grid-template-columns: 1fr 1fr; gap: 0.5rem;">
+            <!-- Rempli en JS -->
+          </div>
+        </div>
+
+        <hr style="border: 0; border-top: 1px solid rgba(255, 255, 255, 0.1); margin: 0;">
+
+        <!-- CALCULATEUR DE SÉJOUR EN DIRECT -->
+        <div>
+          <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 0.85rem;">
+            <h4 style="font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.15em; color: #FAF7F2; font-weight: 700; margin: 0; font-family: 'Plus Jakarta Sans', sans-serif;">
+              Simulateur de Séjour &amp; Options
+            </h4>
+            <span style="font-size: 0.68rem; color: #C5A059; font-family: 'Plus Jakarta Sans', sans-serif;">Calcul instantané</span>
+          </div>
+
+          <!-- Stepper nuits et voyageurs -->
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 0.75rem; margin-bottom: 1rem;">
+            <div class="lodging-stepper-box">
+              <span style="font-size: 0.65rem; text-transform: uppercase; letter-spacing: 0.08em; color: rgba(250, 247, 242, 0.5); font-family: 'Plus Jakarta Sans', sans-serif;">
+                Nombre de Nuits
+              </span>
+              <div class="lodging-stepper-control">
+                <button type="button" class="lodging-step-btn" id="nightMinusBtn">-</button>
+                <span id="nightDisplayVal" style="font-family: 'Cormorant Garamond', serif; font-size: 1.15rem; font-weight: 600; color: #FAF7F2;">
+                  1 nuit
+                </span>
+                <button type="button" class="lodging-step-btn" id="nightPlusBtn">+</button>
+              </div>
+            </div>
+
+            <div class="lodging-stepper-box">
+              <span style="font-size: 0.65rem; text-transform: uppercase; letter-spacing: 0.08em; color: rgba(250, 247, 242, 0.5); font-family: 'Plus Jakarta Sans', sans-serif;">
+                Voyageurs
+              </span>
+              <div class="lodging-stepper-control">
+                <button type="button" class="lodging-step-btn" id="guestMinusBtn">-</button>
+                <span id="guestDisplayVal" style="font-family: 'Cormorant Garamond', serif; font-size: 1.15rem; font-weight: 600; color: #FAF7F2;">
+                  2 pers.
+                </span>
+                <button type="button" class="lodging-step-btn" id="guestPlusBtn">+</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Add-ons à la carte -->
+          <div style="display: flex; flex-direction: column; gap: 0.6rem;">
+            <span style="font-size: 0.68rem; text-transform: uppercase; letter-spacing: 0.1em; color: rgba(250, 247, 242, 0.6); font-family: 'Plus Jakarta Sans', sans-serif;">
+              Options à la carte recommandées :
+            </span>
+
+            <div class="lodging-addon-item" data-addon-id="petit_dejeuner_royal">
+              <input type="checkbox" id="addon-pdj">
+              <div style="flex: 1;">
+                <div style="display: flex; align-items: baseline; justify-content: space-between;">
+                  <strong style="font-size: 0.78rem; color: #FAF7F2; font-family: 'Plus Jakarta Sans', sans-serif;">Petit-déjeuner royal béninois</strong>
+                  <span style="font-size: 0.72rem; color: #C5A059; font-weight: 600; font-family: 'Plus Jakarta Sans', sans-serif;">+3 500 FCFA / pers / j</span>
+                </div>
+                <p style="font-size: 0.7rem; color: rgba(250, 247, 242, 0.6); margin: 0.15rem 0 0; font-family: 'Plus Jakarta Sans', sans-serif; line-height: 1.4;">
+                  Jus d’ananas frais pain de sucre, beignets kklaklo chauds, fruits découpés, thé &amp; café.
+                </p>
+              </div>
+            </div>
+
+            <div class="lodging-addon-item" data-addon-id="navette_vip_cotonou">
+              <input type="checkbox" id="addon-navette">
+              <div style="flex: 1;">
+                <div style="display: flex; align-items: baseline; justify-content: space-between;">
+                  <strong style="font-size: 0.78rem; color: #FAF7F2; font-family: 'Plus Jakarta Sans', sans-serif;">Navette VIP Cotonou ⇄ Ouidah</strong>
+                  <span style="font-size: 0.72rem; color: #C5A059; font-weight: 600; font-family: 'Plus Jakarta Sans', sans-serif;">+25 000 FCFA / trajet</span>
+                </div>
+                <p style="font-size: 0.7rem; color: rgba(250, 247, 242, 0.6); margin: 0.15rem 0 0; font-family: 'Plus Jakarta Sans', sans-serif; line-height: 1.4;">
+                  Transfert climatisé privatif par la Route des Pêches avec chauffeur dédié.
+                </p>
+              </div>
+            </div>
+
+            <div class="lodging-addon-item" data-addon-id="diner_bomiwo_royal">
+              <input type="checkbox" id="addon-diner">
+              <div style="flex: 1;">
+                <div style="display: flex; align-items: baseline; justify-content: space-between;">
+                  <strong style="font-size: 0.78rem; color: #FAF7F2; font-family: 'Plus Jakarta Sans', sans-serif;">Dîner d’apparat Bômiwo Royal</strong>
+                  <span style="font-size: 0.72rem; color: #C5A059; font-weight: 600; font-family: 'Plus Jakarta Sans', sans-serif;">+8 500 FCFA / pers</span>
+                </div>
+                <p style="font-size: 0.7rem; color: rgba(250, 247, 242, 0.6); margin: 0.15rem 0 0; font-family: 'Plus Jakarta Sans', sans-serif; line-height: 1.4;">
+                  Pâte rouge mijotée au jus de poulet fermier, pintade dorée et canaris traditionnels.
+                </p>
+              </div>
+            </div>
+
+            <div class="lodging-addon-item" data-addon-id="visite_guidee_ouidah">
+              <input type="checkbox" id="addon-visite">
+              <div style="flex: 1;">
+                <div style="display: flex; align-items: baseline; justify-content: space-between;">
+                  <strong style="font-size: 0.78rem; color: #FAF7F2; font-family: 'Plus Jakarta Sans', sans-serif;">Visite guidée mémorielle de Ouidah</strong>
+                  <span style="font-size: 0.72rem; color: #C5A059; font-weight: 600; font-family: 'Plus Jakarta Sans', sans-serif;">+15 000 FCFA / groupe</span>
+                </div>
+                <p style="font-size: 0.7rem; color: rgba(250, 247, 242, 0.6); margin: 0.15rem 0 0; font-family: 'Plus Jakarta Sans', sans-serif; line-height: 1.4;">
+                  Circuit privatif : Temple des Pythons, Forêt Sacrée de Kpassè, Route des Esclaves.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Pied fixe avec total calculé & réservation WhatsApp -->
+      <div class="lodging-drawer-footer">
+        <div class="lodging-drawer-total-row">
+          <div>
+            <span id="drawerNightsSummary" style="font-size: 0.68rem; text-transform: uppercase; letter-spacing: 0.08em; color: rgba(250, 247, 242, 0.5); font-family: 'Plus Jakarta Sans', sans-serif; display: block;">
+              Estimation totale pour 1 nuit :
+            </span>
+            <div id="drawerTotalAmount" class="lodging-total-amount">
+              38 000 FCFA
+            </div>
+          </div>
+          <span style="font-size: 0.68rem; color: rgba(250, 247, 242, 0.45); font-family: 'Plus Jakarta Sans', sans-serif; text-align: right; max-width: 140px;">
+            Tarif direct sans commission
+          </span>
+        </div>
+
+        <div style="display: flex; gap: 0.6rem;">
+          <a id="drawerWhatsAppBtn" href="https://wa.me/2290155456363" target="_blank" rel="noopener noreferrer" class="lodging-wa-booking-btn" style="flex: 1;">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M12.031 2C6.505 2 2.012 6.486 2.012 12.004c0 1.907.539 3.69 1.472 5.213L2.001 22l4.945-1.45a9.98 9.98 0 005.085 1.385c5.526 0 10.019-4.486 10.019-10.005C22.05 6.486 17.557 2 12.031 2zm0 18.257c-1.637 0-3.176-.464-4.502-1.267l-.323-.194-2.946.864.88-2.868-.21-.334a8.214 8.214 0 01-1.258-4.454c0-4.57 3.72-8.283 8.359-8.283 4.638 0 8.358 3.713 8.358 8.283 0 4.57-3.72 8.283-8.358 8.283zm4.58-6.195c-.251-.126-1.485-.733-1.715-.816-.23-.084-.397-.126-.565.126-.168.25-.65.816-.797.983-.146.168-.293.189-.544.063-.251-.126-1.06-.39-2.02-1.246-.746-.665-1.25-1.487-1.396-1.739-.147-.251-.016-.387.11-.512.113-.113.251-.294.377-.44.126-.147.168-.252.251-.419.084-.168.042-.315-.021-.441-.063-.126-.565-1.363-.775-1.867-.204-.49-.411-.424-.564-.432l-.481-.008c-.168 0-.44.063-.67.315-.23.252-.88.86-.88 2.097 0 1.238.902 2.435 1.027 2.603.126.168 1.776 2.712 4.303 3.803.601.26 1.07.415 1.436.531.604.192 1.154.165 1.588.1.484-.072 1.485-.607 1.694-1.194.21-.587.21-1.09.147-1.194-.063-.105-.23-.168-.481-.294z"/>
+            </svg>
+            <span>Réserver via WhatsApp</span>
+          </a>
+          <a href="tel:+2290155456363" class="lodging-btn-glass" style="padding: 0 1.2rem; font-size: 0.75rem;" title="Appel direct Conciergerie">
+            01 55 45 63 63
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==========================================================================
+       5. POPUP FLOTTANT ALÉATOIRE DISCRET (SITE-WIDE DISCOVERY TOAST)
+       ========================================================================== -->
+  <aside class="lodging-discovery-toast" id="lodgingDiscoveryToast" role="status" aria-live="polite">
+    <div class="lodging-discovery-content">
+      <div class="lodging-discovery-icon">✦</div>
+      <div class="lodging-discovery-text-group">
+        <div class="lodging-discovery-meta">
+          <span id="discoveryToastTag">Le Saviez-vous ?</span>
+          <span>•</span>
+          <span id="discoveryToastCategory" style="color: rgba(250, 247, 242, 0.5);">Artisanat &amp; Matières</span>
+        </div>
+        <p id="discoveryToastText" class="lodging-discovery-text">
+          Le grand salon de l’Appartement 1 est habillé de textiles traditionnels teints à la main selon la technique ancestrale de l’indigo béninois.
+        </p>
+      </div>
+      <button type="button" class="lodging-discovery-close" id="discoveryToastClose" aria-label="Fermer la notification">&times;</button>
+    </div>
+    <div class="lodging-discovery-bar">
+      <div class="lodging-discovery-progress"></div>
+    </div>
+  </aside>
+
+  <!-- FOOTER -->
+    <!-- ==========================================================================
+       FOOTER STATUTAIRE & HAUTE HOSPITALITÉ (4 COLONNES ÉDITORIALES & MO MO)
+       ========================================================================== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <!-- Colonne 1 : Identité & Maison -->
+        <div class="footer-brand-col">
+          <div class="footer-brand-box">
+            <img src="assets/images/logo-adenike.png" alt="Logo Maison Adénikè" class="footer-logo-img">
+            <div>
+              <div class="footer-brand">Maison Adénikè</div>
+              <div class="footer-brand-tag">Haute Hospitalité • Ouidah</div>
+            </div>
+          </div>
+          <p class="footer-brand-desc">
+            L’âme d’une maison, le goût de nos racines. Résidences privées d'exception, haute gastronomie d'héritage et sanctuaire de sérénité au cœur de la cité historique de Ouidah.
+          </p>
+          <div class="footer-phone-badges">
+            <a href="https://wa.me/2290155456363" target="_blank" rel="noopener noreferrer" class="footer-phone-btn" title="Ligne 1 WhatsApp Conciergerie">
+              <span class="dot-live"></span>
+              <span>01 55 45 63 63</span>
+            </a>
+            <a href="https://wa.me/2290153838363" target="_blank" rel="noopener noreferrer" class="footer-phone-btn" title="Ligne 2 WhatsApp Conciergerie">
+              <span class="dot-live"></span>
+              <span>01 53 83 83 63</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Colonne 2 : Navigation (Les 7 Espaces) -->
+        <div class="footer-nav-col">
+          <h4 class="footer-col-title">Les 7 Espaces</h4>
+          <ul class="footer-links">
+            <li><a href="index.html">Accueil</a></li>
+            <li><a href="restaurant.html">Restaurant &amp; Bômiwo</a></li>
+            <li><a href="chambres.html">Lodges &amp; Espaces Privatisables</a></li>
+            <li><a href="evenements.html">Événements &amp; Résidences d'Art</a></li>
+            <li><a href="vodoun-days.html" class="footer-link-vodoun">Vodoun Days 2027 ★</a></li>
+            <li><a href="galerie.html">Galerie Photos &amp; Œuvres</a></li>
+            <li><a href="contact.html">Contact &amp; Accès Ouidah</a></li>
+          </ul>
+        </div>
+
+        <!-- Colonne 3 : Expériences Signatures -->
+        <div class="footer-exp-col">
+          <h4 class="footer-col-title">Expériences</h4>
+          <ul class="footer-links">
+            <li><a href="restaurant.html">Le Plat Signature Bômiwo</a></li>
+            <li><a href="chambres.html#privatisation">Privatisation &amp; Banquets</a></li>
+            <li><a href="chambres.html">Suites &amp; Lodges Climatisés</a></li>
+            <li><a href="vodoun-days.html">Vodoun Days (2–9 Janvier 2027)</a></li>
+            <li><a href="contact.html">Navette Privée &amp; Chauffeur</a></li>
+          </ul>
+        </div>
+
+        <!-- Colonne 4 : Réservations & Modalités MoMo -->
+        <div class="footer-booking-col">
+          <h4 class="footer-col-title">Réservations &amp; Modalités</h4>
+          <div class="footer-booking-card">
+            <div class="footer-booking-row">
+              <span class="footer-booking-label">Lignes Directes (Appel / WhatsApp) :</span>
+              <div class="footer-booking-contacts">
+                <a href="tel:+2290155456363">01 55 45 63 63</a>
+                <span>•</span>
+                <a href="tel:+2290153838363">01 53 83 83 63</a>
+              </div>
+            </div>
+            <div class="footer-momo-box">
+              <span class="momo-badge">MTN MoMo</span>
+              <div class="footer-momo-text">
+                <strong>Acompte obligatoire :</strong> Exigé à la réservation par Mobile Money ou Carte Bancaire. Le solde est réglé sur place à l'arrivée.
+              </div>
+            </div>
+            <button class="btn btn-primary footer-cta-btn" data-open-booking data-service="Séjour &amp; Haute Table">
+              <span>Réserver en Ligne</span>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div class="footer-bottom-copy">
+          &copy; <span id="currentYear">2026</span> <strong>Maison Adénikè (M • A)</strong>. Tous droits réservés. Quartier Lébou, Ouidah, République du Bénin.
+        </div>
+        <div class="footer-bottom-tagline">
+          <span>Haute Hospitalité</span>
+          <span class="sep">•</span>
+          <span>Table d'Héritage</span>
+          <span class="sep">•</span>
+          <span>Art &amp; Culture Afro-Chic</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ==========================================================================
+       MODAL DE RÉSERVATION UNIVERSEL — DUAL PAYMENT STACK CRO & HAUTE HOSPITALITÉ
+       ========================================================================== -->
+  <div id="reservationModal" class="reservation-modal-backdrop" role="dialog" aria-modal="true">
+    <div class="reservation-modal-card" style="max-width: 580px;">
+      <div class="modal-header" style="background: var(--bg-cream); border-bottom: 1.5px solid var(--color-raffia);">
+        <div style="display: flex; align-items: center; gap: 0.75rem;">
+          <img src="assets/images/logo-adenike.png" alt="Logo Maison Adénikè" style="width: 40px; height: 40px; border-radius: 50%; border: 1.5px solid var(--color-champagne); box-shadow: var(--shadow-luxury-glow);">
+          <div>
+            <span style="font-size: 0.6875rem; text-transform: uppercase; letter-spacing: 0.15em; color: var(--color-ochre); font-weight: 700;">Haute Hospitalité • Ouidah</span>
+            <h3 class="modal-title" style="margin: 0; font-size: 1.25rem;">Réservation Suites & Lodges</h3>
+          </div>
+        </div>
+        <button id="modalCloseBtn" class="modal-close-btn" aria-label="Fermer la fenêtre">&times;</button>
+      </div>
+
+      <div class="modal-body" style="padding: 1.5rem;">
+        <form id="modalBookingForm">
+          <div class="form-group" style="margin-bottom: 1rem;">
+            <label class="form-label" style="font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.05em; color: var(--text-espresso-muted);">
+              1. Choisissez votre expérience
+            </label>
+            <div class="service-selector-pills">
+              <label>
+                <input type="radio" name="modalService" value="Chambre / Lodge" class="service-pill-radio" checked>
+                <span class="service-pill-label">🛏️ Suite & Lodge</span>
+              </label>
+              <label>
+                <input type="radio" name="modalService" value="Restaurant Adénikè" class="service-pill-radio">
+                <span class="service-pill-label">🍽️ Table & Terroir</span>
+              </label>
+              <label>
+                <input type="radio" name="modalService" value="Séjour / Événement" class="service-pill-radio">
+                <span class="service-pill-label">🎉 Événement</span>
+              </label>
+              <label>
+                <input type="radio" name="modalService" value="Vodoun Days 2027" class="service-pill-radio">
+                <span class="service-pill-label">✨ Vodoun Days</span>
+              </label>
+            </div>
+          </div>
+
+          <div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 0.75rem;" class="form-group">
+            <div>
+              <label for="modalDate" class="form-label" style="font-size: 0.75rem;">Arrivée</label>
+              <input type="date" id="modalDate" class="form-input" style="padding: 0.55rem 0.65rem; font-size: 0.8125rem;" required>
+            </div>
+            <div>
+              <label for="modalTime" class="form-label" style="font-size: 0.75rem;">Heure Prévue</label>
+              <input type="time" id="modalTime" class="form-input" style="padding: 0.55rem 0.65rem; font-size: 0.8125rem;" value="14:00">
+            </div>
+            <div>
+              <label for="modalGuests" class="form-label" style="font-size: 0.75rem;">Voyageurs</label>
+              <select id="modalGuests" class="form-select" style="padding: 0.55rem 0.65rem; font-size: 0.8125rem;">
+                <option value="1 voyageur">1 voyageur</option>
+                <option value="2 personnes" selected>2 personnes</option>
+                <option value="3 à 4 personnes">3 à 4 personnes</option>
+                <option value="5 personnes et plus">5 personnes et plus</option>
+              </select>
+            </div>
+          </div>
+
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 0.75rem;" class="form-group">
+            <div>
+              <label for="modalName" class="form-label" style="font-size: 0.75rem;">Nom & Prénom</label>
+              <input type="text" id="modalName" class="form-input" style="padding: 0.55rem 0.75rem; font-size: 0.8125rem;" placeholder="Ex. Sophie Mensah" required>
+            </div>
+            <div>
+              <label for="modalPhone" class="form-label" style="font-size: 0.75rem;">Téléphone Mobile (MoMo / WhatsApp)</label>
+              <input type="tel" id="modalPhone" class="form-input" style="padding: 0.55rem 0.75rem; font-size: 0.8125rem;" placeholder="Ex. 01 55 45 63 63" required>
+            </div>
+          </div>
+
+          <div class="price-breakdown-card">
+            <div class="price-breakdown-row">
+              <span>Montant estimatif suite :</span>
+              <strong id="breakdownTotal" style="color: #FFFFFF;">45 000 FCFA</strong>
+            </div>
+            <div class="price-breakdown-row accent-row">
+              <div style="display: flex; align-items: center; gap: 0.5rem;">
+                <span>Acompte requis :</span>
+                <span class="deposit-toggle-group">
+                  <button type="button" class="deposit-toggle-btn active" data-deposit-pct="30">30%</button>
+                  <button type="button" class="deposit-toggle-btn" data-deposit-pct="50">50%</button>
+                </span>
+              </div>
+              <strong id="breakdownDeposit" style="color: var(--c-gold-bright);">13 500 FCFA</strong>
+            </div>
+            <div class="price-breakdown-row" style="border-top: 1px solid rgba(255, 255, 255, 0.08); padding-top: 0.35rem;">
+              <span>Solde restant dû à l'arrivée :</span>
+              <strong id="breakdownBalance" style="color: var(--text-espresso-muted);">31 500 FCFA</strong>
+            </div>
+          </div>
+
+          <div class="form-group" style="margin-bottom: 0.75rem;">
+            <label class="form-label" style="font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.05em; color: var(--text-espresso-muted);">
+              2. Canal de paiement sécurisé
+            </label>
+            <div class="dual-payment-tabs">
+              <button type="button" class="payment-tab-btn active" data-payment-channel="momo">
+                <span>🟡 MTN MoMo</span>
+                <span class="payment-tab-badge">Push Bénin</span>
+              </button>
+              <button type="button" class="payment-tab-btn" data-payment-channel="flooz">
+                <span>🔵 Moov Flooz</span>
+                <span class="payment-tab-badge">Push Bénin</span>
+              </button>
+              <button type="button" class="payment-tab-btn" data-payment-channel="card">
+                <span>💳 Carte CB</span>
+                <span class="payment-tab-badge">Visa / MC</span>
+              </button>
+              <button type="button" class="payment-tab-btn" data-payment-channel="concierge">
+                <span>🛎️ Concierge</span>
+                <span class="payment-tab-badge">Garantie</span>
+              </button>
+            </div>
+
+            <div id="paymentInstructionBox" class="payment-instruction-box">
+              📲 <strong>Paiement instantané MTN Mobile Money :</strong> Un prompt de notification push sera déclenché vers votre numéro pour composer votre code secret et verrouiller immédiatement votre réservation.
+            </div>
+          </div>
+
+          <div class="reassurance-badge-box">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--c-gold)" stroke-width="2" style="flex-shrink: 0;">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+            </svg>
+            <span>Paiement sécurisé instantané par Mobile Money & Carte Bancaire • Confirmation immédiate par SMS & WhatsApp</span>
+          </div>
+
+          <button type="submit" class="btn btn-primary" id="modalSubmitBtn" style="width: 100%; padding: 0.95rem; font-size: 0.95rem; background: var(--color-ochre); color: #FFFFFF; font-weight: 700; box-shadow: 0 4px 20px rgba(168, 59, 36, 0.35);">
+            <span>Valider ma Suite & l'Acompte (13 500 FCFA)</span>
+            <span class="btn-icon-capsule" style="background: rgba(255, 255, 255, 0.2); color: #FFFFFF;">
+              &rarr;
+            </span>
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- Fenêtre Modale Dédiée Vodoun Days 2027 -->
+  <div id="vodounModal" class="reservation-modal-backdrop" role="dialog" aria-modal="true">
+    <div class="reservation-modal-card vodoun-modal-card">
+      <div class="modal-header vodoun-modal-header">
+        <div style="display: flex; align-items: center; gap: 0.75rem;">
+          <img src="assets/images/logo-adenike.png" alt="Logo" style="width: 38px; height: 38px; border-radius: 50%; border: 1.5px solid var(--c-gold);">
+          <div>
+            <div style="display: flex; align-items: center; gap: 0.5rem;">
+              <span style="font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.15em; color: var(--c-gold-bright); font-weight: 700;">Édition Spéciale</span>
+              <span class="vodoun-gold-tag">02 - 09 Janv 2027</span>
+            </div>
+            <h3 class="modal-title" style="margin: 0;">Réservation Vodoun Days 2027</h3>
+          </div>
+        </div>
+        <button id="vodounModalClose" class="modal-close-btn" style="color: #FFFFFF;">&times;</button>
+      </div>
+      <div class="modal-body">
+        <p style="font-size: 0.9rem; color: var(--c-teak-light); margin-bottom: 1.25rem;">
+          Vivez la ferveur des Vodoun Days à Ouidah avec le confort et la gastronomie de la Maison Adénikè.
+        </p>
+        <form id="vodounBookingForm">
+          <div class="form-group">
+            <label class="form-label">1. Choisissez Votre Formule Vodoun Days</label>
+            <div style="display: grid; gap: 0.6rem;">
+              <label style="display: flex; align-items: center; gap: 0.6rem; background: var(--c-sand-surface); padding: 0.65rem 0.85rem; border-radius: var(--radius-md); cursor: pointer; border: 1px solid rgba(61,39,29,0.1);">
+                <input type="radio" name="vodounPack" value="Pack Séjour & Nuitées (Chambre Lodge)" checked>
+                <span style="font-size: 0.875rem;"><strong>Pack Séjour & Lodge :</strong> Hébergement climatisé, petit-déjeuner & accès privilégié</span>
+              </label>
+              <label style="display: flex; align-items: center; gap: 0.6rem; background: var(--c-sand-surface); padding: 0.65rem 0.85rem; border-radius: var(--radius-md); cursor: pointer; border: 1px solid rgba(61,39,29,0.1);">
+                <input type="radio" name="vodounPack" value="Table Dîner & Festin sous Pergola">
+                <span style="font-size: 0.875rem;"><strong>Table & Festin Terroir :</strong> Déjeuner ou dîner braisé, Soto Royal, ambiance conviviale</span>
+              </label>
+              <label style="display: flex; align-items: center; gap: 0.6rem; background: var(--c-sand-surface); padding: 0.65rem 0.85rem; border-radius: var(--radius-md); cursor: pointer; border: 1px solid rgba(61,39,29,0.1);">
+                <input type="radio" name="vodounPack" value="Pass Journée & Lounge Détente">
+                <span style="font-size: 0.875rem;"><strong>Pass Journée Lounge :</strong> Repos sur sable fin, cocktails & escale entre deux concerts</span>
+              </label>
+            </div>
+          </div>
+
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;" class="form-group">
+            <div>
+              <label for="vodounDate" class="form-label">Date (Entre le 2 et 9 Janv 2027)</label>
+              <input type="date" id="vodounDate" class="form-input" min="2027-01-02" max="2027-01-09" value="2027-01-08" required>
+            </div>
+            <div>
+              <label for="vodounGuests" class="form-label">Nombre de personnes</label>
+              <select id="vodounGuests" class="form-select">
+                <option value="1 personne">1 personne</option>
+                <option value="2 personnes" selected>2 personnes</option>
+                <option value="3 à 5 personnes">3 à 5 personnes</option>
+                <option value="Groupe (6+)">Groupe (6+)</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="vodounName" class="form-label">Votre Nom Complet</label>
+            <input type="text" id="vodounName" class="form-input" placeholder="Ex. Diane Dossou" required>
+          </div>
+
+          <div class="form-group">
+            <label for="vodounNotes" class="form-label">Demandes spéciales / Transport / Besoins</label>
+            <textarea id="vodounNotes" class="form-textarea" rows="2" placeholder="Précisez : arrivée aéroport Cotonou, nuits consécutives, régimes..."></textarea>
+          </div>
+
+          <div class="momo-notice-box" style="margin-top: 0.5rem; margin-bottom: 1.25rem;">
+            <span class="momo-badge">MTN MoMo</span>
+            <div class="momo-text">
+              <strong>Acompte obligatoire :</strong> Un acompte par MoMo sera exigé à la réservation pour garantir votre place pendant les Vodoun Days. Le solde sera réglé sur place.
+            </div>
+          </div>
+
+          <button type="submit" class="btn btn-primary" style="width: 100%; padding: 0.95rem; font-size: 0.95rem;">
+            <span>Confirmer Ma Réservation Vodoun Days sur WhatsApp</span>
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==========================================================================
+       FLOATING WHATSAPP CONCIERGE WIDGET (HAUTE HOSPITALITÉ 24H)
+       ========================================================================== -->
+  <aside class="wa-concierge-container" id="waConciergeWidget" aria-label="Conciergerie WhatsApp Maison Adénikè">
+    <div class="wa-concierge-tooltip" id="waConciergeTooltip">
+      <span class="wa-concierge-pulse-dot"></span>
+      <span>Conciergerie Maison Adénikè — <strong>Réponse immédiate</strong></span>
+    </div>
+
+    <!-- Sélecteur rapide des 2 lignes officielles -->
+    <div class="wa-concierge-lines" id="waConciergeLines">
+      <div style="font-size: 0.6875rem; text-transform: uppercase; letter-spacing: 0.1em; color: var(--c-gold); font-weight: 700; margin-bottom: 0.25rem;">
+        Conciergerie en Ligne (24h/7j)
+      </div>
+      <a href="https://wa.me/2290155456363?text=Bonjour%20Maison%20Ad%C3%A9nik%C3%A8%2C%20je%20souhaite%20des%20informations%20pour%20une%20r%C3%A9servation..." 
+         target="_blank" 
+         rel="noopener noreferrer" 
+         class="wa-line-btn">
+        <div>
+          <div style="font-weight: 600; color: #FFFFFF;">Ligne 1 (Principale)</div>
+          <div style="font-size: 0.7rem; color: var(--color-raffia);">01 55 45 63 63</div>
+        </div>
+        <span class="wa-line-badge">Direct</span>
+      </a>
+      <a href="https://wa.me/2290153838363?text=Bonjour%20Maison%20Ad%C3%A9nik%C3%A8%2C%20je%20souhaite%20des%20informations%20pour%20une%20r%C3%A9servation..." 
+         target="_blank" 
+         rel="noopener noreferrer" 
+         class="wa-line-btn">
+        <div>
+          <div style="font-weight: 600; color: #FFFFFF;">Ligne 2 (Secondaire)</div>
+          <div style="font-size: 0.7rem; color: var(--color-raffia);">01 53 83 83 63</div>
+        </div>
+        <span class="wa-line-badge" style="background: rgba(255,255,255,0.2); color: #FFF;">Disponible</span>
+      </a>
+    </div>
+
+    <button type="button" class="wa-concierge-btn" id="waConciergeToggle" aria-label="Contacter la conciergerie Maison Adénikè sur WhatsApp">
+      <span class="wa-concierge-pulse-ring"></span>
+      <svg width="30" height="30" viewBox="0 0 24 24" fill="currentColor">
+        <path d="M12.031 2C6.505 2 2.012 6.486 2.012 12.004c0 1.907.539 3.69 1.472 5.213L2.001 22l4.945-1.45a9.98 9.98 0 005.085 1.385c5.526 0 10.019-4.486 10.019-10.005C22.05 6.486 17.557 2 12.031 2zm0 18.257c-1.637 0-3.176-.464-4.502-1.267l-.323-.194-2.946.864.88-2.868-.21-.334a8.214 8.214 0 01-1.258-4.454c0-4.57 3.72-8.283 8.359-8.283 4.638 0 8.358 3.713 8.358 8.283 0 4.57-3.72 8.283-8.358 8.283zm4.58-6.195c-.251-.126-1.485-.733-1.715-.816-.23-.084-.397-.126-.565.126-.168.25-.65.816-.797.983-.146.168-.293.189-.544.063-.251-.126-1.06-.39-2.02-1.246-.746-.665-1.25-1.487-1.396-1.739-.147-.251-.016-.387.11-.512.113-.113.251-.294.377-.44.126-.147.168-.252.251-.419.084-.168.042-.315-.021-.441-.063-.126-.565-1.363-.775-1.867-.204-.49-.411-.424-.564-.432l-.481-.008c-.168 0-.44.063-.67.315-.23.252-.88.86-.88 2.097 0 1.238.902 2.435 1.027 2.603.126.168 1.776 2.712 4.303 3.803.601.26 1.07.415 1.436.531.604.192 1.154.165 1.588.1.484-.072 1.485-.607 1.694-1.194.21-.587.21-1.09.147-1.194-.063-.105-.23-.168-.481-.294z"/>
+      </svg>
+    </button>
+  </aside>
+
+  <script src="app.js?v=9.0"></script>
+  <script src="assets/js/lodging-engine.js?v=4.0"></script>
+</body>
+</html>
