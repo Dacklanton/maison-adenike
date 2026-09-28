@@ -2,11 +2,11 @@
   "name": "maison-adenike",
   "version": "1.0.0",
   "description": "Site officiel de la Maison Adénikè à Ouidah, Bénin - Restaurant, Lodge, Séjours",
+  "main": "index.html",
   "scripts": {
+    "build": "echo 'Build OK: Static website ready'",
     "dev": "npx serve -l 3000 .",
-    "start": "python -m http.server 3000",
-    "tunnel": "npx localtunnel --port 3000",
-    "test": "node -c app.js",
-    "deploy": "vercel --scope david-s-projects229 --prod --yes"
+    "start": "npx serve -l 3000 .",
+    "test": "node -c app.js"
   }
 }
