@@ -735,6 +735,14 @@
 
     const grandTotal = baseTotal + addonsTotal;
 
+    // Calcul de l'acompte officiel (30%)
+    const depositPct = window.FEDAPAY_CONFIG?.defaultDepositPct || 30;
+    const depositAmount = Math.round((grandTotal * depositPct) / 100);
+    const depositElem = document.getElementById('drawerDepositAmountText');
+    if (depositElem) {
+      depositElem.textContent = depositAmount.toLocaleString('fr-FR') + ' FCFA';
+    }
+
     // Affichage prix
     const totalElem = document.getElementById('drawerTotalAmount');
     const nightsSummaryElem = document.getElementById('drawerNightsSummary');
@@ -743,6 +751,41 @@
     }
     if (nightsSummaryElem) {
       nightsSummaryElem.textContent = `Estimation totale pour ${currentNights} nuit(s) (${currentGuests} pers.) :`;
+    }
+
+    // Bouton de paiement sécurisé direct FedaPay (MoMo / Carte)
+    const payBtn = document.getElementById('drawerPayDepositBtn');
+    if (payBtn) {
+      payBtn.onclick = () => {
+        const nameInput = document.getElementById('drawerCustomerName');
+        const phoneInput = document.getElementById('drawerCustomerPhone');
+        const customerName = nameInput ? nameInput.value.trim() : '';
+        const customerPhone = phoneInput ? phoneInput.value.trim() : '';
+
+        if (!customerName) {
+          alert('Veuillez renseigner votre nom et prénom avant de procéder au paiement.');
+          if (nameInput) nameInput.focus();
+          return;
+        }
+
+        if (!customerPhone) {
+          alert('Veuillez renseigner votre numéro de téléphone (MoMo ou WhatsApp) pour recevoir votre confirmation.');
+          if (phoneInput) phoneInput.focus();
+          return;
+        }
+
+        if (window.MaisonAdenikePayment) {
+          closeLodgingDrawer();
+          window.MaisonAdenikePayment.triggerCheckout({
+            amount: depositAmount,
+            service: currentSelectedItem.name,
+            description: `Acompte séjour Maison Adénikè • ${currentSelectedItem.name} (${currentNights} nuit(s))`,
+            customerName: customerName,
+            customerPhone: customerPhone,
+            guests: `${currentGuests} pers. • ${currentNights} nuit(s)`
+          });
+        }
+      };
     }
 
     // Génération du lien WhatsApp
@@ -765,6 +808,7 @@
 
       lines.push(``);
       lines.push(`✦ Montant total estimé : ${grandTotal.toLocaleString('fr-FR')} FCFA`);
+      lines.push(`✦ Acompte de réservation (30%) : ${depositAmount.toLocaleString('fr-FR')} FCFA`);
       lines.push(``);
       lines.push(`Pourriez-vous me confirmer les disponibilités pour ces dates ? Merci.`);
 
