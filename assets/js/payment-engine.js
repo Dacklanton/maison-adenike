@@ -191,40 +191,24 @@
     if (!isSandbox) return;
 
     // Helper pour la modal de réservation universelle
-    const instructionBox = document.getElementById('paymentInstructionBox');
-    if (instructionBox && !document.getElementById('fedapaySandboxHelper')) {
+    const modalSubmitBtn = document.getElementById('modalSubmitBtn');
+    if (modalSubmitBtn && !document.getElementById('fedapaySandboxHelper')) {
       const helper = document.createElement('div');
       helper.id = 'fedapaySandboxHelper';
-      helper.style.cssText = 'background: rgba(197, 160, 89, 0.12); border: 1px dashed #C5A059; border-radius: 6px; padding: 0.65rem 0.75rem; margin-top: 0.6rem; font-size: 0.75rem; color: #FAF7F2; line-height: 1.45; text-align: left;';
+      helper.style.cssText = 'background: rgba(197, 160, 89, 0.15); border: 1.5px dashed #C5A059; border-radius: 8px; padding: 0.75rem; margin-bottom: 0.85rem; font-size: 0.78rem; color: #FAF7F2; line-height: 1.5; text-align: left;';
       helper.innerHTML = `
         <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 0.35rem; flex-wrap: wrap; gap: 0.4rem;">
-          <strong style="color: #FFE6A7;">🧪 Mode Test FedaPay Actif (Sandbox)</strong>
-          <button type="button" id="fillTestCredsBtn" style="background: #C5A059; color: #1A1A17; font-weight: 700; border: none; border-radius: 4px; padding: 0.25rem 0.55rem; font-size: 0.6875rem; cursor: pointer;">
-            Remplir numéro test (66000001)
-          </button>
+          <strong style="color: #FFE6A7; font-size: 0.82rem;">🧪 Mode Test FedaPay Actif (Sandbox)</strong>
+          <span style="background: rgba(197, 160, 89, 0.3); color: #FFF; padding: 0.15rem 0.5rem; border-radius: 4px; font-size: 0.68rem; font-weight: 600;">Simulation Active</span>
         </div>
-        <div>• <strong>Succès MoMo :</strong> Tapez le numéro test <code>66000001</code> (code OTP : <code>1234</code>)</div>
-        <div>• <strong>Succès Carte :</strong> Tapez la carte <code>4111 1111 1111 1111</code> (CVV: <code>123</code>)</div>
-        <div style="font-size: 0.6875rem; color: rgba(250, 247, 242, 0.65); margin-top: 0.25rem;">
-          ⚠️ En mode test, vos vrais numéros personnels sont volontairement rejetés par FedaPay.
+        <div>Pour que la simulation réussisse sans débiter votre vrai compte :</div>
+        <div style="margin-top: 0.25rem;">• <strong>MoMo :</strong> Utilisez le numéro test <strong>66000001</strong> (code : <code>1234</code>)</div>
+        <div>• <strong>Carte :</strong> Utilisez la carte <strong>4111 1111 1111 1111</strong> (CVV : <code>123</code>)</div>
+        <div style="font-size: 0.7rem; color: rgba(250, 247, 242, 0.7); margin-top: 0.35rem; border-top: 1px solid rgba(255,255,255,0.1); padding-top: 0.3rem;">
+          💡 <em>Note : En mode test, si vous tapez un numéro personnel, le système le remplace automatiquement par 66000001 auprès de FedaPay pour garantir le succès du test.</em>
         </div>
       `;
-      instructionBox.parentNode.insertBefore(helper, instructionBox.nextSibling);
-
-      const fillBtn = document.getElementById('fillTestCredsBtn');
-      if (fillBtn) {
-        fillBtn.onclick = () => {
-          const phoneInput = document.getElementById('modalPhone');
-          if (phoneInput) {
-            phoneInput.value = '66000001';
-            phoneInput.style.borderColor = '#C5A059';
-          }
-          const nameInput = document.getElementById('modalName');
-          if (nameInput && !nameInput.value) {
-            nameInput.value = 'Client Test Maison Adénikè';
-          }
-        };
-      }
+      modalSubmitBtn.parentNode.insertBefore(helper, modalSubmitBtn);
     }
 
     // Helper pour le tiroir des chambres
@@ -232,27 +216,15 @@
     if (drawerDepositBtn && !document.getElementById('drawerSandboxHelper')) {
       const drawerHelper = document.createElement('div');
       drawerHelper.id = 'drawerSandboxHelper';
-      drawerHelper.style.cssText = 'background: rgba(197, 160, 89, 0.12); border: 1px dashed #C5A059; border-radius: 6px; padding: 0.5rem 0.6rem; margin-top: 0.4rem; font-size: 0.72rem; color: #FAF7F2; line-height: 1.4; text-align: left;';
+      drawerHelper.style.cssText = 'background: rgba(197, 160, 89, 0.15); border: 1.5px dashed #C5A059; border-radius: 8px; padding: 0.6rem; margin-top: 0.4rem; font-size: 0.75rem; color: #FAF7F2; line-height: 1.4; text-align: left;';
       drawerHelper.innerHTML = `
-        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.2rem;">
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.25rem;">
           <strong style="color: #FFE6A7;">🧪 Test Sandbox :</strong>
-          <button type="button" id="fillDrawerTestBtn" style="background: #C5A059; color: #1A1A17; font-weight: 700; border: none; border-radius: 3px; padding: 0.15rem 0.4rem; font-size: 0.65rem; cursor: pointer;">
-            Utiliser 66000001
-          </button>
+          <span style="color: #C5A059; font-weight: 700;">66000001</span>
         </div>
-        <div>Tapez <code>66000001</code> (code: <code>1234</code>) pour simuler un succès immédiat.</div>
+        <div>Numéro test FedaPay simulé automatiquement avec succès (code : <code>1234</code>).</div>
       `;
       drawerDepositBtn.parentNode.appendChild(drawerHelper);
-
-      const fillDrawerBtn = document.getElementById('fillDrawerTestBtn');
-      if (fillDrawerBtn) {
-        fillDrawerBtn.onclick = () => {
-          const p = document.getElementById('drawerCustomerPhone');
-          if (p) p.value = '66000001';
-          const n = document.getElementById('drawerCustomerName');
-          if (n && !n.value) n.value = 'Client Test Maison Adénikè';
-        };
-      }
     }
   }
 
@@ -265,7 +237,16 @@
     triggerCheckout: function (opts) {
       const config = window.FEDAPAY_CONFIG || {};
       const { firstname, lastname } = splitFullName(opts.customerName);
-      const cleanPhone = cleanPhoneNumber(opts.customerPhone);
+      let cleanPhone = cleanPhoneNumber(opts.customerPhone);
+
+      // En mode Sandbox, FedaPay exige exclusivement 66000001 ou 64000001 pour simuler un succès
+      if ((config.environment || 'sandbox') === 'sandbox') {
+        if (cleanPhone !== '66000001' && cleanPhone !== '64000001') {
+          console.log(`[FedaPay Sandbox] Substitution automatique du numéro réel (${cleanPhone}) par 66000001 pour approbation.`);
+          cleanPhone = '66000001';
+        }
+      }
+
       const email = opts.customerEmail || (cleanPhone + '@maisonadenike.com');
 
       ensureFedaPaySDK(function () {
