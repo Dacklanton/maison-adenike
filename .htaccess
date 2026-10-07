@@ -1,31 +1,53 @@
 RewriteEngine On
 
-# 1. Force HTTPS
+# 1. Désactiver le listage des répertoires (Directory Browsing)
+Options -Indexes
+
+# 2. Bloquer l'accès aux fichiers sensibles et de configuration
+<FilesMatch "(^\.|\.(json|lock|md|log|env|yml|yaml|config|sh|py|git|bak|swp))$">
+    Require all denied
+</FilesMatch>
+
+# 3. Force HTTPS
 RewriteCond %{HTTPS} off
 RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
 
-# 2. Redirections d'anciennes pages
+# 4. Redirections d'anciennes pages
 RewriteRule ^sejours(\.html)?$ /evenements [R=301,L]
 RewriteRule ^livre(\.html)?$ / [R=301,L]
 RewriteRule ^brochure$ / [R=301,L]
 
-# 3. Clean URLs : permet d'accéder à /restaurant sans écrire restaurant.html
+# 5. Clean URLs : permet d'accéder à /restaurant sans écrire restaurant.html
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteCond %{REQUEST_FILENAME}\.html -f
 RewriteRule ^(.*)$ $1.html [L]
 
-# 4. Redirection automatique si un utilisateur tape .html dans l'URL
+# 6. Redirection automatique si un utilisateur tape .html dans l'URL
 RewriteCond %{THE_REQUEST} /([^.]+)\.html [NC]
 RewriteRule ^ /%1 [NC,L,R=301]
 
-# 5. Sécurité
+# 7. En-têtes de Sécurité Avancés (Security Headers)
 <IfModule mod_headers.c>
+    # Empêche le reniflage de type MIME
     Header always set X-Content-Type-Options "nosniff"
+
+    # Empêche le clickjacking en interdisant l'affichage dans des frames externes
     Header always set X-Frame-Options "SAMEORIGIN"
+
+    # Filtre anti-XSS des navigateurs
     Header always set X-XSS-Protection "1; mode=block"
+
+    # HSTS : Force la navigation en HTTPS pendant 1 an (Strict-Transport-Security)
+    Header always set Strict-Transport-Security "max-age=31536000; includeSubDomains; preload"
+
+    # Referrer Policy : Ne divulgue pas d'informations sensibles aux domaines tiers
+    Header always set Referrer-Policy "strict-origin-when-cross-origin"
+
+    # Permissions Policy : Désactive les capteurs intrusifs non nécessaires tout en autorisant les paiements
+    Header always set Permissions-Policy "camera=(), microphone=(), geolocation=(), payment=(self)"
 </IfModule>
 
-# 6. Cache navigateur pour performances optimales
+# 8. Cache navigateur pour performances optimales
 <IfModule mod_expires.c>
     ExpiresActive On
     ExpiresByType image/jpg "access plus 1 year"
