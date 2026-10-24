@@ -74,7 +74,7 @@
 
       <ul class="nav-menu">
         <li><a href="index.html" class="nav-link">Accueil</a></li>
-        <li><a href="restaurant.html" class="nav-link">Restaurant</a></li>
+        <li><a href="restaurant.html" class="nav-link">Restaurant &amp; Bar</a></li>
         <li><a href="chambres.html" class="nav-link">Lodges &amp; Espaces</a></li>
         <li><a href="evenements.html" class="nav-link active">Événements</a></li>
         <li><a href="vodoun-days.html" class="nav-link nav-link-vodoun">Vodoun Days <span class="vodoun-badge-mini">2027</span></a></li>
@@ -121,7 +121,7 @@
     </div>
     <ul class="mobile-menu-links">
       <li><a href="index.html" class="mobile-nav-link">Accueil</a></li>
-      <li><a href="restaurant.html" class="mobile-nav-link">Restaurant</a></li>
+      <li><a href="restaurant.html" class="mobile-nav-link">Restaurant &amp; Bar</a></li>
       <li><a href="chambres.html" class="mobile-nav-link">Lodges &amp; Espaces</a></li>
       <li><a href="evenements.html" class="mobile-nav-link active">Événements</a></li>
       <li><a href="vodoun-days.html" class="mobile-nav-link" style="color: var(--c-gold-bright); font-weight: 700;">★ Vodoun Days 2027</a></li>
@@ -207,18 +207,18 @@
           <div style="text-align: center; max-width: 820px; margin: 0 auto 2.75rem auto;">
             <div class="eyebrow" style="background: rgba(168, 59, 36, 0.12); color: var(--color-ochre); border: 1px solid var(--color-raffia);">
               <span class="eyebrow-dot" style="background: var(--color-ochre);"></span>
-              <span>Concerts d'Exception • Automne 2026</span>
+              <span>Concert Live d'Exception • Samedi 24 Octobre 2026</span>
             </div>
             <h2 style="font-family: var(--font-serif); font-size: clamp(2.2rem, 3.8vw, 3.25rem); font-weight: 600; color: var(--text-espresso); margin-bottom: 0.65rem;">
-              Les Rendez-Vous <span style="font-style: italic; color: var(--color-ochre);">Mystère</span>
+              Le Grand Concert Live <span style="font-style: italic; color: var(--color-ochre);">Ricos Campos</span>
             </h2>
             <p style="font-size: 1.05rem; color: var(--text-espresso-muted); max-width: 65ch; margin: 0 auto;">
-              Deux soirées exclusives sous les étoiles de Ouidah. Musique vivante, gastronomie du terroir et atmosphère feutrée avant les festivités des Vodoun Days.
+              Une soirée musicale et festive inoubliable sous les étoiles de Ouidah. Musique vivante, carte gastronomique du terroir, bar à cocktails et atmosphère feutrée.
             </p>
           </div>
 
           <!-- GRILLE LUXE 2 COLONNES DES DEUX CONCERTS MYSTÈRE -->
-          <div class="mystery-events-grid" id="mysteryEventsContainer">
+          <div class="mystery-events-grid" id="mysteryEventsContainer" style="grid-template-columns: minmax(320px, 580px); justify-content: center;">
             
             <!-- ÉVÉNEMENT 1 : 24 OCTOBRE 2026 — RICOS CAMPOS -->
             <article class="mystery-event-card" id="concert-24-octobre-2026">
@@ -256,10 +256,11 @@
                   <span>Maison Adénikè, Ouidah</span>
                 </div>
 
-                <!-- Conditions & Salons VIP d'après l'Affiche -->
-                <div style="font-size: 0.8125rem; color: var(--text-espresso-muted); line-height: 1.45; background: rgba(197, 160, 89, 0.08); border: 1px solid rgba(197, 160, 89, 0.25); border-radius: 8px; padding: 0.65rem 0.85rem; margin: 0.25rem 0 0.5rem 0;">
-                  <strong style="color: var(--color-ochre); display: block; margin-bottom: 0.2rem; font-size: 0.85rem;">Entrée libre &amp; gratuite (consommation obligatoire)</strong>
-                  <span>✦ 2 Salons VIP (4 places chacun) : 100 000 FCFA / salon avec vin ou champagne</span>
+                <!-- Conditions & Salons VIP d'après l'Affiche (Contraste Élevé & Texte Lisible) -->
+                <div style="font-size: 0.85rem; color: #FAF7F2; line-height: 1.5; background: rgba(197, 160, 89, 0.16); border: 1.5px solid rgba(197, 160, 89, 0.55); border-radius: 10px; padding: 0.85rem 1rem; margin: 0.35rem 0 0.65rem 0; box-shadow: 0 4px 15px rgba(0, 0, 0, 0.35);">
+                  <strong style="color: #FFE6A7; display: block; margin-bottom: 0.35rem; font-size: 0.92rem; font-weight: 700; letter-spacing: 0.02em;">Entrée libre &amp; gratuite (consommation obligatoire)</strong>
+                  <span style="color: #FFFFFF; font-weight: 600; display: block; margin-bottom: 0.25rem;">✦ 2 Salons VIP (4 places chacun) : 100 000 FCFA / salon avec vin ou champagne</span>
+                  <span style="color: rgba(255, 255, 255, 0.9); font-size: 0.78rem; display: block;">✦ 1 VIP avec 2 bouteilles de vin • 1 VIP avec 2 bouteilles de champagne</span>
                 </div>
 
                 <!-- Teaser Menu Spécial du Jour -->
@@ -299,65 +300,7 @@
               </div>
             </article>
 
-            <!-- ÉVÉNEMENT 2 : 31 OCTOBRE 2026 -->
-            <article class="mystery-event-card" id="concert-31-octobre-2026">
-              <!-- 1. L'Affiche (Visuel) -->
-              <div class="mystery-poster-wrap">
-                <img src="assets/images/events/artiste-mystere-31-octobre.jpg" 
-                     alt="Affiche Concert Artiste Mystère Invité — Samedi 31 Octobre 2026 à la Maison Adénikè Ouidah" 
-                     class="mystery-poster-img"
-                     loading="lazy">
-              </div>
-
-              <!-- 2. Le Bloc Détails & Action -->
-              <div class="mystery-details-block">
-                <div>
-                  <span class="mystery-status-badge">✦ ARTISTE MYSTÈRE INVITÉ</span>
-                </div>
-
-                <div class="mystery-date-row">
-                  <svg class="mystery-date-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <circle cx="12" cy="12" r="10" stroke-width="1.8"/>
-                    <polyline points="12 6 12 12 16 14" stroke-width="1.8"/>
-                  </svg>
-                  <span><strong>Samedi 31 octobre 2026</strong> — Dès 17h00</span>
-                </div>
-
-                <div class="mystery-location-row">
-                  <svg class="mystery-date-icon" style="width: 1rem; height: 1rem;" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/>
-                  </svg>
-                  <span>Maison Adénikè, Ouidah</span>
-                </div>
-
-                <!-- Note Teaser pour le 31 octobre -->
-                <div style="font-size: 0.8125rem; color: var(--text-espresso-muted); line-height: 1.45; background: rgba(38, 22, 15, 0.04); border: 1px solid rgba(38, 22, 15, 0.1); border-radius: 8px; padding: 0.65rem 0.85rem; margin: 0.25rem 0 0.5rem 0;">
-                  <strong style="color: var(--text-espresso); display: block; margin-bottom: 0.2rem; font-size: 0.85rem;">✦ Affiche officielle bientôt dévoilée</strong>
-                  <span>Réservations anticipées ouvertes dès maintenant pour garantir votre accès.</span>
-                </div>
-
-                <div class="mystery-actions-row">
-                  <button type="button" class="mystery-btn-book" data-open-booking data-service="Artiste Mystère (31 Octobre 2026)">
-                    <span>Réserver ma place</span>
-                    <svg width="15" height="15" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2.5">
-                      <line x1="5" y1="12" x2="19" y2="12"></line>
-                      <polyline points="12 5 19 12 12 19"></polyline>
-                    </svg>
-                  </button>
-                  <a href="https://wa.me/2290155456363?text=Bonjour%20Maison%20Ad%C3%A9nik%C3%A9%2C%20je%20souhaite%20r%C3%A9server%20pour%20le%20concert%20du%2031%20octobre" 
-                     target="_blank" 
-                     rel="noopener noreferrer" 
-                     class="mystery-btn-wa"
-                     title="Réserver sur WhatsApp (01 55 45 63 63)">
-                    <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor">
-                      <path d="M12.031 2C6.505 2 2.012 6.486 2.012 12.004c0 1.907.539 3.69 1.472 5.213L2.001 22l4.945-1.45a9.98 9.98 0 005.085 1.385c5.526 0 10.019-4.486 10.019-10.005C22.05 6.486 17.557 2 12.031 2zm0 18.257c-1.637 0-3.176-.464-4.502-1.267l-.323-.194-2.946.864.88-2.868-.21-.334a8.214 8.214 0 01-1.258-4.454c0-4.57 3.72-8.283 8.359-8.283 4.638 0 8.358 3.713 8.358 8.283 0 4.57-3.72 8.283-8.358 8.283zm4.58-6.195c-.251-.126-1.485-.733-1.715-.816-.23-.084-.397-.126-.565.126-.168.25-.65.816-.797.983-.146.168-.293.189-.544.063-.251-.126-1.06-.39-2.02-1.246-.746-.665-1.25-1.487-1.396-1.739-.147-.251-.016-.387.11-.512.113-.113.251-.294.377-.44.126-.147.168-.252.251-.419.084-.168.042-.315-.021-.441-.063-.126-.565-1.363-.775-1.867-.204-.49-.411-.424-.564-.432l-.481-.008c-.168 0-.44.063-.67.315-.23.252-.88.86-.88 2.097 0 1.238.902 2.435 1.027 2.603.126.168 1.776 2.712 4.303 3.803.601.26 1.07.415 1.436.531.604.192 1.154.165 1.588.1.484-.072 1.485-.607 1.694-1.194.21-.587.21-1.09.147-1.194-.063-.105-.23-.168-.481-.294z"/>
-                    </svg>
-                    <span>WhatsApp</span>
-                  </a>
-                </div>
-              </div>
-            </article>
+            
 
           </div>
         </div>
@@ -391,12 +334,24 @@
           <!-- Grille Asymétrique : Affiche Officielle & Liste Gastronomique -->
           <div class="menu-du-jour-grid">
             
-            <!-- Colonne Gauche : L'Affiche Haute Résolution -->
+            <!-- Colonne Gauche : Les Deux Affiches Officielles (Plats & Cocktails) -->
             <div class="menu-flyer-column">
-              <div class="menu-flyer-card" data-open-menu-flyer title="Cliquer pour afficher l'affiche en plein écran">
-                <span class="menu-flyer-badge-top">✦ CARTE SAVEURS DU 24 OCTOBRE</span>
-                <img src="assets/images/events/menu-saveurs-24-octobre.jpg" 
-                     alt="Affiche Officielle Menu Saveurs du Samedi 24 Octobre 2026 à la Maison Adénikè" 
+              <!-- Sélecteur d'Affiche Interactive -->
+              <div style="display: flex; gap: 0.5rem; margin-bottom: 0.85rem; width: 100%; justify-content: center;">
+                <button type="button" class="flyer-switch-btn is-active" id="btnShowFoodFlyer" style="background: linear-gradient(135deg, #A6242B, #7A141A); color: #FFF; border: 1.5px solid #C5A059; border-radius: 9999px; padding: 0.4rem 0.85rem; font-size: 0.75rem; font-weight: 700; cursor: pointer; display: flex; align-items: center; gap: 0.35rem; font-family: 'Plus Jakarta Sans', sans-serif;">
+                  <span>🍽️ Affiche Plats</span>
+                </button>
+                <button type="button" class="flyer-switch-btn" id="btnShowCocktailsFlyer" style="background: rgba(255,255,255,0.06); color: #FFE6A7; border: 1.5px solid rgba(197, 160, 89, 0.4); border-radius: 9999px; padding: 0.4rem 0.85rem; font-size: 0.75rem; font-weight: 700; cursor: pointer; display: flex; align-items: center; gap: 0.35rem; font-family: 'Plus Jakarta Sans', sans-serif;">
+                  <span>🍸 Affiche Cocktails</span>
+                </button>
+              </div>
+
+              <!-- Cadre de l'Affiche Interactive -->
+              <div class="menu-flyer-card" id="menuFlyerInteractiveCard" data-open-poster="assets/images/events/menu-saveurs-24-octobre.jpg" title="Cliquer pour afficher l'affiche en plein écran">
+                <span class="menu-flyer-badge-top" id="menuFlyerBadgeTop">✦ CARTE SAVEURS DU 24 OCTOBRE</span>
+                <img id="menuFlyerCurrentImg" 
+                     src="assets/images/events/menu-saveurs-24-octobre.jpg" 
+                     alt="Affiche Officielle Menu du Samedi 24 Octobre 2026 à la Maison Adénikè" 
                      class="menu-flyer-img" 
                      loading="lazy">
                 <div class="menu-flyer-zoom-hint">
@@ -404,9 +359,10 @@
                   <span>Agrandir l'Affiche</span>
                 </div>
               </div>
-              <button type="button" class="menu-flyer-btn-expand" data-open-menu-flyer>
+
+              <button type="button" class="menu-flyer-btn-expand" id="menuFlyerBtnExpand">
                 <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg>
-                <span>Voir en plein écran</span>
+                <span>Agrandir en plein écran</span>
               </button>
             </div>
 
@@ -502,114 +458,134 @@
                 </div>
               </div>
 
-                            <!-- 4. Cocktails Signatures & Bar Lounge -->
+                            <!-- 4. Cocktails & Bar Lounge (Conforme à l'Affiche Officielle) -->
               <div class="menu-category-group" data-category-type="cocktails" id="menu-cocktails">
                 <div class="menu-category-header">
                   <div class="menu-category-icon" style="background: rgba(18, 140, 126, 0.2); border-color: #128C7E; color: #4EFA87;">🍸</div>
-                  <h3 class="menu-category-title" style="color: #FFE6A7;">Cocktails Signatures &amp; Bar Lounge</h3>
+                  <h3 class="menu-category-title" style="color: #FFE6A7;">Cocktails</h3>
                 </div>
 
-                <!-- 1. Cocktail Mangoustan -->
-                <div class="menu-dish-row">
-                  <div class="menu-dish-with-media">
-                    <div class="menu-dish-media-thumb">
-                      <img src="assets/images/cocktail-mangoustan.jpg" alt="Cocktail Mangoustan Signature" loading="lazy">
-                    </div>
-                    <div class="menu-dish-info">
-                      <div class="menu-dish-name">
-                        <span>Cocktail Mangoustan</span>
-                        <span class="menu-badge-gold">Signature Adénikè</span>
-                      </div>
-                      <p class="menu-dish-desc">
-                        Nectar de mangoustan frais, touches de menthe sauvage du potager, zeste de citron vert et rhum ambré arrangé (disponible en version Mocktail sans alcool).
-                      </p>
-                    </div>
-                  </div>
-                  <div class="menu-dish-price-pill" style="background: linear-gradient(135deg, #C5A059 0%, #9E7D3B 100%); color: #1A1614;">3 500 F.CFA</div>
-                </div>
-
-                <!-- 2. Soto Royal -->
-                <div class="menu-dish-row">
-                  <div class="menu-dish-with-media">
-                    <div class="menu-dish-media-thumb">
-                      <img src="assets/images/soto-royal-adenike.jpg" alt="Soto Royal Traditionnel" loading="lazy">
-                    </div>
-                    <div class="menu-dish-info">
-                      <div class="menu-dish-name">
-                        <span>Soto Royal d'Ouidah</span>
-                        <span class="menu-badge-gold">Héritage Royal</span>
-                      </div>
-                      <p class="menu-dish-desc">
-                        Liqueur sacrée d'héritage d'Ouidah macérée aux écorces nobles, miel pur de forêt tropicale et nectars de fruits mijotés.
-                      </p>
-                    </div>
-                  </div>
-                  <div class="menu-dish-price-pill" style="background: linear-gradient(135deg, #C5A059 0%, #9E7D3B 100%); color: #1A1614;">3 000 / 4 500 F.CFA</div>
-                </div>
-
-                <!-- 3. Cocktails Givrés Bicolores -->
-                <div class="menu-dish-row">
-                  <div class="menu-dish-with-media">
-                    <div class="menu-dish-media-thumb">
-                      <img src="assets/images/cocktail-maison.jpg" alt="Cocktails Givrés Bicolores" loading="lazy">
-                    </div>
-                    <div class="menu-dish-info">
-                      <div class="menu-dish-name">
-                        <span>Cocktails Givrés Tropiques</span>
-                        <span class="menu-badge-cocktail">Fraîcheur</span>
-                      </div>
-                      <p class="menu-dish-desc">
-                        Duo givré mangue fraîche &amp; fruits de la passion, infusion de fleurs d'hibiscus et glace pilée rafraîchissante.
-                      </p>
-                    </div>
-                  </div>
-                  <div class="menu-dish-price-pill" style="background: linear-gradient(135deg, #C5A059 0%, #9E7D3B 100%); color: #1A1614;">3 000 F.CFA</div>
-                </div>
-
-                <!-- 4. Mojito Ouidah Impérial -->
-                <div class="menu-dish-row">
-                  <div class="menu-dish-with-media">
-                    <div class="menu-dish-media-thumb">
-                      <img src="assets/images/bar-cocktails.jpg" alt="Mojito Ouidah Impérial" loading="lazy">
-                    </div>
-                    <div class="menu-dish-info">
-                      <div class="menu-dish-name">
-                        <span>Mojito Ouidah Impérial</span>
-                      </div>
-                      <p class="menu-dish-desc">
-                        Rhum blanc premium, menthe fraîche pilée, jus pur de canne à sucre locale, perles de citron et eau gazeuse glacée.
-                      </p>
-                    </div>
-                  </div>
-                  <div class="menu-dish-price-pill" style="background: linear-gradient(135deg, #C5A059 0%, #9E7D3B 100%); color: #1A1614;">3 500 F.CFA</div>
-                </div>
-
-                <!-- 5. Bières & Jus Locaux -->
+                <!-- Gléxwé -->
                 <div class="menu-dish-row">
                   <div class="menu-dish-info">
                     <div class="menu-dish-name">
                       <span class="menu-dish-name-bullet">&rarr;</span>
-                      <span>Bières Fraîches &amp; Jus de Fruits Pressés</span>
+                      <span>Gléxwé</span>
+                      <span class="menu-badge-gold">Signature Ouidah</span>
                     </div>
-                    <p class="menu-dish-desc">
-                      Béninoise, Castel, Beaufort frappées, Jus d'ananas frais de Savalou, Bissap artisanal et cocktail détox gingembre.
-                    </p>
+                    <p class="menu-dish-desc">Miel, Orange, Grenadine, S.O.T.O</p>
                   </div>
-                  <div class="menu-dish-price-pill" style="background: rgba(255, 255, 255, 0.15); color: #FFE6A7;">1 500 / 2 000 F.CFA</div>
+                  <div class="menu-dish-price-pill">2 500 F.CFA</div>
                 </div>
 
-                <!-- 6. Vins & Champagnes Fins -->
+                <!-- MMA -->
                 <div class="menu-dish-row">
                   <div class="menu-dish-info">
                     <div class="menu-dish-name">
                       <span class="menu-dish-name-bullet">&rarr;</span>
-                      <span>Bouteilles VIP : Vins Fins &amp; Champagnes au Seau</span>
+                      <span>MMA</span>
                     </div>
-                    <p class="menu-dish-desc">
-                      Champagnes bruts de prestige, cuvées sélectionnées, servies fraîches au seau à glace pour les tables et salons VIP.
-                    </p>
+                    <p class="menu-dish-desc">Menthe, Passion, Citron, Rhum</p>
                   </div>
-                  <div class="menu-dish-price-pill" style="background: linear-gradient(135deg, #B3542E, #8C3E1F); color: #FFFFFF;">Dès 25 000 F.CFA</div>
+                  <div class="menu-dish-price-pill">2 500 F.CFA</div>
+                </div>
+              </div>
+
+              <!-- 5. Mocktails (Sans Alcool) -->
+              <div class="menu-category-group" data-category-type="cocktails">
+                <div class="menu-category-header">
+                  <div class="menu-category-icon" style="background: rgba(197, 160, 89, 0.2); border-color: #C5A059; color: #FFE6A7;">🍹</div>
+                  <h3 class="menu-category-title" style="color: #FFE6A7;">Mocktails (Sans Alcool)</h3>
+                </div>
+
+                <!-- Ouidah - Colada -->
+                <div class="menu-dish-row">
+                  <div class="menu-dish-info">
+                    <div class="menu-dish-name">
+                      <span class="menu-dish-name-bullet">&rarr;</span>
+                      <span>Ouidah - Colada</span>
+                    </div>
+                    <p class="menu-dish-desc">Lait de coco, Ananas, Bissap, Malibu</p>
+                  </div>
+                  <div class="menu-dish-price-pill">1 500 F.CFA</div>
+                </div>
+
+                <!-- Passion - Bora -->
+                <div class="menu-dish-row">
+                  <div class="menu-dish-info">
+                    <div class="menu-dish-name">
+                      <span class="menu-dish-name-bullet">&rarr;</span>
+                      <span>Passion - Bora</span>
+                    </div>
+                    <p class="menu-dish-desc">Goyave, orange, passion, Citron</p>
+                  </div>
+                  <div class="menu-dish-price-pill">1 500 F.CFA</div>
+                </div>
+
+                <!-- Ice Tea -->
+                <div class="menu-dish-row">
+                  <div class="menu-dish-info">
+                    <div class="menu-dish-name">
+                      <span class="menu-dish-name-bullet">&rarr;</span>
+                      <span>Ice Tea Maison</span>
+                    </div>
+                    <p class="menu-dish-desc">Thé glacé maison, Citron, Menthe</p>
+                  </div>
+                  <div class="menu-dish-price-pill">1 500 F.CFA</div>
+                </div>
+              </div>
+
+              <!-- 6. Jus Nature -->
+              <div class="menu-category-group" data-category-type="cocktails">
+                <div class="menu-category-header">
+                  <div class="menu-category-icon" style="background: rgba(166, 36, 43, 0.2); border-color: #A6242B; color: #FF9B9B;">🍉</div>
+                  <h3 class="menu-category-title" style="color: #FFE6A7;">Jus Nature</h3>
+                </div>
+
+                <!-- Fruits de saison -->
+                <div class="menu-dish-row">
+                  <div class="menu-dish-info">
+                    <div class="menu-dish-name">
+                      <span class="menu-dish-name-bullet">&rarr;</span>
+                      <span>Fruits de saison</span>
+                    </div>
+                    <p class="menu-dish-desc">Jus frais pressés de saison (sauf Pastèque)</p>
+                  </div>
+                  <div class="menu-dish-price-pill">1 000 F.CFA</div>
+                </div>
+
+                <!-- Pastèque -->
+                <div class="menu-dish-row">
+                  <div class="menu-dish-info">
+                    <div class="menu-dish-name">
+                      <span class="menu-dish-name-bullet">&rarr;</span>
+                      <span>Jus de Pastèque Frais</span>
+                      <span class="menu-badge-gold">Frappé</span>
+                    </div>
+                    <p class="menu-dish-desc">Pur jus de pastèque désaltérant, servi très frais</p>
+                  </div>
+                  <div class="menu-dish-price-pill">2 000 F.CFA</div>
+                </div>
+              </div>
+
+              <!-- 7. Soto Royal d'Ouidah -->
+              <div class="menu-category-group" data-category-type="cocktails">
+                <div class="menu-category-header">
+                  <div class="menu-category-icon" style="background: rgba(197, 160, 89, 0.25); border-color: #FFE6A7; color: #FFE6A7;">👑</div>
+                  <h3 class="menu-category-title" style="color: #FFE6A7;">Soto Royal d'Ouidah</h3>
+                </div>
+
+                <!-- Soto Royal Shots -->
+                <div class="menu-dish-row">
+                  <div class="menu-dish-info">
+                    <div class="menu-dish-name">
+                      <span class="menu-dish-name-bullet">&rarr;</span>
+                      <span>Soto Royal</span>
+                      <span class="menu-badge-gold">Liqueur d'Héritage</span>
+                    </div>
+                    <p class="menu-dish-desc">Liqueur artisanale sacrée d'Ouidah macérée aux écorces nobles et miel pur</p>
+                  </div>
+                  <div class="menu-dish-price-pill" style="background: linear-gradient(135deg, #C5A059 0%, #9E7D3B 100%); color: #1A1614; font-weight: 800;">1 Shot : 500 F • 3 Shots : 1 000 F.CFA</div>
                 </div>
               </div>
 
@@ -1333,7 +1309,7 @@
           </div>
           <ul class="mockup-subfooter-nav">
             <li><a href="index.html">Accueil</a></li>
-            <li><a href="restaurant.html">Restaurant</a></li>
+            <li><a href="restaurant.html">Restaurant &amp; Bar</a></li>
             <li><a href="chambres.html">Chambres</a></li>
             <li><a href="vodoun-days.html">Vodoun Days</a></li>
             <li><a href="contact.html">Contact</a></li>
@@ -1496,10 +1472,7 @@
                 <input type="radio" name="modalService" value="Concert Ricos Campos (24 Octobre 2026)" class="service-pill-radio">
                 <span class="service-pill-label">🎤 Ricos Campos (24 Oct)</span>
               </label>
-              <label>
-                <input type="radio" name="modalService" value="Artiste Mystère (31 Octobre 2026)" class="service-pill-radio">
-                <span class="service-pill-label">🎭 Artiste Mystère (31 Oct)</span>
-              </label>
+
               <label>
                 <input type="radio" name="modalService" value="Vodoun Days 2027" class="service-pill-radio">
                 <span class="service-pill-label">✨ Vodoun Days</span>
@@ -1746,7 +1719,7 @@
         id: "concert-24-octobre-2026",
         title: "Concert Live Ricos Campos",
         badge: "✦ CONCERT LIVE EXCLUSIF",
-        badgeStyle: "background: rgba(197, 160, 89, 0.18); color: var(--color-ochre); border-color: rgba(197, 160, 89, 0.4);",
+        badgeStyle: "background: rgba(197, 160, 89, 0.25); color: #FFE6A7; border-color: rgba(197, 160, 89, 0.6);",
         dateFull: "Samedi 24 octobre 2026",
         time: "À partir de 16h00",
         location: "Maison Adénikè, Ouidah",
@@ -1754,27 +1727,10 @@
         alt: "Affiche Officielle Concert Live Ricos Campos — Samedi 24 Octobre 2026 à la Maison Adénikè Ouidah",
         infoTitle: "Entrée libre & gratuite (consommation obligatoire)",
         infoDesc: "✦ 2 Salons VIP (4 places chacun) : 100 000 FCFA / salon avec vin ou champagne",
-        infoBoxStyle: "background: rgba(197, 160, 89, 0.08); border: 1px solid rgba(197, 160, 89, 0.25);",
-        infoTitleColor: "var(--color-ochre)",
+        infoBoxStyle: "background: rgba(197, 160, 89, 0.16); border: 1.5px solid rgba(197, 160, 89, 0.55); color: #FAF7F2;",
+        infoTitleColor: "#FFE6A7",
         whatsappMessage: "Bonjour Maison Adéniké, je souhaite réserver pour le concert de Ricos Campos du samedi 24 octobre 2026",
         serviceValue: "Concert Ricos Campos (24 Octobre 2026)"
-      },
-      {
-        id: "concert-31-octobre-2026",
-        title: "Artiste Mystère Invité",
-        badge: "✦ ARTISTE MYSTÈRE INVITÉ",
-        badgeStyle: "",
-        dateFull: "Samedi 31 octobre 2026",
-        time: "Dès 17h00",
-        location: "Maison Adénikè, Ouidah",
-        image: "assets/images/events/artiste-mystere-31-octobre.jpg",
-        alt: "Affiche Concert Artiste Mystère Invité — Samedi 31 Octobre 2026 à la Maison Adénikè Ouidah",
-        infoTitle: "✦ Affiche officielle bientôt dévoilée",
-        infoDesc: "Réservations anticipées ouvertes dès maintenant pour garantir votre accès.",
-        infoBoxStyle: "background: rgba(38, 22, 15, 0.04); border: 1px solid rgba(38, 22, 15, 0.1);",
-        infoTitleColor: "var(--text-espresso)",
-        whatsappMessage: "Bonjour Maison Adéniké, je souhaite réserver pour le concert du 31 octobre",
-        serviceValue: "Artiste Mystère (31 Octobre 2026)"
       }
     ];
 
@@ -1922,6 +1878,73 @@
 
       if (window.location.hash === '#menu-cocktails') {
         setMenuFilter('cocktails');
+      }
+    })();
+  </script>
+
+
+  <script>
+    (function() {
+      const btnFood = document.getElementById('btnShowFoodFlyer');
+      const btnCocktails = document.getElementById('btnShowCocktailsFlyer');
+      const flyerCard = document.getElementById('menuFlyerInteractiveCard');
+      const flyerImg = document.getElementById('menuFlyerCurrentImg');
+      const flyerBadge = document.getElementById('menuFlyerBadgeTop');
+      const btnExpand = document.getElementById('menuFlyerBtnExpand');
+
+      const foodFlyerSrc = 'assets/images/events/menu-saveurs-24-octobre.jpg';
+      const cocktailsFlyerSrc = 'assets/images/events/menu-cocktails-24-octobre.jpg';
+
+      let currentFlyer = 'food';
+
+      const showFood = () => {
+        currentFlyer = 'food';
+        if (flyerImg) flyerImg.src = foodFlyerSrc;
+        if (flyerCard) flyerCard.setAttribute('data-open-poster', foodFlyerSrc);
+        if (flyerBadge) flyerBadge.textContent = '✦ CARTE SAVEURS DU 24 OCTOBRE';
+        if (btnFood) {
+          btnFood.style.background = 'linear-gradient(135deg, #A6242B, #7A141A)';
+          btnFood.style.borderColor = '#C5A059';
+          btnFood.style.color = '#FFF';
+        }
+        if (btnCocktails) {
+          btnCocktails.style.background = 'rgba(255,255,255,0.06)';
+          btnCocktails.style.borderColor = 'rgba(197, 160, 89, 0.4)';
+          btnCocktails.style.color = '#FFE6A7';
+        }
+      };
+
+      const showCocktails = () => {
+        currentFlyer = 'cocktails';
+        if (flyerImg) flyerImg.src = cocktailsFlyerSrc;
+        if (flyerCard) flyerCard.setAttribute('data-open-poster', cocktailsFlyerSrc);
+        if (flyerBadge) flyerBadge.textContent = '✦ CARTE COCKTAILS DU 24 OCTOBRE';
+        if (btnCocktails) {
+          btnCocktails.style.background = 'linear-gradient(135deg, #C5A059, #9E7D3B)';
+          btnCocktails.style.borderColor = '#FFE6A7';
+          btnCocktails.style.color = '#1A1614';
+        }
+        if (btnFood) {
+          btnFood.style.background = 'rgba(255,255,255,0.06)';
+          btnFood.style.borderColor = 'rgba(197, 160, 89, 0.4)';
+          btnFood.style.color = '#FFE6A7';
+        }
+      };
+
+      if (btnFood) btnFood.addEventListener('click', showFood);
+      if (btnCocktails) btnCocktails.addEventListener('click', showCocktails);
+
+      if (btnExpand && flyerCard) {
+        btnExpand.addEventListener('click', () => {
+          const src = currentFlyer === 'food' ? foodFlyerSrc : cocktailsFlyerSrc;
+          const modal = document.getElementById('posterFlyerModal');
+          const modalImg = document.getElementById('posterFlyerModalImg');
+          if (modal && modalImg) {
+            modalImg.src = src;
+            modal.classList.add('is-open');
+            document.body.style.overflow = 'hidden';
+          }
+        });
       }
     })();
   </script>
