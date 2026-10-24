@@ -6420,27 +6420,53 @@ body.is-scrolled .navbar {
 
 .mystery-poster-wrap {
   width: 100%;
-  aspect-ratio: 1 / 1;
-  border-radius: 1rem;
+  aspect-ratio: auto;
+  border-radius: 1.15rem;
   overflow: hidden;
-  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  margin-bottom: 1.5rem;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.6);
+  border: 1.5px solid rgba(216, 186, 142, 0.35);
+  margin-bottom: 1.25rem;
   position: relative;
-  background: #0A0A0A;
+  background: #0E0C0A;
 }
 
 .mystery-poster-img {
   width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: center;
-  transition: transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+  height: auto;
   display: block;
+  object-fit: contain;
+  transition: transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .mystery-event-card:hover .mystery-poster-img {
   transform: scale(1.02);
+}
+
+.poster-expand-badge {
+  position: absolute;
+  bottom: 12px;
+  right: 12px;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  background: rgba(14, 12, 10, 0.85);
+  border: 1px solid rgba(197, 160, 89, 0.5);
+  color: #FFE6A7;
+  padding: 0.3rem 0.65rem;
+  border-radius: 9999px;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 0.7rem;
+  font-weight: 700;
+  backdrop-filter: blur(8px);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+  pointer-events: none;
+  opacity: 0.9;
+  transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+.mystery-poster-wrap:hover .poster-expand-badge {
+  opacity: 1;
+  transform: scale(1.05);
 }
 
 .mystery-status-badge {

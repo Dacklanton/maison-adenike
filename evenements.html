@@ -9,8 +9,8 @@
   <meta property="og:title" content="Événements & Réceptions — Maison Adénikè Ouidah">
   <meta property="og:image" content="assets/images/logo-adenike.png">
   <link rel="icon" type="image/png" href="assets/images/logo-adenike.png">
-  <link rel="stylesheet" href="styles.css?v=8.1">
-  <link rel="stylesheet" href="assets/css/event-menu-jour.css?v=1.0">
+  <link rel="stylesheet" href="styles.css?v=8.2">
+  <link rel="stylesheet" href="assets/css/event-menu-jour.css?v=1.1">
 </head>
 <body>
 
@@ -222,12 +222,16 @@
             
             <!-- ÉVÉNEMENT 1 : 24 OCTOBRE 2026 — RICOS CAMPOS -->
             <article class="mystery-event-card" id="concert-24-octobre-2026">
-              <!-- 1. L'Affiche Officielle -->
-              <div class="mystery-poster-wrap">
+              <!-- 1. L'Affiche Officielle Non-Tronquée -->
+              <div class="mystery-poster-wrap" data-open-poster="assets/images/events/ricos-campos-24-octobre.jpg?v=3" style="cursor: pointer;" title="Cliquer pour voir l'affiche en plein écran">
                 <img src="assets/images/events/ricos-campos-24-octobre.jpg?v=3" 
                      alt="Affiche Officielle Concert Live Ricos Campos — Samedi 24 Octobre 2026 à la Maison Adénikè Ouidah" 
                      class="mystery-poster-img"
                      loading="lazy">
+                <span class="poster-expand-badge">
+                  <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line><line x1="11" y1="8" x2="11" y2="14"></line><line x1="8" y1="11" x2="14" y2="11"></line></svg>
+                  <span>Agrandir</span>
+                </span>
               </div>
 
               <!-- 2. Le Bloc Détails & Action -->
@@ -1713,39 +1717,48 @@
   <script src="assets/js/payment-engine.js?v=1.2"></script>
   <script src="app.js?v=8.1"></script>
 
-  <!-- Modal Agrandissement de l'Affiche Menu Spécial du Jour -->
-  <div id="menuFlyerModal" class="menu-flyer-modal" role="dialog" aria-modal="true" aria-label="Affiche Menu Saveurs du 24 Octobre 2026">
+  <!-- Modal Universel Agrandissement d'Affiche (Concert & Menu) -->
+  <div id="posterFlyerModal" class="menu-flyer-modal" role="dialog" aria-modal="true" aria-label="Affiche grand format">
     <div class="menu-flyer-modal-content">
-      <button type="button" id="menuFlyerCloseBtn" class="menu-flyer-modal-close" aria-label="Fermer l'affiche">
+      <button type="button" id="posterFlyerCloseBtn" class="menu-flyer-modal-close" aria-label="Fermer l'affiche">
         <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
           <line x1="18" y1="6" x2="6" y2="18"></line>
           <line x1="6" y1="6" x2="18" y2="18"></line>
         </svg>
       </button>
-      <img src="assets/images/events/menu-saveurs-24-octobre.jpg" alt="Affiche Officielle Menu Saveurs — Samedi 24 Octobre 2026 à la Maison Adénikè" class="menu-flyer-modal-img">
+      <img id="posterFlyerModalImg" src="assets/images/events/ricos-campos-24-octobre.jpg?v=3" alt="Affiche officielle" class="menu-flyer-modal-img">
     </div>
   </div>
 
   <script>
     (function() {
-      const modal = document.getElementById('menuFlyerModal');
-      const triggers = document.querySelectorAll('[data-open-menu-flyer]');
-      const closeBtn = document.getElementById('menuFlyerCloseBtn');
-      if (!modal) return;
+      const modal = document.getElementById('posterFlyerModal');
+      const modalImg = document.getElementById('posterFlyerModalImg');
+      const closeBtn = document.getElementById('posterFlyerCloseBtn');
+      if (!modal || !modalImg) return;
       
-      const open = () => {
+      const openModal = (src) => {
+        if (src) modalImg.src = src;
         modal.classList.add('is-open');
         document.body.style.overflow = 'hidden';
       };
-      const close = () => {
+      const closeModal = () => {
         modal.classList.remove('is-open');
         document.body.style.overflow = '';
       };
       
-      triggers.forEach(t => t.addEventListener('click', (e) => { e.preventDefault(); open(); }));
-      if (closeBtn) closeBtn.addEventListener('click', close);
-      modal.addEventListener('click', (e) => { if (e.target === modal) close(); });
-      document.addEventListener('keydown', (e) => { if (e.key === 'Escape' && modal.classList.contains('is-open')) close(); });
+      document.addEventListener('click', (e) => {
+        const trigger = e.target.closest('[data-open-poster], [data-open-menu-flyer]');
+        if (trigger) {
+          e.preventDefault();
+          const src = trigger.getAttribute('data-open-poster') || 'assets/images/events/menu-saveurs-24-octobre.jpg';
+          openModal(src);
+        }
+      });
+      
+      if (closeBtn) closeBtn.addEventListener('click', closeModal);
+      modal.addEventListener('click', (e) => { if (e.target === modal) closeModal(); });
+      document.addEventListener('keydown', (e) => { if (e.key === 'Escape' && modal.classList.contains('is-open')) closeModal(); });
     })();
   </script>
 
