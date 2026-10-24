@@ -23,6 +23,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initRestaurantMenuCardModal();
   initDishHoverPreview();
   initCurrentYear();
+  initHeroEntranceAnimation();
 });
 
 /* ==========================================================================
@@ -168,6 +169,7 @@ function initBookingEngines() {
     'Lodge & Suites': 45000,
     'Lodge': 45000,
     'Restaurant Adénikè': 25000,
+    'Menu Saveurs (24 Octobre 2026)': 10000,
     'Séjour / Événement': 150000,
     'Vodoun Days 2027': 85000,
     'Concert Ricos Campos (24 Octobre 2026)': 35000,
@@ -645,7 +647,9 @@ function initCurtainTransition() {
     hasExited = true;
 
     overlay.classList.add('is-exiting');
-
+    document.querySelector('.hero-editorial-full')?.classList.add('hero-revealed');
+    document.querySelector('.lodging-hero-section')?.classList.add('lodge-revealed');
+    
     // Libère les interactions et supprime le rideau du DOM après l'animation
     setTimeout(() => {
       overlay.classList.add('is-hidden');
@@ -1032,3 +1036,170 @@ function initDishHoverPreview() {
   document.addEventListener('mouseleave', hideDish);
 }
 
+/* ==========================================================================
+   16. ANIMATION CHORÉGRAPHIÉE DU HERO (PAGE D'ACCUEIL) & PARALLAXE SCROLL
+   ========================================================================== */
+function initHeroEntranceAnimation() {
+  const homeHero = document.querySelector('.hero-editorial-full');
+  const lodgeHero = document.querySelector('.lodging-hero-section');
+  const restaurantHero = document.querySelector('.restaurant-hero-animated');
+  const overlay = document.getElementById('pageCurtainTransition');
+
+  // Révélation d'accueil
+  if (homeHero) {
+    const triggerHomeReveal = () => homeHero.classList.add('hero-revealed');
+    if (!overlay || overlay.classList.contains('is-hidden') || overlay.classList.contains('is-exiting')) {
+      setTimeout(triggerHomeReveal, 150);
+    } else {
+      setTimeout(triggerHomeReveal, 2200);
+    }
+  }
+
+  // Révélation Lodge
+  if (lodgeHero) {
+    const triggerLodgeReveal = () => lodgeHero.classList.add('lodge-revealed');
+    if (!overlay || overlay.classList.contains('is-hidden') || overlay.classList.contains('is-exiting')) {
+      setTimeout(triggerLodgeReveal, 150);
+    } else {
+      setTimeout(triggerLodgeReveal, 2200);
+    }
+  }
+
+      // Révélation Restaurant progressive :
+  // 1. Vidéo bien claire sans filtre sombre
+  // 2. Au MILIEU de la vidéo -> Le texte apparaît
+  // 3. À la FIN de la vidéo -> L'image de l'assiette et le logo apparaissent
+  if (restaurantHero) {
+    const restaurantVideo = document.getElementById('restaurantHeroVideo');
+    let textRevealed = false;
+    let mediaRevealed = false;
+
+    const revealText = () => {
+      if (textRevealed) return;
+      textRevealed = true;
+      restaurantHero.classList.add('restaurant-text-revealed');
+    };
+
+    const revealMedia = () => {
+      if (mediaRevealed) return;
+      mediaRevealed = true;
+      revealText(); // s'assurer que le texte est là
+      restaurantHero.classList.add('restaurant-media-revealed');
+    };
+
+    if (restaurantVideo) {
+      restaurantVideo.loop = false;
+
+      const onProgress = () => {
+        const dur = restaurantVideo.duration;
+        const cur = restaurantVideo.currentTime;
+        if (dur > 0) {
+          // Au milieu (>= 50% de la durée, ex: 10s sur 20s) -> apparition du texte
+          if (cur >= (dur * 0.48)) {
+            revealText();
+          }
+          // Vers la fin (>= 98% de la durée) -> apparition de l'image et du logo
+          if (cur >= (dur - 0.35)) {
+            revealMedia();
+            restaurantVideo.removeEventListener('timeupdate', onProgress);
+            restaurantVideo.loop = true;
+            restaurantVideo.play().catch(() => {});
+          }
+        }
+      };
+
+      restaurantVideo.addEventListener('timeupdate', onProgress);
+
+      restaurantVideo.addEventListener('ended', () => {
+        revealMedia();
+        restaurantVideo.loop = true;
+        restaurantVideo.play().catch(() => {});
+      }, { once: true });
+
+      // Lancer la lecture en fond
+      const playPromise = restaurantVideo.play();
+      if (playPromise !== undefined) {
+        playPromise.catch(() => {
+          // Fallback si autoplay bloqué par le navigateur
+          setTimeout(revealText, 2500);
+          setTimeout(revealMedia, 5000);
+        });
+      }
+    } else {
+      setTimeout(revealText, 300);
+      setTimeout(revealMedia, 1200);
+    }
+  }
+
+  // Déplacement du logo au scroll (au centre en bas du hero, sur la frontière avec la section suivante)
+  const restaurantBadge = document.getElementById('restaurantHeroBadge');
+
+  if (window.matchMedia('(prefers-reduced-motion: no-preference)').matches) {
+    let ticking = false;
+
+    window.addEventListener('scroll', () => {
+      if (!ticking) {
+        window.requestAnimationFrame(() => {
+          const scrolled = window.scrollY;
+          const limit = window.innerHeight * 1.2;
+
+          // Restaurant Logo Shift : se positionne sous la barre de menu au scroll
+          if (restaurantBadge) {
+            if (scrolled > 120) {
+              restaurantBadge.classList.add('badge-docked-nav');
+            } else {
+              restaurantBadge.classList.remove('badge-docked-nav');
+            }
+          }
+
+          if (scrolled < limit) {
+            // Parallaxe Accueil
+            if (homeHero) {
+              const heroContent = homeHero.querySelector('.hero-content-editorial');
+              const heroVideo = homeHero.querySelector('.hero-video-bg');
+              if (heroContent) {
+                heroContent.style.transform = `translate3d(0, ${scrolled * 0.22}px, 0)`;
+                heroContent.style.opacity = Math.max(0, 1 - (scrolled / (window.innerHeight * 0.72)));
+              }
+              if (heroVideo) {
+                heroVideo.style.transform = `translate3d(0, ${scrolled * 0.08}px, 0) scale(1.02)`;
+              }
+            }
+
+            // Parallaxe Lodge
+            if (lodgeHero) {
+              const lodgeContent = lodgeHero.querySelector('.lodging-hero-content');
+              const lodgeVideo = lodgeHero.querySelector('.lodging-hero-video');
+              if (lodgeContent) {
+                lodgeContent.style.transform = `translate3d(0, ${scrolled * 0.20}px, 0)`;
+                lodgeContent.style.opacity = Math.max(0, 1 - (scrolled / (window.innerHeight * 0.75)));
+              }
+              if (lodgeVideo) {
+                lodgeVideo.style.transform = `translate3d(0, ${scrolled * 0.07}px, 0) scale(1.02)`;
+              }
+            }
+
+            // Parallaxe Restaurant
+            if (restaurantHero) {
+              const restoLeft = restaurantHero.querySelector('.aww-hero-left');
+              const restoRight = restaurantHero.querySelector('.aww-hero-right');
+              const restoBgVid = restaurantHero.querySelector('.restaurant-hero-bg-video');
+              if (restoLeft) {
+                restoLeft.style.transform = `translate3d(0, ${scrolled * 0.16}px, 0)`;
+                restoLeft.style.opacity = Math.max(0, 1 - (scrolled / (window.innerHeight * 0.85)));
+              }
+              if (restoRight && !restaurantBadge?.classList.contains('badge-docked-nav')) {
+                restoRight.style.transform = `translate3d(0, ${scrolled * 0.22}px, 0)`;
+              }
+              if (restoBgVid) {
+                restoBgVid.style.transform = `translate3d(0, ${scrolled * 0.08}px, 0) scale(1.02)`;
+              }
+            }
+          }
+          ticking = false;
+        });
+        ticking = true;
+      }
+    }, { passive: true });
+  }
+}

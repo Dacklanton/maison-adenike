@@ -10,6 +10,7 @@
   <meta property="og:image" content="assets/images/logo-adenike.png">
   <link rel="icon" type="image/png" href="assets/images/logo-adenike.png">
   <link rel="stylesheet" href="styles.css?v=8.1">
+  <link rel="stylesheet" href="assets/css/event-menu-jour.css?v=1.0">
 </head>
 <body>
 
@@ -184,6 +185,7 @@
           <nav aria-label="Sous-navigation événements">
             <ul class="mockup-brand-nav">
               <li><a href="#prochains-evenements" class="active">Concerts Confirmés</a></li>
+              <li><a href="#menu-special-du-jour" style="color: #FFE6A7; font-weight: 700;">🍽️ Menu Spécial (24 Oct)</a></li>
               <li><a href="#vodoun-days-highlight">Vodoun Days 2027</a></li>
               <li><a href="#agenda-complet">Calendrier</a></li>
               <li><a href="#reserver" data-open-booking data-service="Séjour / Événement">Réservations</a></li>
@@ -254,6 +256,21 @@
                 <div style="font-size: 0.8125rem; color: var(--text-espresso-muted); line-height: 1.45; background: rgba(197, 160, 89, 0.08); border: 1px solid rgba(197, 160, 89, 0.25); border-radius: 8px; padding: 0.65rem 0.85rem; margin: 0.25rem 0 0.5rem 0;">
                   <strong style="color: var(--color-ochre); display: block; margin-bottom: 0.2rem; font-size: 0.85rem;">Entrée libre &amp; gratuite (consommation obligatoire)</strong>
                   <span>✦ 2 Salons VIP (4 places chacun) : 100 000 FCFA / salon avec vin ou champagne</span>
+                </div>
+
+                <!-- Teaser Menu Spécial du Jour -->
+                <div class="concert-menu-teaser-box">
+                  <div class="concert-menu-teaser-left">
+                    <span class="concert-menu-teaser-icon">🍽️</span>
+                    <div class="concert-menu-teaser-text">
+                      <strong>Menu Spécial du Jour disponible !</strong>
+                      <span>Bômiwo, Riz au Gras, Moyo Adénikè, Tchatchanga</span>
+                    </div>
+                  </div>
+                  <a href="#menu-special-du-jour" class="concert-menu-teaser-btn">
+                    <span>Voir le Menu</span>
+                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                  </a>
                 </div>
 
                 <div class="mystery-actions-row">
@@ -340,6 +357,163 @@
 
           </div>
         </div>
+
+        
+        <!-- ==================================================================
+             MENU SPÉCIAL DU JOUR — ÉDITION CONCERT DU 24 OCTOBRE 2026
+             ================================================================== -->
+        <section class="menu-du-jour-section" id="menu-special-du-jour" aria-labelledby="menuDuJourTitle">
+          <!-- En-tête Statutaire -->
+          <div class="menu-du-jour-header">
+            <div>
+              <span class="menu-du-jour-brand-tag">
+                <img src="assets/images/logo-adenike.png" alt="Maison Adénikè" class="menu-du-jour-logo-mini">
+                <span>Maison Adénikè • Table Gastronomique</span>
+              </span>
+            </div>
+            <div style="margin-bottom: 0.5rem;">
+              <span class="menu-du-jour-date-pill">
+                <span>✦ SAMEDI 24 OCTOBRE 2026</span>
+              </span>
+            </div>
+            <h2 id="menuDuJourTitle" class="menu-du-jour-title">
+              Menu Spécial <span class="menu-du-jour-title-accent">du Jour</span>
+            </h2>
+            <p class="menu-du-jour-subtitle">
+              À l'occasion du concert live de <strong>Ricos Campos</strong>, notre chef vous propose une carte éphémère célébrant l'authenticité et les trésors culinaires du terroir béninois. Service dès 16h00.
+            </p>
+          </div>
+
+          <!-- Grille Asymétrique : Affiche Officielle & Liste Gastronomique -->
+          <div class="menu-du-jour-grid">
+            
+            <!-- Colonne Gauche : L'Affiche Haute Résolution -->
+            <div class="menu-flyer-column">
+              <div class="menu-flyer-card" data-open-menu-flyer title="Cliquer pour afficher l'affiche en plein écran">
+                <span class="menu-flyer-badge-top">✦ CARTE SAVEURS DU 24 OCTOBRE</span>
+                <img src="assets/images/events/menu-saveurs-24-octobre.jpg" 
+                     alt="Affiche Officielle Menu Saveurs du Samedi 24 Octobre 2026 à la Maison Adénikè" 
+                     class="menu-flyer-img" 
+                     loading="lazy">
+                <div class="menu-flyer-zoom-hint">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line><line x1="11" y1="8" x2="11" y2="14"></line><line x1="8" y1="11" x2="14" y2="11"></line></svg>
+                  <span>Agrandir l'Affiche</span>
+                </div>
+              </div>
+              <button type="button" class="menu-flyer-btn-expand" data-open-menu-flyer>
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg>
+                <span>Voir en plein écran</span>
+              </button>
+            </div>
+
+            <!-- Colonne Droite : Les Plats & Tarifs Officiels -->
+            <div class="menu-details-column">
+
+              <!-- 1. Spécialités -->
+              <div class="menu-category-group">
+                <div class="menu-category-header">
+                  <div class="menu-category-icon">✦</div>
+                  <h3 class="menu-category-title">Spécialités de la Maison</h3>
+                </div>
+
+                <div class="menu-dish-row">
+                  <div class="menu-dish-info">
+                    <div class="menu-dish-name">
+                      <span class="menu-dish-name-bullet">&rarr;</span>
+                      <span>Bomiwo Royal</span>
+                    </div>
+                    <p class="menu-dish-desc">
+                      Pâte rouge traditionnelle mijotée au bouillon savoureux, accompagnée de volaille dorée assaisonnée aux épices royales.
+                    </p>
+                  </div>
+                  <div class="menu-dish-price-pill">3 000 / 6 000 F.CFA</div>
+                </div>
+              </div>
+
+              <!-- 2. Nos Plats du Terroir -->
+              <div class="menu-category-group">
+                <div class="menu-category-header">
+                  <div class="menu-category-icon">✦</div>
+                  <h3 class="menu-category-title">Nos Plats du Terroir</h3>
+                </div>
+
+                <div class="menu-dish-row">
+                  <div class="menu-dish-info">
+                    <div class="menu-dish-name">
+                      <span class="menu-dish-name-bullet">&rarr;</span>
+                      <span>Riz au Gras / Riz au Curry</span>
+                    </div>
+                    <p class="menu-dish-desc">
+                      Mijoté au poisson frais de mer de l'Atlantique, grains fondants parfumés aux aromates de Ouidah.
+                    </p>
+                  </div>
+                  <div class="menu-dish-price-pill">3 000 / 3 500 F.CFA</div>
+                </div>
+
+                <div class="menu-dish-row">
+                  <div class="menu-dish-info">
+                    <div class="menu-dish-name">
+                      <span class="menu-dish-name-bullet">&rarr;</span>
+                      <span>Moyo Adénikè</span>
+                    </div>
+                    <p class="menu-dish-desc">
+                      Sauce crue d'héritage aux tomates fraîches concassées, oignons croquants, piments doux et poisson de mer grillé.
+                    </p>
+                  </div>
+                  <div class="menu-dish-price-pill">3 500 / 4 000 F.CFA</div>
+                </div>
+              </div>
+
+              <!-- 3. Grillades au Feu de Bois -->
+              <div class="menu-category-group">
+                <div class="menu-category-header">
+                  <div class="menu-category-icon">✦</div>
+                  <h3 class="menu-category-title">Grillades au Feu de Bois</h3>
+                </div>
+
+                <div class="menu-dish-row">
+                  <div class="menu-dish-info">
+                    <div class="menu-dish-name">
+                      <span class="menu-dish-name-bullet">&rarr;</span>
+                      <span>Tchatchanga Suprême</span>
+                    </div>
+                    <p class="menu-dish-desc">
+                      Viandes tendres braisées sur braises ardentes avec marinade secrète et piment kankan artisanal.
+                    </p>
+                  </div>
+                  <div class="menu-dish-price-pill">2 500 / 5 000 F.CFA</div>
+                </div>
+              </div>
+
+              <!-- Notice d'Avertissement & Quantité Limitée -->
+              <div class="menu-notice-box">
+                <div class="menu-notice-icon">⚠️</div>
+                <p class="menu-notice-text">
+                  <strong>Quantité limitée • Réservation fortement conseillée :</strong> Pour garantir la fraîcheur absolue et le service optimal de votre repas durant la soirée concert, nous vous invitons à réserver vos plats à l'avance.
+                </p>
+              </div>
+
+              <!-- Boutons d'Action & Réservation -->
+              <div class="menu-du-jour-actions">
+                <button type="button" class="menu-btn-primary" data-open-booking data-service="Menu Saveurs (24 Octobre 2026)">
+                  <span>Réserver ma Table & mon Menu</span>
+                  <span class="btn-icon-capsule">&rarr;</span>
+                </button>
+                <a href="https://wa.me/2290155456363?text=Bonjour%20Maison%20Ad%C3%A9nik%C3%A8%2C%20je%20souhaite%20r%C3%A9server%20des%20plats%20du%20Menu%20Saveurs%20du%20samedi%2024%20octobre%202026%20(Bomiwo%2C%20Tchatchanga%2C%20Riz%2C%20Moyo)..." 
+                   target="_blank" 
+                   rel="noopener noreferrer" 
+                   class="menu-btn-wa">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12.031 2C6.505 2 2.012 6.486 2.012 12.004c0 1.907.539 3.69 1.472 5.213L2.001 22l4.945-1.45a9.98 9.98 0 005.085 1.385c5.526 0 10.019-4.486 10.019-10.005C22.05 6.486 17.557 2 12.031 2zm0 18.257c-1.637 0-3.176-.464-4.502-1.267l-.323-.194-2.946.864.88-2.868-.21-.334a8.214 8.214 0 01-1.258-4.454c0-4.57 3.72-8.283 8.359-8.283 4.638 0 8.358 3.713 8.358 8.283 0 4.57-3.72 8.283-8.358 8.283zm4.58-6.195c-.251-.126-1.485-.733-1.715-.816-.23-.084-.397-.126-.565.126-.168.25-.65.816-.797.983-.146.168-.293.189-.544.063-.251-.126-1.06-.39-2.02-1.246-.746-.665-1.25-1.487-1.396-1.739-.147-.251-.016-.387.11-.512.113-.113.251-.294.377-.44.126-.147.168-.252.251-.419.084-.168.042-.315-.021-.441-.063-.126-.565-1.363-.775-1.867-.204-.49-.411-.424-.564-.432l-.481-.008c-.168 0-.44.063-.67.315-.23.252-.88.86-.88 2.097 0 1.238.902 2.435 1.027 2.603.126.168 1.776 2.712 4.303 3.803.601.26 1.07.415 1.436.531.604.192 1.154.165 1.588.1.484-.072 1.485-.607 1.694-1.194.21-.587.21-1.09.147-1.194-.063-.105-.23-.168-.481-.294z"/></svg>
+                  <span>Commander sur WhatsApp</span>
+                </a>
+                <a href="tel:+2290155456363" class="menu-btn-phone">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M6.62 10.79a15.053 15.053 0 006.59 6.59l2.2-2.2a1.003 1.003 0 011.02-.24c1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
+                  <span>01 55 45 63 63</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </section>
 
         <!-- BANIÈRE PHARE : VODOUN DAYS 2027 -->
         <div class="event-spotlight-card">
@@ -1187,6 +1361,10 @@
                 <span class="service-pill-label">🍽️ Table & Terroir</span>
               </label>
               <label>
+                <input type="radio" name="modalService" value="Menu Saveurs (24 Octobre 2026)" class="service-pill-radio">
+                <span class="service-pill-label">✨ Menu Saveurs (24 Oct)</span>
+              </label>
+              <label>
                 <input type="radio" name="modalService" value="Concert Ricos Campos (24 Octobre 2026)" class="service-pill-radio">
                 <span class="service-pill-label">🎤 Ricos Campos (24 Oct)</span>
               </label>
@@ -1534,5 +1712,42 @@
   <script src="assets/js/payment-config.js?v=1.0"></script>
   <script src="assets/js/payment-engine.js?v=1.2"></script>
   <script src="app.js?v=8.1"></script>
+
+  <!-- Modal Agrandissement de l'Affiche Menu Spécial du Jour -->
+  <div id="menuFlyerModal" class="menu-flyer-modal" role="dialog" aria-modal="true" aria-label="Affiche Menu Saveurs du 24 Octobre 2026">
+    <div class="menu-flyer-modal-content">
+      <button type="button" id="menuFlyerCloseBtn" class="menu-flyer-modal-close" aria-label="Fermer l'affiche">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="18" y1="6" x2="6" y2="18"></line>
+          <line x1="6" y1="6" x2="18" y2="18"></line>
+        </svg>
+      </button>
+      <img src="assets/images/events/menu-saveurs-24-octobre.jpg" alt="Affiche Officielle Menu Saveurs — Samedi 24 Octobre 2026 à la Maison Adénikè" class="menu-flyer-modal-img">
+    </div>
+  </div>
+
+  <script>
+    (function() {
+      const modal = document.getElementById('menuFlyerModal');
+      const triggers = document.querySelectorAll('[data-open-menu-flyer]');
+      const closeBtn = document.getElementById('menuFlyerCloseBtn');
+      if (!modal) return;
+      
+      const open = () => {
+        modal.classList.add('is-open');
+        document.body.style.overflow = 'hidden';
+      };
+      const close = () => {
+        modal.classList.remove('is-open');
+        document.body.style.overflow = '';
+      };
+      
+      triggers.forEach(t => t.addEventListener('click', (e) => { e.preventDefault(); open(); }));
+      if (closeBtn) closeBtn.addEventListener('click', close);
+      modal.addEventListener('click', (e) => { if (e.target === modal) close(); });
+      document.addEventListener('keydown', (e) => { if (e.key === 'Escape' && modal.classList.contains('is-open')) close(); });
+    })();
+  </script>
+
 </body>
 </html>
