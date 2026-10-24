@@ -185,7 +185,7 @@
           <nav aria-label="Sous-navigation événements">
             <ul class="mockup-brand-nav">
               <li><a href="#prochains-evenements" class="active">Concerts Confirmés</a></li>
-              <li><a href="#menu-special-du-jour" style="color: #FFE6A7; font-weight: 700;">🍽️ Menu Spécial (24 Oct)</a></li>
+              <li><a href="#menu-special-du-jour" style="color: #FFE6A7; font-weight: 700;">🍽️ Menu &amp; 🍸 Cocktails (24 Oct)</a></li>
               <li><a href="#vodoun-days-highlight">Vodoun Days 2027</a></li>
               <li><a href="#agenda-complet">Calendrier</a></li>
               <li><a href="#reserver" data-open-booking data-service="Séjour / Événement">Réservations</a></li>
@@ -268,7 +268,7 @@
                     <span class="concert-menu-teaser-icon">🍽️</span>
                     <div class="concert-menu-teaser-text">
                       <strong>Menu Spécial du Jour disponible !</strong>
-                      <span>Bômiwo, Riz au Gras, Moyo Adénikè, Tchatchanga</span>
+                      <span>Bômiwo, Riz au Gras, Moyo, Tchatchanga &amp; Cocktails Signatures</span>
                     </div>
                   </div>
                   <a href="#menu-special-du-jour" class="concert-menu-teaser-btn">
@@ -413,8 +413,21 @@
             <!-- Colonne Droite : Les Plats & Tarifs Officiels -->
             <div class="menu-details-column">
 
+              <!-- Onglets de Sélection Interactive : Tout / Mets / Cocktails -->
+              <div class="menu-filter-nav" role="tablist" aria-label="Filtrer les cartes du menu">
+                <button type="button" class="menu-filter-btn is-active" data-menu-filter="all">
+                  <span>✦ Tout Afficher</span>
+                </button>
+                <button type="button" class="menu-filter-btn" data-menu-filter="plats">
+                  <span>🍽️ Mets &amp; Spécialités</span>
+                </button>
+                <button type="button" class="menu-filter-btn" data-menu-filter="cocktails">
+                  <span>🍸 Cocktails &amp; Bar Lounge</span>
+                </button>
+              </div>
+
               <!-- 1. Spécialités -->
-              <div class="menu-category-group">
+              <div class="menu-category-group" data-category-type="plats">
                 <div class="menu-category-header">
                   <div class="menu-category-icon">✦</div>
                   <h3 class="menu-category-title">Spécialités de la Maison</h3>
@@ -435,7 +448,7 @@
               </div>
 
               <!-- 2. Nos Plats du Terroir -->
-              <div class="menu-category-group">
+              <div class="menu-category-group" data-category-type="plats">
                 <div class="menu-category-header">
                   <div class="menu-category-icon">✦</div>
                   <h3 class="menu-category-title">Nos Plats du Terroir</h3>
@@ -469,7 +482,7 @@
               </div>
 
               <!-- 3. Grillades au Feu de Bois -->
-              <div class="menu-category-group">
+              <div class="menu-category-group" data-category-type="plats">
                 <div class="menu-category-header">
                   <div class="menu-category-icon">✦</div>
                   <h3 class="menu-category-title">Grillades au Feu de Bois</h3>
@@ -486,6 +499,117 @@
                     </p>
                   </div>
                   <div class="menu-dish-price-pill">2 500 / 5 000 F.CFA</div>
+                </div>
+              </div>
+
+                            <!-- 4. Cocktails Signatures & Bar Lounge -->
+              <div class="menu-category-group" data-category-type="cocktails" id="menu-cocktails">
+                <div class="menu-category-header">
+                  <div class="menu-category-icon" style="background: rgba(18, 140, 126, 0.2); border-color: #128C7E; color: #4EFA87;">🍸</div>
+                  <h3 class="menu-category-title" style="color: #FFE6A7;">Cocktails Signatures &amp; Bar Lounge</h3>
+                </div>
+
+                <!-- 1. Cocktail Mangoustan -->
+                <div class="menu-dish-row">
+                  <div class="menu-dish-with-media">
+                    <div class="menu-dish-media-thumb">
+                      <img src="assets/images/cocktail-mangoustan.jpg" alt="Cocktail Mangoustan Signature" loading="lazy">
+                    </div>
+                    <div class="menu-dish-info">
+                      <div class="menu-dish-name">
+                        <span>Cocktail Mangoustan</span>
+                        <span class="menu-badge-gold">Signature Adénikè</span>
+                      </div>
+                      <p class="menu-dish-desc">
+                        Nectar de mangoustan frais, touches de menthe sauvage du potager, zeste de citron vert et rhum ambré arrangé (disponible en version Mocktail sans alcool).
+                      </p>
+                    </div>
+                  </div>
+                  <div class="menu-dish-price-pill" style="background: linear-gradient(135deg, #C5A059 0%, #9E7D3B 100%); color: #1A1614;">3 500 F.CFA</div>
+                </div>
+
+                <!-- 2. Soto Royal -->
+                <div class="menu-dish-row">
+                  <div class="menu-dish-with-media">
+                    <div class="menu-dish-media-thumb">
+                      <img src="assets/images/soto-royal-adenike.jpg" alt="Soto Royal Traditionnel" loading="lazy">
+                    </div>
+                    <div class="menu-dish-info">
+                      <div class="menu-dish-name">
+                        <span>Soto Royal d'Ouidah</span>
+                        <span class="menu-badge-gold">Héritage Royal</span>
+                      </div>
+                      <p class="menu-dish-desc">
+                        Liqueur sacrée d'héritage d'Ouidah macérée aux écorces nobles, miel pur de forêt tropicale et nectars de fruits mijotés.
+                      </p>
+                    </div>
+                  </div>
+                  <div class="menu-dish-price-pill" style="background: linear-gradient(135deg, #C5A059 0%, #9E7D3B 100%); color: #1A1614;">3 000 / 4 500 F.CFA</div>
+                </div>
+
+                <!-- 3. Cocktails Givrés Bicolores -->
+                <div class="menu-dish-row">
+                  <div class="menu-dish-with-media">
+                    <div class="menu-dish-media-thumb">
+                      <img src="assets/images/cocktail-maison.jpg" alt="Cocktails Givrés Bicolores" loading="lazy">
+                    </div>
+                    <div class="menu-dish-info">
+                      <div class="menu-dish-name">
+                        <span>Cocktails Givrés Tropiques</span>
+                        <span class="menu-badge-cocktail">Fraîcheur</span>
+                      </div>
+                      <p class="menu-dish-desc">
+                        Duo givré mangue fraîche &amp; fruits de la passion, infusion de fleurs d'hibiscus et glace pilée rafraîchissante.
+                      </p>
+                    </div>
+                  </div>
+                  <div class="menu-dish-price-pill" style="background: linear-gradient(135deg, #C5A059 0%, #9E7D3B 100%); color: #1A1614;">3 000 F.CFA</div>
+                </div>
+
+                <!-- 4. Mojito Ouidah Impérial -->
+                <div class="menu-dish-row">
+                  <div class="menu-dish-with-media">
+                    <div class="menu-dish-media-thumb">
+                      <img src="assets/images/bar-cocktails.jpg" alt="Mojito Ouidah Impérial" loading="lazy">
+                    </div>
+                    <div class="menu-dish-info">
+                      <div class="menu-dish-name">
+                        <span>Mojito Ouidah Impérial</span>
+                      </div>
+                      <p class="menu-dish-desc">
+                        Rhum blanc premium, menthe fraîche pilée, jus pur de canne à sucre locale, perles de citron et eau gazeuse glacée.
+                      </p>
+                    </div>
+                  </div>
+                  <div class="menu-dish-price-pill" style="background: linear-gradient(135deg, #C5A059 0%, #9E7D3B 100%); color: #1A1614;">3 500 F.CFA</div>
+                </div>
+
+                <!-- 5. Bières & Jus Locaux -->
+                <div class="menu-dish-row">
+                  <div class="menu-dish-info">
+                    <div class="menu-dish-name">
+                      <span class="menu-dish-name-bullet">&rarr;</span>
+                      <span>Bières Fraîches &amp; Jus de Fruits Pressés</span>
+                    </div>
+                    <p class="menu-dish-desc">
+                      Béninoise, Castel, Beaufort frappées, Jus d'ananas frais de Savalou, Bissap artisanal et cocktail détox gingembre.
+                    </p>
+                  </div>
+                  <div class="menu-dish-price-pill" style="background: rgba(255, 255, 255, 0.15); color: #FFE6A7;">1 500 / 2 000 F.CFA</div>
+                </div>
+
+                <!-- 6. Vins & Champagnes Fins -->
+                <div class="menu-dish-row">
+                  <div class="menu-dish-info">
+                    <div class="menu-dish-name">
+                      <span class="menu-dish-name-bullet">&rarr;</span>
+                      <span>Bouteilles VIP : Vins Fins &amp; Champagnes au Seau</span>
+                    </div>
+                    <p class="menu-dish-desc">
+                      Champagnes bruts de prestige, cuvées sélectionnées, servies fraîches au seau à glace pour les tables et salons VIP.
+                    </p>
+                  </div>
+                  <div class="menu-dish-price-pill" style="background: linear-gradient(135deg, #B3542E, #8C3E1F); color: #FFFFFF;">Dès 25 000 F.CFA</div>
                 </div>
               </div>
 
@@ -1759,6 +1883,46 @@
       if (closeBtn) closeBtn.addEventListener('click', closeModal);
       modal.addEventListener('click', (e) => { if (e.target === modal) closeModal(); });
       document.addEventListener('keydown', (e) => { if (e.key === 'Escape' && modal.classList.contains('is-open')) closeModal(); });
+    })();
+  </script>
+
+
+  <script>
+    (function() {
+      // Filtrage dynamique Mets / Cocktails
+      const filterBtns = document.querySelectorAll('.menu-filter-btn');
+      const categoryGroups = document.querySelectorAll('.menu-category-group[data-category-type]');
+
+      const setMenuFilter = (filter) => {
+        filterBtns.forEach(btn => {
+          const btnFilter = btn.getAttribute('data-menu-filter');
+          if (btnFilter === filter) {
+            btn.classList.add(filter === 'cocktails' ? 'is-active-cocktails' : 'is-active');
+          } else {
+            btn.classList.remove('is-active', 'is-active-cocktails');
+          }
+        });
+
+        categoryGroups.forEach(group => {
+          const type = group.getAttribute('data-category-type');
+          if (filter === 'all' || type === filter) {
+            group.classList.remove('is-hidden');
+          } else {
+            group.classList.add('is-hidden');
+          }
+        });
+      };
+
+      filterBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+          const filter = btn.getAttribute('data-menu-filter') || 'all';
+          setMenuFilter(filter);
+        });
+      });
+
+      if (window.location.hash === '#menu-cocktails') {
+        setMenuFilter('cocktails');
+      }
     })();
   </script>
 
