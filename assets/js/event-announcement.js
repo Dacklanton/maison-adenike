@@ -1,6 +1,6 @@
 /**
  * ==========================================================================
- * POPUP ANNONCE SPÉCIALE CONCERT (RICOS CAMPOS - 24 OCTOBRE 2026)
+ * POPUP ANNONCE SPÉCIALE CONCERT (YOVO GANGAN - 07 NOVEMBRE 2026)
  * Maison Adénikè • Ouidah, Bénin
  * Double-Bezel & Effet Flash Éclat (Awwwards-Tier Engineering)
  * ==========================================================================
@@ -9,8 +9,8 @@
 (function () {
   'use strict';
 
-  const STORAGE_KEY_SESSION = 'adenike_concert_24oct_dismissed';
-  const STORAGE_KEY_LOCAL_TIME = 'adenike_concert_24oct_dismiss_time';
+  const STORAGE_KEY_SESSION = 'adenike_concert_07nov_dismissed';
+  const STORAGE_KEY_LOCAL_TIME = 'adenike_concert_07nov_dismiss_time';
   const DISMISS_DURATION_MS = 24 * 60 * 60 * 1000; // 24 heures
 
   document.addEventListener('DOMContentLoaded', () => {
@@ -153,7 +153,7 @@
         // Déclencher le modal universel de réservation avec le service pré-sélectionné
         setTimeout(() => {
           if (typeof window.openBookingModal === 'function') {
-            window.openBookingModal('Concert Ricos Campos (24 Octobre 2026)');
+            window.openBookingModal('Concert Yovo Gangan (07 Novembre 2026)');
           } else {
             // Repli vers la section de réservation
             const bookingSec = document.getElementById('reservations');

@@ -172,6 +172,7 @@ function initBookingEngines() {
     'Menu Saveurs (24 Octobre 2026)': 10000,
     'Séjour / Événement': 150000,
     'Vodoun Days 2027': 85000,
+    'Concert Yovo Gangan (07 Novembre 2026)': 35000,
     'Concert Ricos Campos (24 Octobre 2026)': 35000,
     'Concert Fanicko (31 Octobre 2026)': 35000,
     'Artiste Mystère (24 Octobre 2026)': 35000,
