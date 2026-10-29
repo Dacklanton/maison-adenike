@@ -2565,6 +2565,7 @@ body.is-scrolled .navbar {
     rgba(18, 18, 18, 0.88) 100%
   );
   backdrop-filter: blur(0.5px);
+  pointer-events: none;
 }
 
 .hero-content-editorial {

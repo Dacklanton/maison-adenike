@@ -1,0 +1,103 @@
+/* ==========================================================================
+   MAISON ADÉNIKÈ — DESIGN TOKENS ARCHITECTURE (OUIDAH, BÉNIN)
+   Aligné à 100% sur le Design System en Production (styles.css)
+   ========================================================================== */
+
+:root {
+  /* ==========================================================================
+     1. PALETTE CHROMATIQUE AUTHENTIQUE (CONFORME AU SITE EN PRODUCTION)
+     ========================================================================== */
+
+  /* 1.1 Fonds & Surfaces Organiques (60%) */
+  --bg-linen:                     #FAF8F5; /* Lin d'Écueil : Fond principal diurne */
+  --bg-cream:                     #F3EDE2; /* Crème de Canari : Surfaces de cartes & encarts */
+  --bg-white:                     #FFFFFF; /* Blanc Pur : Cartes contrastées */
+
+  /* 1.2 Typographie & Contrastes Ébène (30%) */
+  --text-espresso:                #2B1810; /* Espresso d'Ébène : Titres & lecture (AAA > 13:1) */
+  --text-espresso-muted:          #5C4438; /* Espresso Doux : Textes secondaires */
+  --text-espresso-subtle:         #7D6559; /* Espresso Subtil : Légendes & mentions */
+
+  /* 1.3 Terroir & Chaleur Minérale */
+  --color-ochre:                  #A83B24; /* Ocre Rouge Béninois (Terracotta officielle) */
+  --color-ochre-hover:            #8C2F1A;
+  --color-ochre-active:           #752514;
+  --color-ochre-soft:             rgba(168, 59, 36, 0.12);
+  --color-ochre-glow:             rgba(168, 59, 36, 0.28);
+
+  /* 1.4 Orfèvrerie & Éclat Solaire */
+  --color-champagne:              #CBA158; /* Or Champagne / Orfèvrerie royale (Logo & Sceaux) */
+  --color-champagne-hover:        #B58D46;
+  --color-champagne-bright:       #E0BC75; /* Or Brillant Solaire : Accents sur fond sombre */
+  --color-champagne-light:        #FFE6A7; /* Or Pâle Haute Visibilité */
+  --color-champagne-soft:         rgba(203, 161, 88, 0.18);
+  --color-champagne-glow:         rgba(203, 161, 88, 0.28);
+
+  /* 1.5 Paille de Raphia & Artisanat Tressé */
+  --color-raffia:                 #D8BA8E; /* Paille de Raphia : Bordures délicates & séparateurs */
+  --color-raffia-light:           #EADBC3;
+  --color-raffia-soft:            rgba(216, 186, 142, 0.28);
+
+  /* 1.6 Végétal & Canopée des Manguiers */
+  --color-tropical:               #2E453A; /* Vert Tropical Canopée : Oasis du jardin de Ouidah */
+  --color-tropical-dark:          #1D2E26;
+  --color-tropical-light:         #436254;
+  --color-tropical-soft:          rgba(46, 69, 58, 0.10);
+
+  /* 1.7 Immersion Nocturne & Soirées Vivantes */
+  --obsidian-noir:                #14100E; /* Noir Obsidienne : Fond mode nuit, gala, concerts */
+  --obsidian-surface:             #1E1714; /* Surface nocturne */
+  --obsidian-card:                #251C18; /* Cartes nocturnes */
+  --obsidian-glass:               rgba(20, 16, 14, 0.94);
+
+  /* ==========================================================================
+     2. ALIASES SÉMANTIQUES (COMPATIBILITÉ TOTALE)
+     ========================================================================== */
+  --color-primary-terracotta:     var(--color-ochre);
+  --color-accent-dahomey-gold:    var(--color-champagne);
+  --color-primary-forest:         var(--color-tropical);
+  --color-neutral-raw-linen:      var(--bg-linen);
+  --color-neutral-ebony:          var(--text-espresso);
+  --color-dark-night-green:       var(--obsidian-noir);
+
+  --brand-gold:                   var(--color-champagne);
+  --brand-terracotta:             var(--color-ochre);
+  --brand-obsidian:               var(--obsidian-noir);
+  --brand-sand:                   var(--bg-linen);
+
+  /* ==========================================================================
+     3. TYPOGRAPHIE
+     ========================================================================== */
+  --font-serif:                   'Cormorant Garamond', Georgia, serif;
+  --font-display:                 'Cinzel', serif;
+  --font-sans:                    'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+  --font-script:                  'Pinyon Script', 'Alex Brush', cursive;
+
+  /* ==========================================================================
+     4. RYTHME D'ESPACEMENT (CADENCE 4px / 8px)
+     ========================================================================== */
+  --space-1:                      4px;
+  --space-2:                      8px;
+  --space-3:                      12px;
+  --space-4:                      16px;
+  --space-6:                      24px;
+  --space-8:                      32px;
+  --space-12:                     48px;
+  --space-16:                     64px;
+  --space-24:                     96px;
+
+  /* ==========================================================================
+     5. DOUBLE-BEZEL & RAYONS HAPTIQUES
+     ========================================================================== */
+  --radius-sm:                    8px;
+  --radius-md:                    12px;
+  --radius-bezel-inner:           14px;
+  --radius-bezel-outer:           20px;
+  --radius-full:                  9999px;
+
+  --shadow-luxury-glow:           0 0 15px rgba(203, 161, 88, 0.25);
+  --shadow-card:                  0 16px 40px -10px rgba(43, 24, 16, 0.06), 0 0 0 1px rgba(216, 186, 142, 0.35);
+  --shadow-hover:                 0 24px 48px -8px rgba(168, 59, 36, 0.18), 0 0 20px rgba(203, 161, 88, 0.18);
+  --border-gold-subtle:           1px solid rgba(203, 161, 88, 0.35);
+  --border-raffia-subtle:         1px solid rgba(216, 186, 142, 0.45);
+}

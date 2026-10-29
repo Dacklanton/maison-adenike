@@ -16,6 +16,7 @@ Thumbs.db
 
 # Scratch / build scripts (not needed for production)
 scratch/
+passes_concert_24_octobre/
 
 # Next.js build
 .next/

@@ -1,0 +1,690 @@
+/**
+ * MAISON ADÉNIKÈ — HERO ANIMATIONS & CINEMATIC MOTION
+ * Page d'Accueil, Lodge & Restaurant
+ */
+
+/* ==========================================================================
+   1. PAGE D'ACCUEIL : CHORÉGRAPHIE LUXE DU HERO
+   ========================================================================== */
+
+.hero-editorial-full {
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-content-editorial {
+  position: relative;
+  z-index: 2;
+  max-width: 960px;
+  margin: 0 auto;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  will-change: transform, opacity;
+  transition: transform 0.1s linear, opacity 0.1s linear;
+}
+
+/* Fond Vidéo avec zoom cinématographique feutré */
+.hero-editorial-full .hero-video-bg {
+  transform: scale(1.08);
+  opacity: 0.85;
+  transition: transform 3.5s cubic-bezier(0.16, 1, 0.3, 1), opacity 2s ease;
+  will-change: transform, opacity;
+}
+
+.hero-editorial-full.hero-revealed .hero-video-bg {
+  transform: scale(1.02);
+  opacity: 1;
+}
+
+/* 1. Emblème Monumental avec Apparition Douce */
+.hero-editorial-full .hero-brand-emblem-wrap {
+  opacity: 0;
+  transform: scale(0.82) translateY(28px);
+  filter: blur(8px);
+  transition: opacity 1.2s cubic-bezier(0.16, 1, 0.3, 1),
+              transform 1.2s cubic-bezier(0.16, 1, 0.3, 1),
+              filter 1.2s ease,
+              box-shadow 0.4s ease;
+  will-change: transform, opacity, filter;
+}
+
+.hero-editorial-full.hero-revealed .hero-brand-emblem-wrap {
+  opacity: 1;
+  transform: scale(1) translateY(0);
+  filter: blur(0);
+  animation: heroLogoGlow 4s ease-in-out infinite alternate;
+}
+
+.hero-brand-emblem-wrap:hover {
+  transform: scale(1.07) !important;
+  box-shadow: 0 0 45px rgba(203, 161, 88, 0.55), 0 18px 45px rgba(0, 0, 0, 0.7) !important;
+}
+
+/* 2. Micro-badge */
+.hero-editorial-full .hero-micro-badge {
+  opacity: 0;
+  transform: translateY(18px);
+  letter-spacing: 0.1em;
+  transition: opacity 0.9s cubic-bezier(0.16, 1, 0.3, 1) 0.25s,
+              transform 0.9s cubic-bezier(0.16, 1, 0.3, 1) 0.25s,
+              letter-spacing 1.1s cubic-bezier(0.16, 1, 0.3, 1) 0.25s;
+}
+
+.hero-editorial-full.hero-revealed .hero-micro-badge {
+  opacity: 1;
+  transform: translateY(0);
+  letter-spacing: 0.18em;
+}
+
+/* 3. Masque Cinématographique du Titre H1 */
+.hero-line-mask {
+  display: block;
+  overflow: hidden;
+  padding-bottom: 0.14em;
+}
+
+.hero-line-inner {
+  display: inline-block;
+  transform: translateY(120%);
+  opacity: 0;
+  transition: transform 1.2s cubic-bezier(0.16, 1, 0.3, 1),
+              opacity 0.8s ease;
+  will-change: transform, opacity;
+}
+
+.hero-editorial-full.hero-revealed .hero-line-mask:nth-child(1) .hero-line-inner {
+  transform: translateY(0);
+  opacity: 1;
+  transition-delay: 0.45s;
+}
+
+.hero-editorial-full.hero-revealed .hero-line-mask:nth-child(2) .hero-line-inner {
+  transform: translateY(0);
+  opacity: 1;
+  transition-delay: 0.68s;
+}
+
+/* Reflet Or Doux (Shimmer) sur "le goût de nos racines" */
+.hero-accent-shimmer {
+  font-style: italic;
+  font-weight: 400;
+  background: linear-gradient(
+    110deg,
+    #E6C87C 0%,
+    #FFF6DC 30%,
+    #E6C87C 60%,
+    #CBA158 85%,
+    #E6C87C 100%
+  );
+  background-size: 200% 100%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: inline-block;
+}
+
+.hero-editorial-full.hero-revealed .hero-accent-shimmer {
+  animation: heroGoldSweep 6s ease-in-out infinite 1.8s;
+}
+
+@keyframes heroGoldSweep {
+  0% { background-position: 100% 0; }
+  50%, 100% { background-position: -100% 0; }
+}
+
+/* 4. Sous-titre narratif */
+.hero-editorial-full .hero-sub-editorial {
+  opacity: 0;
+  transform: translateY(18px);
+  transition: opacity 1s cubic-bezier(0.16, 1, 0.3, 1) 0.9s,
+              transform 1s cubic-bezier(0.16, 1, 0.3, 1) 0.9s;
+}
+
+.hero-editorial-full.hero-revealed .hero-sub-editorial {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* 5. Actions CTA */
+.hero-editorial-full .hero-actions-editorial {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 1s cubic-bezier(0.16, 1, 0.3, 1) 1.1s,
+              transform 1s cubic-bezier(0.16, 1, 0.3, 1) 1.1s;
+}
+
+.hero-editorial-full.hero-revealed .hero-actions-editorial {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* 6. Bouton Ambiance Sonore */
+.hero-editorial-full .hero-audio-pill {
+  opacity: 0;
+  transform: translateY(16px);
+  transition: opacity 0.8s ease 1.25s,
+              transform 0.8s ease 1.25s,
+              background 0.3s ease,
+              border-color 0.3s ease;
+}
+
+.hero-editorial-full.hero-revealed .hero-audio-pill {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@media (max-width: 768px) {
+  .hero-editorial-full.hero-revealed .hero-audio-pill {
+    transform: translateX(-50%) translateY(0);
+  }
+}
+
+/* 7. Indicateur de Scroll Awwwards */
+.hero-scroll-indicator {
+  position: absolute;
+  bottom: 2rem;
+  right: 2.5rem;
+  z-index: 20;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  color: rgba(253, 251, 247, 0.65);
+  text-decoration: none;
+  font-size: 0.72rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  font-weight: 500;
+  opacity: 0;
+  transform: translateY(12px);
+  transition: opacity 0.8s ease 1.4s, transform 0.8s ease 1.4s, color 0.3s ease;
+}
+
+.hero-editorial-full.hero-revealed .hero-scroll-indicator {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.hero-scroll-indicator:hover {
+  color: var(--color-champagne-bright, #E6C87C);
+}
+
+.hero-mouse-icon {
+  width: 20px;
+  height: 32px;
+  border: 1.5px solid rgba(253, 251, 247, 0.4);
+  border-radius: 12px;
+  display: flex;
+  justify-content: center;
+  padding-top: 6px;
+  transition: border-color 0.3s ease;
+}
+
+.hero-scroll-indicator:hover .hero-mouse-icon {
+  border-color: var(--color-champagne-bright, #E6C87C);
+}
+
+.hero-mouse-dot {
+  width: 3px;
+  height: 6px;
+  background: var(--color-champagne-bright, #E6C87C);
+  border-radius: 3px;
+  animation: heroScrollWheel 2s infinite ease-in-out;
+}
+
+@keyframes heroScrollWheel {
+  0% { transform: translateY(0); opacity: 1; }
+  60% { transform: translateY(8px); opacity: 0; }
+  100% { transform: translateY(0); opacity: 0; }
+}
+
+@media (max-width: 991px) {
+  .hero-scroll-indicator {
+    display: none;
+  }
+}
+
+/* ==========================================================================
+   2. SECTION BÔMIWO (ACTE 1) : VIDÉO GOURMET DU PLAT
+   ========================================================================== */
+.bomiwo-frame-video {
+  position: relative;
+  border-radius: 2rem;
+  overflow: hidden;
+  box-shadow: 0 24px 60px -15px rgba(18, 18, 18, 0.18), 0 0 0 1px rgba(197, 160, 89, 0.3);
+}
+
+.bomiwo-frame-video video {
+  width: 100%;
+  height: 420px;
+  object-fit: cover;
+  display: block;
+  border-radius: inherit;
+  transition: transform 1.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.bomiwo-frame-video:hover video {
+  transform: scale(1.03);
+}
+
+/* ==========================================================================
+   3. PAGE LODGE & SUITES : CHORÉGRAPHIE SEREINE DU HERO (CHAMBRES.HTML)
+   ========================================================================== */
+
+.lodging-hero-section {
+  position: relative;
+  overflow: hidden;
+}
+
+/* Fond Vidéo avec entrée feutrée */
+.lodging-hero-section .lodging-hero-video {
+  transform: scale(1.08);
+  opacity: 0.85;
+  transition: transform 3.8s cubic-bezier(0.16, 1, 0.3, 1), opacity 2s ease;
+  will-change: transform, opacity;
+}
+
+.lodging-hero-section.lodge-revealed .lodging-hero-video {
+  transform: scale(1.02);
+  opacity: 1;
+}
+
+.lodging-hero-content {
+  position: relative;
+  z-index: 4;
+  will-change: transform, opacity;
+  transition: transform 0.1s linear, opacity 0.1s linear;
+}
+
+/* 1. Kicker Badge (Maison Adénikè • Ouidah) */
+.lodging-hero-section .lodging-hero-kicker {
+  opacity: 0;
+  transform: translateY(18px);
+  letter-spacing: 0.1em;
+  transition: opacity 0.9s cubic-bezier(0.16, 1, 0.3, 1) 0.15s,
+              transform 0.9s cubic-bezier(0.16, 1, 0.3, 1) 0.15s,
+              letter-spacing 1.2s cubic-bezier(0.16, 1, 0.3, 1) 0.15s;
+}
+
+.lodging-hero-section.lodge-revealed .lodging-hero-kicker {
+  opacity: 1;
+  transform: translateY(0);
+  letter-spacing: 0.22em;
+}
+
+/* 2. Titre H1 avec masque */
+.lodging-hero-section.lodge-revealed .hero-line-mask:nth-child(1) .hero-line-inner {
+  transform: translateY(0);
+  opacity: 1;
+  transition-delay: 0.35s;
+}
+
+.lodging-hero-section.lodge-revealed .hero-line-mask:nth-child(2) .hero-line-inner {
+  transform: translateY(0);
+  opacity: 1;
+  transition-delay: 0.58s;
+}
+
+/* Shimmer Or Ambré sur "d'Exception" */
+.lodge-accent-shimmer {
+  font-style: italic;
+  font-weight: 400;
+  background: linear-gradient(
+    110deg,
+    #C5A059 0%,
+    #FFF2D0 30%,
+    #C5A059 60%,
+    #E6C87C 85%,
+    #C5A059 100%
+  );
+  background-size: 200% 100%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: inline-block;
+}
+
+.lodging-hero-section.lodge-revealed .lodge-accent-shimmer {
+  animation: lodgeGoldSweep 6s ease-in-out infinite 1.6s;
+}
+
+@keyframes lodgeGoldSweep {
+  0% { background-position: 100% 0; }
+  50%, 100% { background-position: -100% 0; }
+}
+
+/* 3. Sous-titre intimiste */
+.lodging-hero-section .lodging-hero-subtitle {
+  opacity: 0;
+  transform: translateY(18px);
+  transition: opacity 1s cubic-bezier(0.16, 1, 0.3, 1) 0.8s,
+              transform 1s cubic-bezier(0.16, 1, 0.3, 1) 0.8s;
+}
+
+.lodging-hero-section.lodge-revealed .lodging-hero-subtitle {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* 4. Boutons d'action */
+.lodging-hero-section .lodging-hero-actions {
+  opacity: 0;
+  transform: translateY(22px);
+  transition: opacity 1s cubic-bezier(0.16, 1, 0.3, 1) 1s,
+              transform 1s cubic-bezier(0.16, 1, 0.3, 1) 1s;
+}
+
+.lodging-hero-section.lodge-revealed .lodging-hero-actions {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* 5. Indicateur Scroll Explorer */
+.lodging-hero-section .lodging-hero-scroll-indicator {
+  opacity: 0;
+  transform: translateY(12px);
+  transition: opacity 0.8s ease 1.25s, transform 0.8s ease 1.25s, color 0.3s ease;
+}
+
+.lodging-hero-section.lodge-revealed .lodging-hero-scroll-indicator {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ==========================================================================
+   3. PAGE RESTAURANT : CHORÉGRAPHIE LUXE DU HERO & DÉPLACEMENT SCROLL LOGO
+   ========================================================================== */
+
+.restaurant-hero-animated {
+  position: relative;
+  overflow: visible !important;
+  background-color: #0c0908;
+}
+
+/* Arrière-plan vidéo cinématique : pleine luminosité au départ, sans assombrissement excessif */
+.restaurant-hero-video-wrap {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.restaurant-hero-bg-video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 40%;
+  transform: scale(1.04);
+  /* 1ère lecture : vidéo bien claire, nette, sans atténuation de lumière */
+  filter: brightness(1.0) contrast(1.02);
+  transition: transform 3.5s cubic-bezier(0.16, 1, 0.3, 1), filter 1.8s ease;
+  will-change: transform, filter;
+}
+
+/* Dès que le texte apparaît (milieu de la vidéo), on tamise très légèrement pour une lisibilité parfaite */
+.restaurant-hero-animated.restaurant-text-revealed .restaurant-hero-bg-video {
+  transform: scale(1.01);
+  filter: brightness(0.82) contrast(1.05);
+}
+
+.restaurant-hero-dark-scrim {
+  position: absolute;
+  inset: 0;
+  /* Très subtil au début pour garder la vidéo éclatante */
+  background: radial-gradient(circle at 75% 45%, rgba(12, 9, 8, 0.1) 0%, rgba(12, 9, 8, 0.4) 70%);
+  opacity: 0.45;
+  transition: opacity 1.8s ease;
+  z-index: 1;
+}
+
+.restaurant-hero-animated.restaurant-text-revealed .restaurant-hero-dark-scrim {
+  opacity: 0.85;
+}
+
+.restaurant-hero-gradient-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    180deg,
+    rgba(12, 9, 8, 0.6) 0%,
+    rgba(12, 9, 8, 0.15) 35%,
+    rgba(12, 9, 8, 0.45) 75%,
+    #0c0908 100%
+  );
+  opacity: 0.55;
+  transition: opacity 1.8s ease;
+  z-index: 1;
+}
+
+.restaurant-hero-animated.restaurant-text-revealed .restaurant-hero-gradient-overlay {
+  opacity: 0.95;
+}
+
+.restaurant-hero-inner {
+  position: relative;
+  z-index: 2;
+}
+
+/* SÉQUENCE CHORÉGRAPHIÉE :
+   1. Au milieu de la vidéo -> Révélation du TEXTE (surtexte, titre, lead, boutons)
+   2. À la fin de la vidéo -> Révélation du DESIGN (assiette Bômiwo Royal + Logo officiel) */
+
+/* 1. Surtexte */
+.restaurant-hero-animated .aww-hero-overline {
+  opacity: 0;
+  transform: translateY(22px);
+  filter: blur(6px);
+  transition: opacity 0.9s cubic-bezier(0.16, 1, 0.3, 1),
+              transform 0.9s cubic-bezier(0.16, 1, 0.3, 1),
+              filter 0.9s ease;
+  will-change: transform, opacity;
+}
+
+.restaurant-hero-animated.restaurant-text-revealed .aww-hero-overline {
+  opacity: 1;
+  transform: translateY(0);
+  filter: blur(0);
+}
+
+/* 2. Titre Table & Terroir avec Masque d'Édition */
+.restaurant-hero-animated .aww-hero-title {
+  margin-bottom: 1.35rem;
+}
+
+.restaurant-hero-animated .hero-line-inner {
+  transform: translateY(115%);
+  opacity: 0;
+  transition: transform 1.25s cubic-bezier(0.16, 1, 0.3, 1),
+              opacity 1.1s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: transform, opacity;
+}
+
+.restaurant-hero-animated.restaurant-text-revealed .hero-line-inner {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+.restaurant-hero-animated.restaurant-text-revealed .hero-line-mask:nth-child(1) .hero-line-inner {
+  transition-delay: 0.15s;
+}
+
+.restaurant-hero-animated.restaurant-text-revealed .hero-line-mask:nth-child(2) .hero-line-inner {
+  transition-delay: 0.32s;
+}
+
+/* Balayage or liquide sur "D'EXCEPTION À OUIDAH" */
+.restaurant-accent-shimmer {
+  background: linear-gradient(
+    115deg,
+    #E8D4A8 0%,
+    #FDFBF7 35%,
+    #D4AF37 55%,
+    #AA7C11 75%,
+    #E8D4A8 100%
+  );
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: inline-block;
+  animation: restaurantGoldSweep 8s ease-in-out infinite 2s;
+}
+
+@keyframes restaurantGoldSweep {
+  0% { background-position: 100% 0; }
+  50%, 100% { background-position: -100% 0; }
+}
+
+/* 3. Description / Lead */
+.restaurant-hero-animated .aww-hero-lead {
+  opacity: 0;
+  transform: translateY(22px);
+  transition: opacity 1s cubic-bezier(0.16, 1, 0.3, 1) 0.55s,
+              transform 1s cubic-bezier(0.16, 1, 0.3, 1) 0.55s;
+  will-change: transform, opacity;
+}
+
+.restaurant-hero-animated.restaurant-text-revealed .aww-hero-lead {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* 4. Boutons d'actions */
+.restaurant-hero-animated .aww-hero-actions {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 1s cubic-bezier(0.16, 1, 0.3, 1) 0.75s,
+              transform 1s cubic-bezier(0.16, 1, 0.3, 1) 0.75s;
+  will-change: transform, opacity;
+}
+
+.restaurant-hero-animated.restaurant-text-revealed .aww-hero-actions {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* 5. Cadre média droit (Assiette Bômiwo Royal) : Apparaît à la fin de la vidéo */
+.restaurant-hero-animated .aww-hero-right {
+  opacity: 0;
+  transform: scale(0.92) translateY(35px);
+  filter: blur(10px);
+  transition: opacity 1.35s cubic-bezier(0.16, 1, 0.3, 1),
+              transform 1.35s cubic-bezier(0.16, 1, 0.3, 1),
+              filter 1.35s ease;
+  will-change: transform, opacity, filter;
+}
+
+.restaurant-hero-animated.restaurant-media-revealed .aww-hero-right {
+  opacity: 1;
+  transform: scale(1) translateY(0);
+  filter: blur(0);
+}
+
+/* 6. Logo Badge Flottant : Apparaît à la fin de la vidéo au-dessus du hublot */
+.restaurant-hero-animated .aww-hero-badge {
+  position: absolute;
+  top: 10%;
+  right: 5%;
+  width: 130px;
+  height: 130px;
+  border-radius: 50%;
+  background: #141414;
+  border: 2.5px solid var(--c-gold);
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.75), 0 0 25px rgba(203, 161, 88, 0.45);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px;
+  z-index: 10;
+  opacity: 0;
+  transform: scale(0.65) rotate(-15deg);
+  transition: opacity 1.1s cubic-bezier(0.16, 1, 0.3, 1) 0.35s,
+              transform 0.65s cubic-bezier(0.16, 1, 0.3, 1),
+              top 0.65s cubic-bezier(0.16, 1, 0.3, 1),
+              bottom 0.65s cubic-bezier(0.16, 1, 0.3, 1),
+              left 0.65s cubic-bezier(0.16, 1, 0.3, 1),
+              right 0.65s cubic-bezier(0.16, 1, 0.3, 1),
+              width 0.65s cubic-bezier(0.16, 1, 0.3, 1),
+              height 0.65s cubic-bezier(0.16, 1, 0.3, 1),
+              box-shadow 0.4s ease;
+  will-change: transform, opacity, top, left;
+}
+
+@media (max-width: 991px) {
+  .restaurant-hero-animated .aww-hero-badge {
+    top: 5%;
+    right: 2%;
+    width: 105px;
+    height: 105px;
+  }
+}
+
+.restaurant-hero-animated.restaurant-media-revealed .aww-hero-badge {
+  opacity: 1;
+  transform: scale(1) rotate(0deg);
+  animation: heroLogoGlow 4s ease-in-out infinite alternate 1.8s;
+}
+
+/* ÉTAT DÉPLACÉ AU SCROLL : GRAND & MAJESTUEUX au CENTRE EN BAS (à cheval sur la séparation noire / beige) */
+.restaurant-hero-animated .aww-hero-badge.badge-docked-nav {
+  top: auto !important;
+  bottom: -75px !important;
+  left: 50% !important;
+  right: auto !important;
+  width: 155px !important;
+  height: 155px !important;
+  transform: translate(-50%, 0) scale(1) !important;
+  z-index: 999 !important;
+  background: #120E0C !important;
+  border: 3.5px solid var(--c-gold) !important;
+  box-shadow: 0 20px 55px rgba(0, 0, 0, 0.9), 0 0 40px rgba(203, 161, 88, 0.85) !important;
+  pointer-events: auto !important;
+}
+
+@media (max-width: 768px) {
+  .restaurant-hero-animated .aww-hero-badge.badge-docked-nav {
+    bottom: -55px !important;
+    width: 115px !important;
+    height: 115px !important;
+    border-width: 2.5px !important;
+  }
+}
+
+
+/* ==========================================================================
+   ACCESSIBILITÉ PREFERS-REDUCED-MOTION
+   ========================================================================== */
+@media (prefers-reduced-motion: reduce) {
+  .hero-editorial-full .hero-video-bg,
+  .hero-editorial-full .hero-brand-emblem-wrap,
+  .hero-editorial-full .hero-micro-badge,
+  .hero-line-inner,
+  .hero-accent-shimmer,
+  .hero-editorial-full .hero-sub-editorial,
+  .hero-editorial-full .hero-actions-editorial,
+  .hero-editorial-full .hero-audio-pill,
+  .hero-scroll-indicator,
+  .lodging-hero-section .lodging-hero-video,
+  .lodging-hero-section .lodging-hero-kicker,
+  .lodging-hero-section .lodging-hero-subtitle,
+  .lodging-hero-section .lodging-hero-actions,
+  .lodging-hero-section .lodging-hero-scroll-indicator,
+  .lodge-accent-shimmer,
+  .restaurant-hero-bg-video,
+  .restaurant-hero-animated .aww-hero-overline,
+  .restaurant-hero-animated .aww-hero-lead,
+  .restaurant-hero-animated .aww-hero-actions,
+  .restaurant-hero-animated .aww-hero-right,
+  .restaurant-hero-animated .aww-hero-badge,
+  .restaurant-accent-shimmer {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+    animation: none !important;
+    filter: none !important;
+  }
+}
+
+

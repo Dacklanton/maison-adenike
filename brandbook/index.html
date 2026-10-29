@@ -1,0 +1,807 @@
+<!DOCTYPE html>
+<html lang="fr" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Maison Adénikè — Charte Graphique & Brand Book Officiel (Ouidah, Bénin)</title>
+  
+  <meta name="description" content="Brand Book officiel de la Maison Adénikè : logo officiel, nuancier terroir, typographie, design tokens et standards de marque à Ouidah, Bénin.">
+  <link rel="icon" type="image/png" href="../assets/images/logo-adenike.png">
+
+  <!-- Google Fonts Officielles du Site en Production -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Alex+Brush&family=Cinzel:wght@500;600;700;800&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Pinyon+Script&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=Tenor+Sans&display=swap" rel="stylesheet">
+
+  <!-- Tailwind CSS via CDN avec la palette exacte de styles.css -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            'ochre': '#A83B24',
+            'ochre-hover': '#8C2F1A',
+            'champagne': '#CBA158',
+            'champagne-bright': '#E0BC75',
+            'champagne-light': '#FFE6A7',
+            'linen': '#FAF8F5',
+            'cream': '#F3EDE2',
+            'espresso': '#2B1810',
+            'espresso-muted': '#5C4438',
+            'raffia': '#D8BA8E',
+            'tropical': '#2E453A',
+            'obsidian': '#14100E',
+            'obsidian-surface': '#1E1714',
+            'obsidian-card': '#251C18'
+          },
+          fontFamily: {
+            'serif': ['"Cormorant Garamond"', 'Georgia', 'serif'],
+            'display': ['"Cinzel"', 'serif'],
+            'sans-ui': ['"Plus Jakarta Sans"', 'system-ui', 'sans-serif'],
+            'script': ['"Pinyon Script"', '"Alex Brush"', 'cursive'],
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Importation des Design Tokens Officiels -->
+  <link rel="stylesheet" href="../tokens.css">
+
+  <style>
+    /* Fond Lin d'Écueil avec Texture Minérale Douce */
+    .bg-linen-pattern {
+      background-color: #FAF8F5;
+      background-image: radial-gradient(rgba(203, 161, 88, 0.10) 1px, transparent 1px);
+      background-size: 24px 24px;
+    }
+
+    /* Le Véritable Médaillon Circulaire du Logo Adénikè */
+    .adenike-logo-frame {
+      border-radius: 9999px;
+      border: 2px solid #CBA158;
+      box-shadow: 0 0 20px rgba(203, 161, 88, 0.30);
+      background: #FFFFFF;
+      overflow: hidden;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    /* Double-Bezel Architectural Authentique */
+    .bezel-shell {
+      border-radius: 20px;
+      padding: 7px;
+      background: rgba(203, 161, 88, 0.10);
+      border: 1px solid rgba(216, 186, 142, 0.50);
+      box-shadow: 0 16px 40px -10px rgba(43, 24, 16, 0.06);
+      transition: all 0.35s cubic-bezier(0.32, 0.72, 0, 1);
+    }
+    .bezel-core {
+      border-radius: 14px;
+      box-shadow: inset 0 1px 1px rgba(255, 255, 255, 0.7);
+    }
+
+    .bezel-shell-dark {
+      border-radius: 20px;
+      padding: 7px;
+      background: rgba(30, 23, 20, 0.85);
+      border: 1.5px solid rgba(203, 161, 88, 0.45);
+      box-shadow: 0 20px 48px -10px rgba(0, 0, 0, 0.55);
+    }
+    .bezel-core-dark {
+      border-radius: 14px;
+      box-shadow: inset 0 1px 1px rgba(203, 161, 88, 0.25);
+    }
+
+    /* Lueur Ambrée Signature */
+    .luxury-gold-glow {
+      box-shadow: 0 16px 40px -10px rgba(43, 24, 16, 0.08), 0 0 20px -2px rgba(203, 161, 88, 0.25);
+    }
+
+    /* Toast Notification */
+    #copyToast {
+      transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+  </style>
+</head>
+<body class="bg-linen-pattern text-espresso font-sans-ui antialiased selection:bg-champagne selection:text-espresso">
+
+  <!-- =========================================================================
+       BARRE DE NAVIGATION FLOTTANTE D'ORFÈVRERIE (GLASS ISLAND)
+       ========================================================================= -->
+  <header class="fixed top-5 inset-x-0 z-50 flex justify-center px-4 pointer-events-none">
+    <nav class="pointer-events-auto flex items-center gap-3 sm:gap-5 px-4 sm:px-6 py-2.5 rounded-full bg-obsidian/90 backdrop-blur-xl border border-champagne/40 shadow-2xl text-xs uppercase tracking-widest text-linen">
+      <a href="#hero" class="flex items-center gap-2.5 pr-3 border-r border-champagne/30 hover:opacity-90 transition-opacity">
+        <div class="w-6 h-6 rounded-full border border-champagne overflow-hidden bg-white flex items-center justify-center p-0.5 shadow-sm">
+          <img src="../assets/images/logo-adenike.png" alt="Logo" class="w-full h-full object-cover rounded-full">
+        </div>
+        <span class="font-serif font-bold text-sm text-champagne tracking-normal">Maison Adénikè</span>
+      </a>
+      
+      <div class="hidden md:flex items-center gap-4 text-[11px] font-sans-ui">
+        <a href="#manifesto" class="hover:text-champagne transition-colors">01. Histoire</a>
+        <a href="#logo-system" class="hover:text-champagne transition-colors">02. Logo Officiel</a>
+        <a href="#palette" class="hover:text-champagne transition-colors">03. Couleurs</a>
+        <a href="#typography" class="hover:text-champagne transition-colors">04. Typographie</a>
+        <a href="#mockups" class="hover:text-champagne transition-colors">05. Mises en Scène</a>
+        <a href="#rules" class="hover:text-champagne transition-colors">06. Do's & Don'ts</a>
+      </div>
+
+      <div class="flex items-center gap-2 pl-2 border-l border-champagne/30">
+        <a href="../Maison_Adenike_Charte_Graphique.pdf" target="_blank" class="px-3 py-1 rounded-full bg-champagne text-obsidian font-semibold hover:bg-champagne-bright transition-all flex items-center gap-1.5 shadow-sm">
+          <span>📄</span>
+          <span class="hidden sm:inline">PDF</span>
+        </a>
+      </div>
+    </nav>
+  </header>
+
+  <!-- =========================================================================
+       1. HERO HEADER : LOGO AUTHENTIQUE & POSITIONNEMENT OUIDAH
+       ========================================================================= -->
+  <section id="hero" class="relative min-h-[92vh] flex flex-col items-center justify-center text-center px-4 pt-24 pb-16 overflow-hidden">
+    <!-- Halo Lumineux Doré & Ocre -->
+    <div class="absolute w-[600px] h-[600px] rounded-full bg-champagne/10 blur-[130px] -top-24 pointer-events-none"></div>
+    <div class="absolute w-[450px] h-[450px] rounded-full bg-ochre/8 blur-[110px] -bottom-10 pointer-events-none"></div>
+
+    <div class="relative z-10 max-w-4xl mx-auto flex flex-col items-center">
+      
+      <!-- Badge Pré-Titre Cérémonial -->
+      <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-ochre/10 border border-ochre/30 text-ochre text-[11px] uppercase tracking-[0.25em] font-semibold mb-8">
+        <span class="w-1.5 h-1.5 rounded-full bg-champagne"></span>
+        <span>Charte Graphique Officielle & Standards de Marque</span>
+        <span class="w-1.5 h-1.5 rounded-full bg-champagne"></span>
+      </div>
+
+      <!-- LE VÉRITABLE LOGO OFFICIEL D'ADÉNIKÈ -->
+      <div class="mb-6 p-2 relative group cursor-pointer transition-transform duration-500 hover:scale-105">
+        <div class="absolute inset-0 rounded-full bg-champagne/25 blur-2xl group-hover:bg-champagne/40 transition-all"></div>
+        <div class="w-36 h-36 sm:w-44 sm:h-44 adenike-logo-frame relative z-10 p-1.5">
+          <img src="../assets/images/logo-adenike.png" alt="Logo Officiel Maison Adénikè" class="w-full h-full object-cover rounded-full">
+        </div>
+      </div>
+
+      <!-- Titre Principal de Marque -->
+      <h1 class="font-serif text-4xl sm:text-6xl md:text-7xl font-bold tracking-[0.06em] text-espresso uppercase mb-3">
+        MAISON ADÉNIKÈ
+      </h1>
+
+      <p class="font-sans-ui text-xs sm:text-sm tracking-[0.32em] text-ochre font-bold uppercase mb-4">
+        RÉSIDENCE DE CHARME &bull; RESTAURANT &bull; ÉVÉNEMENTS &bull; OUIDAH
+      </p>
+
+      <!-- Devise Yoruba d'Apparat -->
+      <p class="font-serif italic text-lg sm:text-xl text-espresso-muted max-w-xl mx-auto mb-10 leading-relaxed">
+        « Ibi yìí L'ọkàn ń Sinmi » — En ce lieu béni, le cœur et l'âme trouvent le repos.
+      </p>
+
+      <!-- Boutons d'Action Rapide -->
+      <div class="flex flex-wrap items-center justify-center gap-4">
+        <a href="#logo-system" class="px-8 py-3.5 rounded-full bg-ochre text-white font-sans-ui text-xs uppercase tracking-widest font-semibold hover:bg-ochre-hover transition-all shadow-xl hover:-translate-y-0.5 flex items-center gap-3">
+          <span>Découvrir la Charte</span>
+          <span class="w-6 h-6 rounded-full bg-champagne text-espresso flex items-center justify-center font-bold text-xs">↓</span>
+        </a>
+        <a href="../Maison_Adenike_Charte_Graphique.pdf" target="_blank" class="px-7 py-3.5 rounded-full bg-cream border border-champagne/60 text-espresso font-sans-ui text-xs uppercase tracking-widest font-semibold hover:bg-champagne/15 transition-all flex items-center gap-2">
+          <span>📄 Télécharger PDF Officiel (8 Pages A4)</span>
+        </a>
+      </div>
+
+    </div>
+
+    <!-- Séparateur d'Orfèvrerie -->
+    <div class="w-full max-w-xs mx-auto flex items-center justify-center gap-4 mt-16 text-champagne opacity-75">
+      <div class="flex-1 h-[1px] bg-gradient-to-r from-transparent to-champagne"></div>
+      <span class="text-xs">✦ ✦ ✦</span>
+      <div class="flex-1 h-[1px] bg-gradient-to-l from-transparent to-champagne"></div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       2. BRAND STORY & MANIFESTO : OUIDAH, TERROIR & ADN
+       ========================================================================= -->
+  <section id="manifesto" class="py-24 px-4 sm:px-6 max-w-6xl mx-auto">
+    <div class="text-center max-w-2xl mx-auto mb-16">
+      <span class="text-[11px] uppercase tracking-[0.28em] text-ochre font-semibold block mb-2">01. Ancrage & Philosophie</span>
+      <h2 class="font-serif text-3xl sm:text-5xl font-bold text-espresso">L'Écrin de Ouidah</h2>
+      <div class="w-16 h-0.5 bg-champagne mx-auto mt-4"></div>
+    </div>
+
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center mb-16">
+      <!-- Récit Éditorial -->
+      <div class="lg:col-span-7 space-y-5 text-sm sm:text-base leading-relaxed text-espresso/90">
+        <p class="font-serif italic text-lg sm:text-xl text-espresso-muted border-l-2 border-champagne pl-4 leading-relaxed">
+          « Derrière son grand portail traditionnel en bambou s'ouvre une demeure discrète, sécurisée et verdoyante, pensée pour recevoir personnalités, délégations et hôtes d'exception au cœur de Ouidah. »
+        </p>
+        <p>
+          Idéalement située au quartier <strong>Lêbou / Gomè</strong> à Ouidah — cité historique du Bénin, capitale de la spiritualité Vodoun et haut lieu de mémoire côtière —, la <strong>Maison Adénikè</strong> conjugue intimité absolue, calme reposant et haute hospitalité béninoise.
+        </p>
+        <p>
+          Protégée par sa cour arborée de manguiers centenaires et sa canisse tressée, la résidence offre un sanctuaire préservé du tumulte urbain. Côté table, elle célèbre chaque jour les cuissons d'argile au feu de bois avec son mythique <strong>Bômiwo royal en canari</strong> et sa liqueur signature <strong>Soto Royal</strong>.
+        </p>
+      </div>
+
+      <!-- Fiche Statutaire avec le Vrai Logo -->
+      <div class="lg:col-span-5">
+        <div class="bezel-shell luxury-gold-glow">
+          <div class="bezel-core bg-obsidian p-8 text-linen relative overflow-hidden text-center">
+            <div class="absolute -right-8 -bottom-8 w-40 h-40 rounded-full bg-champagne/15 blur-2xl"></div>
+            <span class="text-[10px] tracking-[0.3em] uppercase text-champagne font-semibold block mb-3">✦ FICHE D'IDENTITÉ OFFICIELLE ✦</span>
+            
+            <div class="w-24 h-24 mx-auto mb-4 p-1 adenike-logo-frame">
+              <img src="../assets/images/logo-adenike.png" alt="Logo Adénikè" class="w-full h-full object-cover rounded-full">
+            </div>
+
+            <h3 class="font-serif text-2xl font-bold text-champagne-bright mb-1">Maison Adénikè</h3>
+            <p class="text-xs text-linen/80 tracking-wider mb-6">Quartier Lêbou / Gomè, Ouidah, Bénin</p>
+            
+            <div class="border-t border-champagne/25 pt-4 text-left space-y-2 text-xs">
+              <div class="flex justify-between"><span class="text-champagne">Offre :</span><span>Chambres d'Hôtes, Restaurant & Bar Lounge</span></div>
+              <div class="flex justify-between"><span class="text-champagne">Spécialité :</span><span>Bômiwo en Canaris d'Argile & Soto Royal</span></div>
+              <div class="flex justify-between"><span class="text-champagne">Devise :</span><span class="italic text-champagne-light">« Ibi yìí L'ọkàn ń Sinmi »</span></div>
+              <div class="flex justify-between"><span class="text-champagne">Conciergerie :</span><span class="font-bold">+229 01 55 45 63 63</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       3. LOGO OFFICIEL : SPÉCIFICATIONS, ZONES & UTILISATION
+       ========================================================================= -->
+  <section id="logo-system" class="py-24 px-4 sm:px-6 bg-cream/60 border-y border-champagne/30">
+    <div class="max-w-6xl mx-auto">
+      <div class="text-center max-w-2xl mx-auto mb-16">
+        <span class="text-[11px] uppercase tracking-[0.28em] text-ochre font-semibold block mb-2">02. Identité Visuelle Fondatrice</span>
+        <h2 class="font-serif text-3xl sm:text-5xl font-bold text-espresso">Le Logo Officiel Adénikè</h2>
+        <p class="text-xs sm:text-sm text-espresso-muted mt-3">L'emblème officiel historique en orfèvrerie or, présent sur l'ensemble du site web et des supports physiques.</p>
+        <div class="w-16 h-0.5 bg-champagne mx-auto mt-4"></div>
+      </div>
+
+      <!-- Présentation Comparée Diurne / Nocturne du Vrai Logo -->
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
+        
+        <!-- Version 1 : Sur Fond Lin (Usage Web & Papeterie) -->
+        <div class="bezel-shell bg-white">
+          <div class="bezel-core bg-linen p-8 flex flex-col items-center text-center">
+            <span class="text-[10px] font-bold uppercase tracking-widest text-ochre mb-6">Version Diurne • Fond Lin d'Écueil (#FAF8F5)</span>
+            
+            <div class="w-36 h-36 adenike-logo-frame p-1 mb-6">
+              <img src="../assets/images/logo-adenike.png" alt="Logo Officiel sur Fond Lin" class="w-full h-full object-cover rounded-full">
+            </div>
+
+            <div class="text-center">
+              <span class="font-serif text-2xl font-bold text-espresso tracking-wider block">Maison Adénikè</span>
+              <span class="text-[11px] tracking-[0.3em] uppercase text-ochre font-bold block mt-1">Ouidah &bull; Bénin</span>
+            </div>
+
+            <p class="text-xs text-espresso-muted mt-4 leading-relaxed max-w-sm">
+              Présentation standard sur le site web, les en-têtes de lettres, les formulaires de conciergerie et la signalétique d'accueil diurne.
+            </p>
+          </div>
+        </div>
+
+        <!-- Version 2 : Sur Fond Noir Obsidienne (Usage Soirées & Événements) -->
+        <div class="bezel-shell-dark">
+          <div class="bezel-core-dark bg-obsidian p-8 flex flex-col items-center text-center">
+            <span class="text-[10px] font-bold uppercase tracking-widest text-champagne mb-6">Version Nocturne • Fond Noir Obsidienne (#14100E)</span>
+            
+            <div class="w-36 h-36 adenike-logo-frame p-1 mb-6">
+              <img src="../assets/images/logo-adenike.png" alt="Logo Officiel sur Fond Noir" class="w-full h-full object-cover rounded-full">
+            </div>
+
+            <div class="text-center">
+              <span class="font-serif text-2xl font-bold text-champagne-light tracking-wider block">Maison Adénikè</span>
+              <span class="text-[11px] tracking-[0.3em] uppercase text-champagne font-bold block mt-1">Ouidah &bull; Bénin</span>
+            </div>
+
+            <p class="text-xs text-linen/75 mt-4 leading-relaxed max-w-sm">
+              Présentation pour les concerts sous la pergola, les soirées privatisées, les cartes VIP de prestige et la couverture des livrets d'or.
+            </p>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Spécifications Techniques du Logo -->
+      <div class="bezel-shell bg-white">
+        <div class="bezel-core bg-linen p-6 sm:p-8">
+          <h4 class="font-serif text-xl font-bold text-espresso mb-4">Règles d'Application du Logo</h4>
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-6 text-xs text-espresso/85">
+            <div class="p-4 rounded-lg bg-cream/70 border border-champagne/30">
+              <strong class="text-ochre block text-sm font-serif mb-1">1. Bordure d'Orfèvrerie Circulaire</strong>
+              Le logo doit impérativement être ceinturé de sa bordure dorée de 1.5px à 2px en Or Champagne (`#CBA158`), avec son halo d'éclat subtil.
+            </div>
+            <div class="p-4 rounded-lg bg-cream/70 border border-champagne/30">
+              <strong class="text-ochre block text-sm font-serif mb-1">2. Zone d'Exclusion (Clear Space)</strong>
+              Un espace de respiration égal au quart du diamètre du logo `(D/4)` doit rester entièrement vierge de tout texte ou élément parasite.
+            </div>
+            <div class="p-4 rounded-lg bg-cream/70 border border-champagne/30">
+              <strong class="text-ochre block text-sm font-serif mb-1">3. Tailles Minimales Autorisées</strong>
+              Impression : diamètre minimal de <strong>15 mm</strong>. Écrans digitaux : <strong>36 px</strong> en en-tête / <strong>24 px</strong> en favicon rond.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       4. PALETTE CHROMATIQUE AUTHENTIQUE (STYLES.CSS) : 1-CLIC CLIPBOARD
+       ========================================================================= -->
+  <section id="palette" class="py-24 px-4 sm:px-6 max-w-6xl mx-auto">
+    <div class="text-center max-w-2xl mx-auto mb-16">
+      <span class="text-[11px] uppercase tracking-[0.28em] text-ochre font-semibold block mb-2">03. Nuancier Officiel du Site</span>
+      <h2 class="font-serif text-3xl sm:text-5xl font-bold text-espresso">La Palette Réelle en Production</h2>
+      <p class="text-xs sm:text-sm text-espresso-muted mt-3">Les teintes authentiques définies dans <code>styles.css</code>. Cliquez sur un échantillon pour copier son code HEX.</p>
+      <div class="w-16 h-0.5 bg-champagne mx-auto mt-4"></div>
+    </div>
+
+    <!-- Grille des 6 Échantillons Authentiques -->
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+
+      <!-- 1. Ocre Rouge Béninois (Terracotta) -->
+      <div class="bezel-shell bg-white hover:-translate-y-1 transition-transform">
+        <div class="bezel-core bg-linen p-5">
+          <div class="relative h-40 rounded-lg bg-ochre mb-4 cursor-pointer overflow-hidden group flex items-end p-4 text-white shadow-md" onclick="copyColor('#A83B24', 'Ocre Rouge Béninois')">
+            <div class="absolute inset-0 bg-white/0 group-hover:bg-white/10 transition-colors"></div>
+            <span class="absolute top-3 right-3 text-[10px] bg-black/40 px-2 py-0.5 rounded-full border border-white/20">Copier HEX</span>
+            <div>
+              <span class="text-[10px] tracking-widest uppercase opacity-80 block">Terre de Ouidah & Feu</span>
+              <span class="font-serif text-xl font-bold text-champagne-light">Ocre Rouge Béninois</span>
+            </div>
+          </div>
+          <div class="space-y-1.5 text-xs text-espresso/80">
+            <div class="flex justify-between py-1 border-b border-black/5"><span>Variable :</span><code class="font-bold text-ochre">--color-ochre</code></div>
+            <div class="flex justify-between py-1 border-b border-black/5"><span>HEX :</span><code class="font-bold select-all">#A83B24</code></div>
+            <div class="flex justify-between py-1 border-b border-black/5"><span>RGB :</span><span>168, 59, 36</span></div>
+            <div class="flex justify-between py-1 border-b border-black/5"><span>CMYK :</span><span>20, 85, 95, 15</span></div>
+            <div class="flex justify-between py-1 pt-1.5"><span class="font-bold text-ochre">Usage :</span><span>Boutons d'action, Bômiwo, accents</span></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 2. Or Champagne / Orfèvrerie -->
+      <div class="bezel-shell bg-white hover:-translate-y-1 transition-transform">
+        <div class="bezel-core bg-linen p-5">
+          <div class="relative h-40 rounded-lg bg-champagne mb-4 cursor-pointer overflow-hidden group flex items-end p-4 text-espresso shadow-md" onclick="copyColor('#CBA158', 'Or Champagne Adénikè')">
+            <div class="absolute inset-0 bg-white/0 group-hover:bg-white/15 transition-colors"></div>
+            <span class="absolute top-3 right-3 text-[10px] bg-black/20 text-white px-2 py-0.5 rounded-full border border-white/30">Copier HEX</span>
+            <div>
+              <span class="text-[10px] tracking-widest uppercase opacity-80 block text-espresso/80">Orfèvrerie Royale</span>
+              <span class="font-serif text-xl font-bold text-espresso">Or Champagne</span>
+            </div>
+          </div>
+          <div class="space-y-1.5 text-xs text-espresso/80">
+            <div class="flex justify-between py-1 border-b border-black/5"><span>Variable :</span><code class="font-bold text-champagne">--color-champagne</code></div>
+            <div class="flex justify-between py-1 border-b border-black/5"><span>HEX :</span><code class="font-bold select-all">#CBA158</code></div>
+            <div class="flex justify-between py-1 border-b border-black/5"><span>RGB :</span><span>203, 161, 88</span></div>
+            <div class="flex justify-between py-1 border-b border-black/5"><span>CMYK :</span><span>20, 32, 75, 2</span></div>
+            <div class="flex justify-between py-1 pt-1.5"><span class="font-bold text-champagne">Usage :</span><span>Logo, liserés or, étoiles ✦, badges</span></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 3. Lin d'Écueil (Fond Principal 60%) -->
+      <div class="bezel-shell bg-white hover:-translate-y-1 transition-transform">
+        <div class="bezel-core bg-linen p-5">
+          <div class="relative h-40 rounded-lg bg-linen border border-champagne/40 mb-4 cursor-pointer overflow-hidden group flex items-end p-4 text-espresso shadow-sm" onclick="copyColor('#FAF8F5', 'Lin d\'Écueil')">
+            <div class="absolute inset-0 bg-black/0 group-hover:bg-black/5 transition-colors"></div>
+            <span class="absolute top-3 right-3 text-[10px] bg-black/10 px-2 py-0.5 rounded-full border border-black/15">Copier HEX</span>
+            <div>
+              <span class="text-[10px] tracking-widest uppercase opacity-80 block text-espresso/70">Fond Lumineux 60%</span>
+              <span class="font-serif text-xl font-bold text-espresso">Lin d'Écueil</span>
+            </div>
+          </div>
+          <div class="space-y-1.5 text-xs text-espresso/80">
+            <div class="flex justify-between py-1 border-b border-black/5"><span>Variable :</span><code class="font-bold text-espresso">--bg-linen</code></div>
+            <div class="flex justify-between py-1 border-b border-black/5"><span>HEX :</span><code class="font-bold select-all">#FAF8F5</code></div>
+            <div class="flex justify-between py-1 border-b border-black/5"><span>RGB :</span><span>250, 248, 245</span></div>
+            <div class="flex justify-between py-1 border-b border-black/5"><span>CMYK :</span><span>2, 2, 3, 0</span></div>
+            <div class="flex justify-between py-1 pt-1.5"><span class="font-bold text-espresso">Usage :</span><span>Fond principal du site & papeterie</span></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 4. Deep Espresso (Texte & Contraste 30%) -->
+      <div class="bezel-shell bg-white hover:-translate-y-1 transition-transform">
+        <div class="bezel-core bg-linen p-5">
+          <div class="relative h-40 rounded-lg bg-espresso mb-4 cursor-pointer overflow-hidden group flex items-end p-4 text-white shadow-md" onclick="copyColor('#2B1810', 'Deep Espresso')">
+            <div class="absolute inset-0 bg-white/0 group-hover:bg-white/10 transition-colors"></div>
+            <span class="absolute top-3 right-3 text-[10px] bg-white/20 px-2 py-0.5 rounded-full border border-white/20">Copier HEX</span>
+            <div>
+              <span class="text-[10px] tracking-widest uppercase opacity-80 block">Typographie de Labeur</span>
+              <span class="font-serif text-xl font-bold text-champagne-light">Deep Espresso</span>
+            </div>
+          </div>
+          <div class="space-y-1.5 text-xs text-espresso/80">
+            <div class="flex justify-between py-1 border-b border-black/5"><span>Variable :</span><code class="font-bold text-espresso">--text-espresso</code></div>
+            <div class="flex justify-between py-1 border-b border-black/5"><span>HEX :</span><code class="font-bold select-all">#2B1810</code></div>
+            <div class="flex justify-between py-1 border-b border-black/5"><span>RGB :</span><span>43, 24, 16</span></div>
+            <div class="flex justify-between py-1 border-b border-black/5"><span>Contraste :</span><span class="font-bold text-emerald-800">13.8:1 (WCAG AAA)</span></div>
+            <div class="flex justify-between py-1 pt-1.5"><span class="font-bold text-espresso">Usage :</span><span>Tous les textes de lecture & titres</span></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 5. Noir Obsidienne (Soirées & Nuit) -->
+      <div class="bezel-shell bg-white hover:-translate-y-1 transition-transform">
+        <div class="bezel-core bg-linen p-5">
+          <div class="relative h-40 rounded-lg bg-obsidian mb-4 cursor-pointer overflow-hidden group flex items-end p-4 text-white shadow-md" onclick="copyColor('#14100E', 'Noir Obsidienne')">
+            <div class="absolute inset-0 bg-white/0 group-hover:bg-white/10 transition-colors"></div>
+            <span class="absolute top-3 right-3 text-[10px] bg-white/20 px-2 py-0.5 rounded-full border border-white/20">Copier HEX</span>
+            <div>
+              <span class="text-[10px] tracking-widest uppercase opacity-80 block text-champagne">Ambiance Nocturne</span>
+              <span class="font-serif text-xl font-bold text-champagne-light">Noir Obsidienne</span>
+            </div>
+          </div>
+          <div class="space-y-1.5 text-xs text-espresso/80">
+            <div class="flex justify-between py-1 border-b border-black/5"><span>Variable :</span><code class="font-bold text-obsidian">--obsidian-noir</code></div>
+            <div class="flex justify-between py-1 border-b border-black/5"><span>HEX :</span><code class="font-bold select-all">#14100E</code></div>
+            <div class="flex justify-between py-1 border-b border-black/5"><span>RGB :</span><span>20, 16, 14</span></div>
+            <div class="flex justify-between py-1 border-b border-black/5"><span>CMYK :</span><span>60, 65, 65, 85</span></div>
+            <div class="flex justify-between py-1 pt-1.5"><span class="font-bold text-obsidian">Usage :</span><span>Pied de page, soirées live & VIP</span></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 6. Paille de Raphia & Crème -->
+      <div class="bezel-shell bg-white hover:-translate-y-1 transition-transform">
+        <div class="bezel-core bg-linen p-5">
+          <div class="relative h-40 rounded-lg bg-raffia mb-4 cursor-pointer overflow-hidden group flex items-end p-4 text-espresso shadow-md" onclick="copyColor('#D8BA8E', 'Paille de Raphia')">
+            <div class="absolute inset-0 bg-white/0 group-hover:bg-white/15 transition-colors"></div>
+            <span class="absolute top-3 right-3 text-[10px] bg-black/20 text-white px-2 py-0.5 rounded-full border border-white/30">Copier HEX</span>
+            <div>
+              <span class="text-[10px] tracking-widest uppercase opacity-80 block text-espresso/80">Matière & Toiture</span>
+              <span class="font-serif text-xl font-bold text-espresso">Paille de Raphia</span>
+            </div>
+          </div>
+          <div class="space-y-1.5 text-xs text-espresso/80">
+            <div class="flex justify-between py-1 border-b border-black/5"><span>Variable :</span><code class="font-bold text-raffia">--color-raffia</code></div>
+            <div class="flex justify-between py-1 border-b border-black/5"><span>HEX :</span><code class="font-bold select-all">#D8BA8E</code></div>
+            <div class="flex justify-between py-1 border-b border-black/5"><span>RGB :</span><span>216, 186, 142</span></div>
+            <div class="flex justify-between py-1 border-b border-black/5"><span>CMYK :</span><span>16, 25, 48, 0</span></div>
+            <div class="flex justify-between py-1 pt-1.5"><span class="font-bold text-raffia">Usage :</span><span>Canisse de bambou, bordures douces</span></div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       5. TYPOGRAPHIE VALIDÉE : CORMORANT GARAMOND & PLUS JAKARTA SANS
+       ========================================================================= -->
+  <section id="typography" class="py-24 px-4 sm:px-6 bg-cream/60 border-t border-champagne/30">
+    <div class="max-w-6xl mx-auto">
+      <div class="text-center max-w-2xl mx-auto mb-16">
+        <span class="text-[11px] uppercase tracking-[0.28em] text-ochre font-semibold block mb-2">04. Polices & Hiérarchie</span>
+        <h2 class="font-serif text-3xl sm:text-5xl font-bold text-espresso">L'Écosystème Typographique</h2>
+        <p class="text-xs sm:text-sm text-espresso-muted mt-3">Utilisez le curseur dynamique pour tester l'élégance de nos polices en temps réel.</p>
+        <div class="w-16 h-0.5 bg-champagne mx-auto mt-4"></div>
+      </div>
+
+      <!-- Spécimen Interactif -->
+      <div class="bezel-shell bg-white mb-12">
+        <div class="bezel-core bg-linen p-6 sm:p-8">
+          <div class="flex flex-wrap items-center justify-between gap-4 pb-6 border-b border-black/10">
+            <div>
+              <span class="text-xs font-bold uppercase tracking-widest text-ochre">Banc d'Essai Typographique</span>
+              <span class="text-[11px] text-espresso-muted block">Cormorant Garamond, Cinzel & Plus Jakarta Sans</span>
+            </div>
+            <div class="flex items-center gap-3">
+              <label for="fontScaleSlider" class="text-xs font-semibold text-espresso">Taille :</label>
+              <input type="range" id="fontScaleSlider" min="16" max="72" value="38" class="w-32 sm:w-48 accent-ochre cursor-pointer">
+              <span id="fontScaleValue" class="text-xs font-bold text-ochre bg-ochre/10 px-2.5 py-1 rounded-full font-mono">38px</span>
+            </div>
+          </div>
+
+          <div class="py-8 space-y-6">
+            <div>
+              <span class="text-[10px] uppercase tracking-widest text-champagne font-bold block mb-1">Cormorant Garamond • Titres H1 / H2</span>
+              <p id="specimenSerif" class="font-serif font-semibold text-espresso leading-tight" style="font-size: 38px;">
+                L'Art de Vivre & Haute Hospitalité au Cœur de Ouidah.
+              </p>
+            </div>
+
+            <div>
+              <span class="text-[10px] uppercase tracking-widest text-ochre font-bold block mb-1">Cormorant Garamond • Italic 400 (Poésie & Devises)</span>
+              <p id="specimenItalic" class="font-serif italic text-espresso-muted leading-snug" style="font-size: 30px;">
+                « Ibi yìí L'ọkàn ń Sinmi — Cuissons au feu de bois & nuits étoilées. »
+              </p>
+            </div>
+
+            <div>
+              <span class="text-[10px] uppercase tracking-widest text-espresso font-bold block mb-1">Cinzel • Sceaux & Monogrammes en Majuscules</span>
+              <p class="font-display font-bold uppercase tracking-[0.25em] text-espresso/90 text-sm sm:text-base">
+                MAISON ADÉNIKÈ &bull; OUIDAH, BÉNIN
+              </p>
+            </div>
+
+            <div>
+              <span class="text-[10px] uppercase tracking-widest text-espresso/70 font-bold block mb-1">Plus Jakarta Sans • Corps de Lecture & Boutons</span>
+              <p class="font-sans-ui text-sm sm:text-base text-espresso/85 leading-relaxed max-w-3xl">
+                Située au cœur de la cité historique de Ouidah, la Maison Adénikè conjugue intimité absolue, calme reposant et haute hospitalité. Chaque chambre est habillée de teck noble et de lin brut pour une escale inoubliable.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       6. MISES EN SCÈNE HÔTELIÈRES (COLLATERALS DU SITE RÉEL)
+       ========================================================================= -->
+  <section id="mockups" class="py-24 px-4 sm:px-6 max-w-6xl mx-auto">
+    <div class="text-center max-w-2xl mx-auto mb-16">
+      <span class="text-[11px] uppercase tracking-[0.28em] text-ochre font-semibold block mb-2">05. Mises en Situation</span>
+      <h2 class="font-serif text-3xl sm:text-5xl font-bold text-espresso">Collaterals & Expérience Réelle</h2>
+      <p class="text-xs sm:text-sm text-espresso-muted mt-3">L'incarnation de la marque sur les supports physiques et digitaux du domaine.</p>
+      <div class="w-16 h-0.5 bg-champagne mx-auto mt-4"></div>
+    </div>
+
+    <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+      
+      <!-- 1. Carte Passe VIP Concert & Gala -->
+      <div class="flex flex-col">
+        <span class="text-xs font-bold uppercase tracking-widest text-ochre mb-3 flex items-center gap-2">
+          <span>🎟️</span> 1. Passe VIP Soirée Live
+        </span>
+        <div class="bezel-shell-dark flex-1">
+          <div class="bezel-core-dark bg-obsidian p-6 text-linen relative overflow-hidden flex flex-col justify-between h-full min-h-[320px]">
+            <div class="flex justify-between items-start">
+              <div>
+                <span class="text-[9px] tracking-[0.25em] uppercase text-champagne font-bold block">ACCÈS PRIVILÈGE VIP</span>
+                <span class="font-serif text-lg font-bold text-champagne-light">Concert sous Pergola</span>
+              </div>
+              <div class="w-11 h-11 adenike-logo-frame p-0.5">
+                <img src="../assets/images/logo-adenike.png" alt="Logo" class="w-full h-full object-cover rounded-full">
+              </div>
+            </div>
+
+            <div class="my-4 p-3 rounded-lg bg-obsidian-card border border-champagne/30 text-xs">
+              <div class="text-champagne font-serif font-bold text-sm">Table & Salon VIP Champagne</div>
+              <p class="text-[10px] text-linen/75 mt-0.5">Placement prioritaire scène, cocktail d'accueil signature Adénikè et service attentionné.</p>
+            </div>
+
+            <div class="flex justify-between items-center text-[10px] text-champagne font-mono pt-2 border-t border-champagne/20">
+              <span>SALON N° 01 • 4 PLACES</span>
+              <span>100 000 FCFA</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 2. Carte Menu Bômiwo Royal & Soto -->
+      <div class="flex flex-col">
+        <span class="text-xs font-bold uppercase tracking-widest text-ochre mb-3 flex items-center gap-2">
+          <span>🍽️</span> 2. Menu Spécial du Terroir
+        </span>
+        <div class="bezel-shell bg-white flex-1">
+          <div class="bezel-core bg-linen p-6 flex flex-col justify-between h-full min-h-[320px] border border-champagne/30">
+            <div class="text-center border-b border-champagne/30 pb-3 mb-3">
+              <div class="w-9 h-9 mx-auto mb-1 adenike-logo-frame p-0.5">
+                <img src="../assets/images/logo-adenike.png" alt="Logo" class="w-full h-full object-cover rounded-full">
+              </div>
+              <h4 class="font-serif text-lg font-bold text-espresso">Maison Adénikè</h4>
+              <span class="text-[10px] font-serif italic text-ochre">Le Cérémonial du Bômiwo Royal</span>
+            </div>
+
+            <div class="space-y-3 text-xs">
+              <div>
+                <div class="flex justify-between font-serif font-bold text-sm text-espresso">
+                  <span>Bômiwo de Luxe en Canari</span>
+                  <span class="text-ochre">5 000 F</span>
+                </div>
+                <p class="text-[10px] text-espresso-muted">Pâte rouge au bouillon d'argile, volaille fermière sur feuille de bananier.</p>
+              </div>
+
+              <div>
+                <div class="flex justify-between font-serif font-bold text-sm text-espresso">
+                  <span>Bar Braisé au Feu de Bois</span>
+                  <span class="text-ochre">8 500 F</span>
+                </div>
+                <p class="text-[10px] text-espresso-muted">Pêche fraîche de l'Atlantique, alloco doré et piments doux pilés.</p>
+              </div>
+
+              <div class="pt-1.5 border-t border-champagne/20">
+                <div class="flex justify-between font-serif font-bold text-sm text-ochre">
+                  <span>Soto Royal d'Adénikè 🍸</span>
+                  <span class="text-champagne font-bold">4 500 F</span>
+                </div>
+                <p class="text-[10px] text-espresso-muted">Liqueur d'héritage macérée aux écorces et racines précieuses.</p>
+              </div>
+            </div>
+
+            <div class="text-center pt-2 text-[9px] text-espresso-muted italic">
+              ✦ Commande à l'avance recommandée au 01 55 45 63 63 ✦
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 3. Clé de Lodge & Carte de Séjour -->
+      <div class="flex flex-col">
+        <span class="text-xs font-bold uppercase tracking-widest text-ochre mb-3 flex items-center gap-2">
+          <span>🗝️</span> 3. Fiche Lodge & Conciergerie
+        </span>
+        <div class="bezel-shell bg-white flex-1">
+          <div class="bezel-core bg-linen p-6 flex flex-col justify-between h-full min-h-[320px] border border-champagne/30">
+            
+            <div class="p-3 rounded-lg bg-espresso text-linen flex items-center justify-between shadow-md mb-3">
+              <div class="flex items-center gap-2">
+                <div class="w-7 h-7 adenike-logo-frame p-0.5">
+                  <img src="../assets/images/logo-adenike.png" alt="Logo" class="w-full h-full object-cover rounded-full">
+                </div>
+                <span class="font-serif font-bold text-xs tracking-wider text-champagne-light">SUITE ROYALE</span>
+              </div>
+              <span class="text-[10px] font-mono text-champagne bg-white/10 px-2 py-0.5 rounded">N° 01</span>
+            </div>
+
+            <div class="p-3.5 rounded-lg bg-cream/80 border border-champagne/30 text-xs space-y-1.5">
+              <span class="text-[9px] uppercase tracking-widest text-ochre font-bold block">Bienvenue à Ouidah</span>
+              <p class="font-serif italic text-sm text-espresso leading-relaxed">
+                « Que votre séjour soit un hymne à la sérénité et à l'authenticité de notre terre. »
+              </p>
+              <div class="text-right text-[11px] font-serif font-bold text-espresso-muted">
+                — Conciergerie Adénikè
+              </div>
+            </div>
+
+            <div class="flex items-center justify-between pt-2 border-t border-champagne/20 text-[10px] text-espresso-muted">
+              <span>Wifi : <strong>Adenike_Lodge</strong></span>
+              <span class="text-ochre font-bold">Tél : 01 55 45 63 63</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       7. DO'S & DON'TS MATRIX
+       ========================================================================= -->
+  <section id="rules" class="py-24 px-4 sm:px-6 bg-cream/60 border-t border-champagne/30">
+    <div class="max-w-6xl mx-auto">
+      <div class="text-center max-w-2xl mx-auto mb-16">
+        <span class="text-[11px] uppercase tracking-[0.28em] text-ochre font-semibold block mb-2">06. Respect de la Marque</span>
+        <h2 class="font-serif text-3xl sm:text-5xl font-bold text-espresso">Matrice Do's & Don'ts</h2>
+        <p class="text-xs sm:text-sm text-espresso-muted mt-3">Règles fondamentales pour garantir l'intégrité de notre univers graphique.</p>
+        <div class="w-16 h-0.5 bg-champagne mx-auto mt-4"></div>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        
+        <!-- DO -->
+        <div class="bezel-shell bg-white">
+          <div class="bezel-core bg-linen p-6 space-y-4">
+            <div class="flex items-center gap-2 pb-3 border-b border-emerald-800/20 text-emerald-800 font-bold text-sm uppercase tracking-wider">
+              <span class="w-6 h-6 rounded-full bg-emerald-800 text-white flex items-center justify-center text-xs">✓</span>
+              <span>DO : Pratiques Exigées</span>
+            </div>
+
+            <div class="space-y-3 text-xs leading-relaxed text-espresso/85">
+              <div class="p-3 rounded bg-emerald-800/5 border-l-4 border-emerald-800">
+                <strong class="block text-emerald-900">1. Utilisation du Véritable Logo Officiel</strong>
+                Toujours utiliser l'image officielle `logo-adenike.png` avec son contour orfèvre doré.
+              </div>
+              <div class="p-3 rounded bg-emerald-800/5 border-l-4 border-emerald-800">
+                <strong class="block text-emerald-900">2. Respect de la Palette styles.css</strong>
+                Ocre Rouge (`#A83B24`), Or Champagne (`#CBA158`), Lin (`#FAF8F5`) et Deep Espresso (`#2B1810`).
+              </div>
+              <div class="p-3 rounded bg-emerald-800/5 border-l-4 border-emerald-800">
+                <strong class="block text-emerald-900">3. Finition Double-Bezel sur les Cartes</strong>
+                Conserver la double enceinte extérieure/intérieure pour préserver la facture hôtelière haut de gamme.
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- DON'T -->
+        <div class="bezel-shell bg-white">
+          <div class="bezel-core bg-linen p-6 space-y-4">
+            <div class="flex items-center gap-2 pb-3 border-b border-ochre/20 text-ochre font-bold text-sm uppercase tracking-wider">
+              <span class="w-6 h-6 rounded-full bg-ochre text-white flex items-center justify-center text-xs">✕</span>
+              <span>DON'T : Interdictions Absolues</span>
+            </div>
+
+            <div class="space-y-3 text-xs leading-relaxed text-espresso/85">
+              <div class="p-3 rounded bg-ochre/5 border-l-4 border-ochre">
+                <strong class="block text-ochre">1. Remplacement par un Logo ou Monogramme Inconnu</strong>
+                Interdiction formelle de substituer le logo de la Maison par un dessin non validé.
+              </div>
+              <div class="p-3 rounded bg-ochre/5 border-l-4 border-ochre">
+                <strong class="block text-ochre">2. Couleurs Saturées ou Néons</strong>
+                Bannir les rouges pétillants vifs (`#FF0000`), jaunes criards et verts fluo.
+              </div>
+              <div class="p-3 rounded bg-ochre/5 border-l-4 border-ochre">
+                <strong class="block text-ochre">3. Slogans Racoleurs ou Discount</strong>
+                Proscription stricte des termes « Pas cher, Low cost, Déstockage, Promo choc ».
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       8. PIED DE PAGE SOLENNEL & COLOPHON
+       ========================================================================= -->
+  <footer class="bg-obsidian text-linen py-16 px-4 border-t border-champagne/40 relative overflow-hidden">
+    <div class="max-w-4xl mx-auto text-center space-y-6 relative z-10">
+      
+      <div class="w-16 h-16 mx-auto adenike-logo-frame p-0.5">
+        <img src="../assets/images/logo-adenike.png" alt="Logo Maison Adénikè" class="w-full h-full object-cover rounded-full">
+      </div>
+
+      <div>
+        <h3 class="font-serif text-2xl font-bold text-champagne-light tracking-widest uppercase">MAISON ADÉNIKÈ</h3>
+        <p class="font-sans-ui text-xs tracking-[0.28em] text-linen/75 uppercase mt-1">Résidences de Charme &bull; Restaurant &bull; Événements</p>
+        <p class="font-serif italic text-sm text-champagne mt-1">« Ibi yìí L'ọkàn ń Sinmi »</p>
+      </div>
+
+      <div class="text-xs text-linen/70 space-y-1 pt-4 border-t border-champagne/20 max-w-md mx-auto">
+        <p>Quartier Lêbou / Gomè, Ouidah, République du Bénin</p>
+        <p class="font-mono text-champagne">Conciergerie : +229 01 55 45 63 63 &bull; Ligne Diaspora : +33 7 80 73 25 94</p>
+        <p class="text-[10px] text-linen/50 pt-2">© 2026-2027 Maison Adénikè. Tous droits patrimoniaux réservés.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- TOAST DE COPIE -->
+  <div id="copyToast" class="fixed bottom-6 right-6 z-50 pointer-events-none opacity-0 translate-y-4 px-4 py-2.5 rounded-full bg-ochre text-white border border-champagne/40 shadow-2xl text-xs font-semibold flex items-center gap-2">
+    <span>✨</span>
+    <span id="copyToastMsg">Code copié avec succès !</span>
+  </div>
+
+  <script>
+    // 1. Curseur Typographique Interactif
+    const slider = document.getElementById('fontScaleSlider');
+    const scaleVal = document.getElementById('fontScaleValue');
+    const serifSample = document.getElementById('specimenSerif');
+    const italicSample = document.getElementById('specimenItalic');
+
+    if (slider) {
+      slider.addEventListener('input', (e) => {
+        const val = e.target.value;
+        scaleVal.textContent = val + 'px';
+        serifSample.style.fontSize = val + 'px';
+        italicSample.style.fontSize = Math.round(val * 0.8) + 'px';
+      });
+    }
+
+    // 2. Copie 1-Clic
+    function copyColor(hex, name) {
+      if (navigator.clipboard) {
+        navigator.clipboard.writeText(hex).then(() => {
+          showToast(`Code ${hex} (${name}) copié !`);
+        }).catch(() => {
+          showToast(`Code : ${hex}`);
+        });
+      } else {
+        showToast(`Code : ${hex}`);
+      }
+    }
+
+    function showToast(msg) {
+      const toast = document.getElementById('copyToast');
+      const toastMsg = document.getElementById('copyToastMsg');
+      if (toast && toastMsg) {
+        toastMsg.textContent = msg;
+        toast.classList.remove('opacity-0', 'translate-y-4');
+        toast.classList.add('opacity-100', 'translate-y-0');
+        setTimeout(() => {
+          toast.classList.remove('opacity-100', 'translate-y-0');
+          toast.classList.add('opacity-0', 'translate-y-4');
+        }, 2200);
+      }
+    }
+  </script>
+</body>
+</html>

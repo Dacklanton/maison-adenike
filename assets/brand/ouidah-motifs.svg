@@ -1,0 +1,134 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 300" width="100%" height="100%" fill="none">
+  <defs>
+    <linearGradient id="motifGold" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#E5C78A"/>
+      <stop offset="50%" stop-color="#C5A365"/>
+      <stop offset="100%" stop-color="#9E7A3E"/>
+    </linearGradient>
+
+    <linearGradient id="motifForest" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#2D5A43"/>
+      <stop offset="100%" stop-color="#1B3B2B"/>
+    </linearGradient>
+
+    <linearGradient id="motifTerracotta" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#A2322E"/>
+      <stop offset="100%" stop-color="#822320"/>
+    </linearGradient>
+  </defs>
+
+  <!-- =========================================================================
+       MOTIF 1 : L'ARCHE HISTORIQUE DE OUIDAH (PORTAIL AFRO-BRÉSILIEN & BAMBOU)
+       Position : x = 20 à 280 (Centre cx = 150)
+       ========================================================================= -->
+  <g id="motif-door-arch" transform="translate(30, 20)">
+    <!-- Cadre Médaillon d'Élégance -->
+    <rect x="0" y="0" width="240" height="260" rx="16" stroke="url(#motifGold)" stroke-width="1.2" stroke-dasharray="4 3" opacity="0.6" fill="rgba(197, 163, 101, 0.03)" />
+    
+    <!-- Grand Arc en Plein Cintre -->
+    <path d="M 60 220 L 60 120 C 60 70, 180 70, 180 120 L 180 220" 
+          stroke="url(#motifGold)" stroke-width="2.5" stroke-linecap="round" fill="none" />
+    
+    <!-- Arc Intérieur Concentrique (Double-Bezel d'Architecture) -->
+    <path d="M 72 220 L 72 125 C 72 82, 168 82, 168 125 L 168 220" 
+          stroke="#1B3B2B" stroke-width="1.2" stroke-linecap="round" fill="none" />
+
+    <!-- Imposte en Éventail Solaire (Sunburst Transom) -->
+    <path d="M 72 125 L 168 125" stroke="url(#motifGold)" stroke-width="1.8" />
+    <circle cx="120" cy="125" r="4" fill="url(#motifGold)" />
+    <line x1="120" y1="125" x2="120" y2="82" stroke="url(#motifGold)" stroke-width="1.2" stroke-linecap="round" />
+    <line x1="120" y1="125" x2="86" y2="98" stroke="url(#motifGold)" stroke-width="1.2" stroke-linecap="round" />
+    <line x1="120" y1="125" x2="154" y2="98" stroke="url(#motifGold)" stroke-width="1.2" stroke-linecap="round" />
+    <line x1="120" y1="125" x2="74" y2="114" stroke="url(#motifGold)" stroke-width="1.2" stroke-linecap="round" />
+    <line x1="120" y1="125" x2="166" y2="114" stroke="url(#motifGold)" stroke-width="1.2" stroke-linecap="round" />
+
+    <!-- Battants de Portes en Bois de Teck Sculpté -->
+    <line x1="120" y1="125" x2="120" y2="220" stroke="url(#motifGold)" stroke-width="1.5" />
+    
+    <!-- Poignées de Porte en Laiton -->
+    <circle cx="112" cy="170" r="3" fill="url(#motifGold)" />
+    <circle cx="128" cy="170" r="3" fill="url(#motifGold)" />
+
+    <!-- Panneaux Sculptés Rectangulaires -->
+    <rect x="80" y="140" width="32" height="32" rx="2" stroke="url(#motifGold)" stroke-width="1" fill="none" opacity="0.75" />
+    <rect x="128" y="140" width="32" height="32" rx="2" stroke="url(#motifGold)" stroke-width="1" fill="none" opacity="0.75" />
+    <rect x="80" y="180" width="32" height="32" rx="2" stroke="url(#motifGold)" stroke-width="1" fill="none" opacity="0.75" />
+    <rect x="128" y="180" width="32" height="32" rx="2" stroke="url(#motifGold)" stroke-width="1" fill="none" opacity="0.75" />
+
+    <!-- Seuil de Pierre & Légende -->
+    <line x1="48" y1="220" x2="192" y2="220" stroke="url(#motifGold)" stroke-width="2.2" stroke-linecap="round" />
+    <text x="120" y="246" text-anchor="middle" font-family="'Cinzel', Georgia, serif" font-size="10" letter-spacing="0.22em" fill="#1B3B2B" font-weight="600">ARCHE DE OUIDAH</text>
+  </g>
+
+  <!-- =========================================================================
+       MOTIF 2 : LA FRONDE DE PALMIER TROPICAL (CANOPÉE & JARDINS SECRETS)
+       Position : x = 330 à 570 (Centre cx = 450)
+       ========================================================================= -->
+  <g id="motif-palm-frond" transform="translate(330, 20)">
+    <!-- Cadre Médaillon d'Élégance -->
+    <rect x="0" y="0" width="240" height="260" rx="16" stroke="url(#motifForest)" stroke-width="1.2" stroke-dasharray="4 3" opacity="0.6" fill="rgba(27, 59, 43, 0.03)" />
+    
+    <!-- Tige Centrale Courbée (Rachis du Palmier) -->
+    <path d="M 60 215 C 80 180, 110 120, 185 55" 
+          stroke="url(#motifForest)" stroke-width="2.5" stroke-linecap="round" fill="none" />
+
+    <!-- Folioles Gauche (Palmes fines courbées) -->
+    <path d="M 90 185 C 70 170, 50 175, 45 190" stroke="url(#motifGold)" stroke-width="1.4" stroke-linecap="round" fill="none" />
+    <path d="M 105 160 C 80 145, 60 150, 55 168" stroke="url(#motifForest)" stroke-width="1.4" stroke-linecap="round" fill="none" />
+    <path d="M 120 135 C 95 118, 75 125, 70 144" stroke="url(#motifGold)" stroke-width="1.4" stroke-linecap="round" fill="none" />
+    <path d="M 135 112 C 110 95, 90 102, 88 120" stroke="url(#motifForest)" stroke-width="1.4" stroke-linecap="round" fill="none" />
+    <path d="M 150 90 C 130 75, 110 82, 108 100" stroke="url(#motifGold)" stroke-width="1.4" stroke-linecap="round" fill="none" />
+    <path d="M 165 72 C 148 60, 132 68, 130 84" stroke="url(#motifForest)" stroke-width="1.4" stroke-linecap="round" fill="none" />
+
+    <!-- Folioles Droite (Palmes retombantes) -->
+    <path d="M 95 180 C 120 175, 135 185, 140 200" stroke="url(#motifGold)" stroke-width="1.4" stroke-linecap="round" fill="none" />
+    <path d="M 112 155 C 138 148, 155 158, 160 175" stroke="url(#motifForest)" stroke-width="1.4" stroke-linecap="round" fill="none" />
+    <path d="M 128 130 C 155 122, 172 132, 180 150" stroke="url(#motifGold)" stroke-width="1.4" stroke-linecap="round" fill="none" />
+    <path d="M 144 108 C 170 98, 188 108, 196 125" stroke="url(#motifForest)" stroke-width="1.4" stroke-linecap="round" fill="none" />
+    <path d="M 160 86 C 182 78, 198 88, 204 102" stroke="url(#motifGold)" stroke-width="1.4" stroke-linecap="round" fill="none" />
+    <path d="M 174 68 C 192 62, 204 70, 208 82" stroke="url(#motifForest)" stroke-width="1.4" stroke-linecap="round" fill="none" />
+
+    <!-- Gouttelette / Étoile Botanique à la Pointe -->
+    <path d="M 185 55 L 187 47 L 195 45 L 187 43 L 185 35 L 183 43 L 175 45 L 183 47 Z" fill="url(#motifGold)" />
+
+    <!-- Légende -->
+    <text x="120" y="246" text-anchor="middle" font-family="'Cinzel', Georgia, serif" font-size="10" letter-spacing="0.22em" fill="#1B3B2B" font-weight="600">CANOPÉE BOTANIQUE</text>
+  </g>
+
+  <!-- =========================================================================
+       MOTIF 3 : LA FLEUR DE BOUGAINVILLIER (ÉCLOSION ET TERROIR D'ADÉNIKÈ)
+       Position : x = 630 à 870 (Centre cx = 750)
+       ========================================================================= -->
+  <g id="motif-bougainvillea" transform="translate(630, 20)">
+    <!-- Cadre Médaillon d'Élégance -->
+    <rect x="0" y="0" width="240" height="260" rx="16" stroke="url(#motifTerracotta)" stroke-width="1.2" stroke-dasharray="4 3" opacity="0.6" fill="rgba(130, 35, 32, 0.03)" />
+
+    <!-- Bractée 1 : Supérieure Gauche -->
+    <path d="M 120 135 C 90 90, 60 100, 75 145 C 90 170, 115 155, 120 135 Z" 
+          stroke="url(#motifTerracotta)" stroke-width="1.8" fill="rgba(130, 35, 32, 0.08)" stroke-linejoin="round" />
+    <path d="M 120 135 C 100 120, 85 125, 78 140" stroke="url(#motifGold)" stroke-width="1" stroke-linecap="round" fill="none" />
+
+    <!-- Bractée 2 : Supérieure Droite -->
+    <path d="M 120 135 C 150 90, 180 100, 165 145 C 150 170, 125 155, 120 135 Z" 
+          stroke="url(#motifTerracotta)" stroke-width="1.8" fill="rgba(130, 35, 32, 0.08)" stroke-linejoin="round" />
+    <path d="M 120 135 C 140 120, 155 125, 162 140" stroke="url(#motifGold)" stroke-width="1" stroke-linecap="round" fill="none" />
+
+    <!-- Bractée 3 : Inférieure Centrale -->
+    <path d="M 120 135 C 95 165, 110 205, 120 205 C 130 205, 145 165, 120 135 Z" 
+          stroke="url(#motifTerracotta)" stroke-width="1.8" fill="rgba(130, 35, 32, 0.08)" stroke-linejoin="round" />
+    <path d="M 120 135 L 120 190" stroke="url(#motifGold)" stroke-width="1" stroke-linecap="round" fill="none" />
+
+    <!-- Cœur Floral à 3 Pistils / Fleurs Tubulaires en Or -->
+    <circle cx="120" cy="135" r="4.5" fill="url(#motifGold)" />
+    <circle cx="113" cy="128" r="2.5" fill="#FAF8F5" stroke="url(#motifGold)" stroke-width="1" />
+    <circle cx="127" cy="128" r="2.5" fill="#FAF8F5" stroke="url(#motifGold)" stroke-width="1" />
+    <circle cx="120" cy="142" r="2.5" fill="#FAF8F5" stroke="url(#motifGold)" stroke-width="1" />
+
+    <!-- Rameau Végétal Fin à la Base -->
+    <path d="M 120 205 C 115 218, 100 225, 90 228" stroke="#1B3B2B" stroke-width="1.5" stroke-linecap="round" />
+    <path d="M 112 216 Q 102 212 104 205 Q 112 210 112 216" fill="#1B3B2B" opacity="0.75" />
+
+    <!-- Légende -->
+    <text x="120" y="246" text-anchor="middle" font-family="'Cinzel', Georgia, serif" font-size="10" letter-spacing="0.22em" fill="#1B3B2B" font-weight="600">BOUGAINVILLIER</text>
+  </g>
+</svg>

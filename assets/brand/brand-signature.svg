@@ -1,0 +1,91 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 240" width="100%" height="100%" fill="none">
+  <defs>
+    <linearGradient id="sigGold" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#E5C78A"/>
+      <stop offset="45%" stop-color="#C5A365"/>
+      <stop offset="85%" stop-color="#9E7A3E"/>
+      <stop offset="100%" stop-color="#C5A365"/>
+    </linearGradient>
+
+    <linearGradient id="sigForest" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#2D5A43"/>
+      <stop offset="100%" stop-color="#1B3B2B"/>
+    </linearGradient>
+
+    <filter id="sigGlow" x="-10%" y="-10%" width="120%" height="120%">
+      <feGaussianBlur stdDeviation="3" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+  </defs>
+
+  <!-- =========================================================================
+       EMBLÈME COMPACT À GAUCHE (x = 30 à 190, cy = 120)
+       ========================================================================= -->
+  <g id="sig-crest" transform="translate(40, 20)">
+    <!-- Anneaux Concentriques Double-Bezel -->
+    <circle cx="100" cy="100" r="92" stroke="url(#sigGold)" stroke-width="1.2" stroke-dasharray="4 2" opacity="0.6" />
+    <circle cx="100" cy="100" r="86" stroke="url(#sigGold)" stroke-width="2" />
+    <circle cx="100" cy="100" r="80" stroke="url(#sigForest)" stroke-width="1.2" opacity="0.5" />
+
+    <!-- Étoile Apex -->
+    <path d="M 100 28 L 102 36 L 110 38 L 102 40 L 100 48 L 98 40 L 90 38 L 98 36 Z" fill="url(#sigGold)" />
+
+    <!-- Monogramme MA Stylisé dans l'Anneau -->
+    <!-- M Base -->
+    <path d="M 64 140 L 64 68 L 74 68 L 100 115 L 126 68 L 136 68 L 136 140 L 126 140 L 126 88 L 104 128 L 96 128 L 74 88 L 74 140 Z" 
+          fill="url(#sigGold)" />
+
+    <!-- A Entrelacé en Vert Forêt Sacrée -->
+    <path d="M 100 58 L 74 140 L 86 140 L 100 95 L 114 140 L 126 140 Z" 
+          fill="url(#sigForest)" stroke="url(#sigGold)" stroke-width="1" />
+    
+    <!-- Barre A -->
+    <rect x="88" y="112" width="24" height="4" fill="url(#sigGold)" />
+
+    <!-- Rameaux Miniatures à la Base -->
+    <path d="M 72 150 C 85 158, 115 158, 128 150" stroke="url(#sigGold)" stroke-width="1.5" stroke-linecap="round" fill="none" />
+    <circle cx="100" cy="155" r="2.5" fill="url(#sigGold)" />
+  </g>
+
+  <!-- =========================================================================
+       TYPOGRAPHIE & HIÉRARCHIE À DROITE (x = 260 à 960)
+       ========================================================================= -->
+  <g id="sig-typography" transform="translate(260, 0)">
+    
+    <!-- Pré-Titre Cérémonial -->
+    <g transform="translate(0, 52)">
+      <text font-family="'Cinzel', Georgia, serif" font-size="11" letter-spacing="0.38em" fill="url(#sigGold)" font-weight="600">
+        ✦ RÉSIDENCES &amp; HAUTE HOSPITALITÉ ✦
+      </text>
+    </g>
+
+    <!-- Titre Principal : MAISON ADÉNIKÈ -->
+    <g transform="translate(0, 114)">
+      <text font-family="'Cormorant Garamond', Georgia, serif" font-size="52" letter-spacing="0.14em" fill="#1A1918" font-weight="700">
+        MAISON ADÉNIKÈ
+      </text>
+    </g>
+
+    <!-- Ligne de Séparation Orfèvrerie avec Losange Central -->
+    <g transform="translate(0, 136)">
+      <line x1="0" y1="0" x2="310" y2="0" stroke="url(#sigGold)" stroke-width="1.2" opacity="0.85" />
+      <polygon points="320,-4 326,0 320,4 314,0" fill="url(#sigGold)" />
+      <line x1="330" y1="0" x2="640" y2="0" stroke="url(#sigGold)" stroke-width="1.2" opacity="0.85" />
+    </g>
+
+    <!-- Sous-Titre Statutaire : LODGE • RESTO • BAR • OUIDAH -->
+    <g transform="translate(0, 168)">
+      <text font-family="'Tenor Sans', 'Plus Jakarta Sans', sans-serif" font-size="14.5" letter-spacing="0.32em" fill="#1B3B2B" font-weight="600">
+        LODGE &nbsp;•&nbsp; RESTO &nbsp;•&nbsp; BAR &nbsp;•&nbsp; OUIDAH
+      </text>
+    </g>
+
+    <!-- Devise Yoruba en Filigrane Poétique -->
+    <g transform="translate(0, 196)">
+      <text font-family="'Cormorant Garamond', Georgia, serif" font-style="italic" font-size="13" letter-spacing="0.08em" fill="#822320" opacity="0.9">
+        « Ibi yìí L'ọkàn ń Sinmi » — Cité Historique de Ouidah, Bénin
+      </text>
+    </g>
+
+  </g>
+</svg>

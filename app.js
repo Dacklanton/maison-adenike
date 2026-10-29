@@ -650,6 +650,12 @@ function initCurtainTransition() {
     overlay.classList.add('is-exiting');
     document.querySelector('.hero-editorial-full')?.classList.add('hero-revealed');
     document.querySelector('.lodging-hero-section')?.classList.add('lodge-revealed');
+
+    // Déclenche et assure la lecture vidéo dès l'interaction de levée du rideau
+    const heroVid = document.getElementById('homeHeroVideo') || document.querySelector('.hero-editorial-full .hero-video-bg');
+    if (heroVid) heroVid.play().catch(() => {});
+    const lodgeVid = document.getElementById('lodgingHeroVideo') || document.querySelector('.lodging-hero-section .lodging-hero-video');
+    if (lodgeVid) lodgeVid.play().catch(() => {});
     
     // Libère les interactions et supprime le rideau du DOM après l'animation
     setTimeout(() => {
@@ -1046,8 +1052,45 @@ function initHeroEntranceAnimation() {
   const restaurantHero = document.querySelector('.restaurant-hero-animated');
   const overlay = document.getElementById('pageCurtainTransition');
 
+  // Helper de démarrage autoplay universel avec fallback tactile/geste
+  function setupAutoplayVideo(video) {
+    if (!video) return;
+    video.muted = true;
+    video.defaultMuted = true;
+    video.playsInline = true;
+    video.setAttribute('playsinline', '');
+    video.setAttribute('webkit-playsinline', '');
+    video.setAttribute('muted', '');
+
+    const startPlayback = () => {
+      const playPromise = video.play();
+      if (playPromise !== undefined) {
+        playPromise.catch(() => {
+          const onUserGesture = () => {
+            video.play().catch(() => {});
+            ['touchstart', 'touchend', 'click', 'scroll', 'keydown', 'pointerdown'].forEach((evt) => {
+              window.removeEventListener(evt, onUserGesture, { capture: true });
+            });
+          };
+          ['touchstart', 'touchend', 'click', 'scroll', 'keydown', 'pointerdown'].forEach((evt) => {
+            window.addEventListener(evt, onUserGesture, { once: true, passive: true, capture: true });
+          });
+        });
+      }
+    };
+
+    startPlayback();
+    if (video.readyState < 2) {
+      video.addEventListener('loadeddata', startPlayback, { once: true });
+      video.addEventListener('canplay', startPlayback, { once: true });
+    }
+  }
+
   // Révélation d'accueil
   if (homeHero) {
+    const homeVideo = document.getElementById('homeHeroVideo') || homeHero.querySelector('.hero-video-bg');
+    if (homeVideo) setupAutoplayVideo(homeVideo);
+
     const triggerHomeReveal = () => homeHero.classList.add('hero-revealed');
     if (!overlay || overlay.classList.contains('is-hidden') || overlay.classList.contains('is-exiting')) {
       setTimeout(triggerHomeReveal, 150);
@@ -1058,12 +1101,21 @@ function initHeroEntranceAnimation() {
 
   // Révélation Lodge
   if (lodgeHero) {
+    const lodgeVideo = document.getElementById('lodgingHeroVideo') || lodgeHero.querySelector('.lodging-hero-video');
+    if (lodgeVideo) setupAutoplayVideo(lodgeVideo);
+
     const triggerLodgeReveal = () => lodgeHero.classList.add('lodge-revealed');
     if (!overlay || overlay.classList.contains('is-hidden') || overlay.classList.contains('is-exiting')) {
       setTimeout(triggerLodgeReveal, 150);
     } else {
       setTimeout(triggerLodgeReveal, 2200);
     }
+  }
+
+  // Vidéo Bômiwo landing page
+  const bomiwoVideo = document.getElementById('bomiwoVideo') || document.querySelector('.bomiwo-video');
+  if (bomiwoVideo) {
+    setupAutoplayVideo(bomiwoVideo);
   }
 
       // Révélation Restaurant progressive :
